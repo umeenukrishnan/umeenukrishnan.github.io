@@ -20,11 +20,14 @@ When we have more than one variable to save in the same pdf file, we need to sha
 
 ```python
 xdmf.parameters["functions_share_mesh"] = True/False
-# Default is false, it controls whether all functions on a single time step share the same mesh. If true the files created will be smaller and also behave better in Paraview, at least in version 5.3.0.
+# Default is false, it controls whether all functions on 
+#a single time step share the same mesh. If true the #files created will be smaller and also behave better in #Paraview, at least in version 5.3.0.
 xdmf.parameters["rewrite_function_mesh"] = True/False
-# Default settings is true, i.e, it controls whether the mesh will be rewritten every time step. If the mesh does not change this can be turned off to create smaller files. 
+# Default settings is true, i.e, it controls whether the 
+#mesh will be rewritten every time step. If the mesh does
+#not change this can be turned off to create smaller files. 
 xdmf.parameters["flush_output"] = True/False
-# Default is false, it controls the file size. You should use True, so as to reduce the size of the file. 
+# Default is false, it controls the file size. You should # use True, so as to reduce the size of the file. 
 ```
 
 Then use the following command to write the data in the file:
