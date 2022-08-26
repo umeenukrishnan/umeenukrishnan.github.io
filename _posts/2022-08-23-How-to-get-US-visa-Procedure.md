@@ -3,7 +3,7 @@ layout: post
 title: "How to get apply for an U.S. visa"
 categories: Misc
 tag: 
-  - Miscellaneous
+  - Misc
 ---
 
 Recently I got an apportunity to attend an international conference, which was held at Uiniversity of california, San Diego. For this I had to travel from India to U.S.. So, yes the first step was to get a Passport, once you have the passport you have to get a Visa. 
