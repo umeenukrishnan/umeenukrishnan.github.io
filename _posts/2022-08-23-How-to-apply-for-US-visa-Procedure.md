@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to apply for an U.S. visa"
+title: "How to get an U.S. visa"
 categories: misc
 tag: 
   - misc
