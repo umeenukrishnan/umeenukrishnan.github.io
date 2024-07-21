@@ -8,7 +8,7 @@ permalink: /:year/:month/:day/:title:output_ext
 
 description: > # this means to ignore newlines until "show_excerpts:"
   Researcher. Indian Institute of Technology Roorkee
-favicon: "./favicon.ico" # set the favicon of the site
+favicon: "https://umeenukrishnan.github.io/favicon.ico" # set the favicon of the site
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
