@@ -64,21 +64,21 @@ footer-text:
 # head_scripts:
 #   - /assets/js/two.min.js
 
-# https://jekyllrb.com/docs/collections/
-collections:
-  projects:
-    output: true
-  newsletters:
-    output: true
+# # https://jekyllrb.com/docs/collections/
+# collections:
+#   projects:
+#     output: true
+#   newsletters:
+#     output: true
 
-# Compress CSS files
-sass:
-    style: compressed
+# # Compress CSS files
+# sass:
+#     style: compressed
 
-highlighter: rouge
-# gist:
-#   noscript: false
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
+# highlighter: rouge
+# # gist:
+# #   noscript: false
+# kramdown:
+#   math_engine: mathjax
+#   syntax_highlighter: rouge
 
