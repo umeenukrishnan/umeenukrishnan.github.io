@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: projects
 ---
 
 # Projects
@@ -62,3 +62,15 @@ Developing computationally efficient algorithms is crucial for solving complex p
 - **Algorithm design**: Focuses on creating algorithms that reduce computational costs and increase efficiency.
 - **Mesh adaptivity**: Implements adaptive meshing techniques to optimize computational resources.
 - **Auto step adaptivity**: Develops strategies for automatic step adaptation to improve simulation accuracy and efficiency.
+
+## 3D printing
+
+### Overview
+3D printing, or additive manufacturing, is a process of creating three-dimensional objects from a digital file. It plays a significant role in modern engineering and manufacturing.
+
+### Key aspects
+- **Integration with optimization**: Combines with topology optimization to produce efficient and complex structures.
+- **Material innovation**: Enables the use of new materials and composites.
+- **Applications**: Ranges from prototyping and manufacturing to medical implants and custom-designed products.
+
+Feel free to update or expand these descriptions based on any additional details or projects you'd like to include.

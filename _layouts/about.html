@@ -9,19 +9,22 @@ layout: default
   <div class="post-back">
     <a class="black-link" href="{{ site.url | relative_url }}"> ← {{ site.moving.back_to }} </a>
   </div>
-  <div class="about-header">
+  <div class="about-header" style="display: flex; align-items: center;">
     {%- if site.moving.avatar_url -%}
-    <img class="about-avatar" src="{{ site.moving.avatar_url }}" />
-    {%- endif -%} {%- if site.author -%}
+    <img class="about-avatar" src="{{ site.moving.avatar_url }}" style="margin-right: 20px;" />
+    {%- endif -%} 
     <div class="about-info">
+      {%- if site.author -%}
       <div class="about-your-name">
         {{ site.author | escape }}
       </div>
-      {%- endif -%} {%- if site.moving.about_you -%}
+      {%- endif -%} 
+      {%- if site.moving.about_you -%}
       <p class="about-description">
         {{ site.moving.about_you | escape }}
       </p>
-      {%- endif -%} {%- include social.html -%}
+      {%- endif -%}
+      {%- include social.html -%}
     </div>
   </div>
 
