@@ -28,24 +28,19 @@ layout: default
     </div>
     <div class="container" style="width:100%">
         <main class="grid">
-            {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
-            {% for project in sorted_projects %}
             <article>
-                <a href="{{ project.url | relative_url }}">
+                <a href="{{ site.url }}/projects.md">
                     <div class="text">
-                        <h2>{{ project.title | escape }}</h2>
-                        <p style="text-align: right; opacity: 0.7"><small>- {{ project.date | date: "%Y-%m" }}</small></p>
+                        <h2>Sample Project 1</h2>
+                        <p style="text-align: right; opacity: 0.7"><small>- 2024-07</small></p>
                         <div class="card-description">
-                            {% for lang in project.langs %}
-                            <code>{{ lang | escape }}</code>
-                            {% endfor %}
+                            <code>Python</code> <code>HTML</code>
                             <hr>
-                            <p>{{ project.description | escape }}</p>
+                            <p>A sample project to demonstrate the structure.</p>
                         </div>
                     </div>
                 </a>
             </article>
-            {% endfor %}
         </main>
     </div>
 </div>
