@@ -15,11 +15,12 @@ layout: default
       <object class="meenu-icon" data="{{ site.url }}/assets/svg/meenu.svg" width="230" style="pointer-events: none;"></object>
       <nav style="margin-top: 20px;">
         <ul style="list-style-type: none; padding: 0;">
-          <li style="margin-bottom: 2px;"><a class="link" href="https://github.com/umeenukrishnan" style="background-color: #003B46; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: block;">GitHub😊</a></li>
+          <li style="margin-bottom: 2px;"><a class="link" href="https://github.com/umeenukrishnan" style="background-color: #003B46; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: block;">Github😊</a></li>
           <li style="margin-bottom: 2px;"><a class="link" href="{{ site.url }}/tags" style="background-color: #07575B; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: block;">Tags😎</a></li>
-          <li style="margin-bottom: 2px;"><a class="link" href="{{ site.url }}/pages/projects" style="background-color: #66A5AD; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: block;">Projects💡</a></li>
+          <li style="margin-bottom: 2px;"><a class="link" href="{{ site.url }}/pagesprojects" style="background-color: #66A5AD; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: block;">Projects💡</a></li>
           <li style="margin-bottom: 2px;"><a class="link" href="{{ site.url }}/funzone" style="background-color: #C4DFE6; color: #003B46; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: block;">Fun Zone🎉</a></li>
           <li style="margin-bottom: 2px;"><a class="button button-hello" href="https://calendly.com/umeenukrishnan/30min" target="_blank" title="Let's connect!" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: block;">Say Hello!👋</a></li>
+
         </ul>
       </nav>
     </div>
@@ -35,45 +36,10 @@ layout: default
                 <br><br>
                 To have a practical application of these computationally efficient algorithms, I work through <a href="https://in.linkedin.com/company/avkalanlabs">Avkalan Labs</a>. In addition to this, I share my learnings through <a href="https://eigenplus.com">EigenPlus</a>. 
                 <br><br>
-                If you want to talk about anything, especially about mathematics, computational mechanics, or high performance computing, I would happily chat with you. To schedule an appointment, please book a time on my calendar.
+                If you want to talk about anything, especially about mathematics, computational mechanics, or high performance computing. To schedule an appointment, please book a time on my calendar.
               </p>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="about-page">
-        <div class="post-back">
-          <a class="black-link" href="{{ site.url | relative_url }}"> ← {{ site.moving.back_to }} </a>
-        </div>
-        <div class="about-header" style="display: flex; align-items: center;">
-          {%- if site.moving.avatar_url -%}
-          <img class="about-avatar" src="{{ site.moving.avatar_url }}" style="margin-right: 20px; width: 150px; border-radius: 50%;" />
-          {%- endif -%} 
-          <div class="about-info">
-            {%- if site.author -%}
-            <div class="about-your-name" style="font-size: 24px; font-weight: bold;">
-              {{ site.author | escape }}
-            </div>
-            {%- endif -%} 
-            {%- if site.moving.about_you -%}
-            <p class="about-description">
-              {{ site.moving.about_you | escape }}
-            </p>
-            {%- endif -%}
-            <div class="social-links" style="margin-top: 10px; display: flex; flex-direction: column;">
-              {%- for platform, username in site.moving.social_links -%}
-              <a href="https://{{ platform }}.com/{{ username }}" target="_blank" style="margin-bottom: 5px;">
-                <img src="https://www.shareicon.net/data/128x128/2016/07/10/119806_{{ platform }}_512x512.png" alt="{{ platform }}" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;">
-                {{ platform | capitalize }}
-              </a>
-              {%- endfor -%}
-            </div>
-          </div>
-        </div>
-
-        <div class="about-content e-content" itemprop="articleBody">
-          {{ content }}
         </div>
       </div>
     </div>
