@@ -7,135 +7,107 @@ layout: default
     </head>
     <!-- ------------------------------------------------------------------- -->
     <div class="hero">
-        <div class="flexbox_container_two_col flexbox_container_flip primary_container" style="padding-top: 50px;padding-bottom: 50px;">
-            <div style="width: 100%; text-align: center; padding: 20px 0;">
+        <div class="flexbox_container_two_col flexbox_container_flip primary_container" style="padding-top: 30px;padding-bottom: 30px;">
+            <div style="width: 100%; text-align: center; padding: 10px 0;">
                 <img src="{{ site.url }}/assets/gif/projects.gif" alt="Project GIF" style="width: 100%; height: auto;" />
             </div>
             <div class="flexbox_item">
                 <div>
-                    <p style="font-size:36px; font-family: Montserrat; font-weight: bold; line-height: 1.2;">Projects</p>
-                    <p style="font-size:18px; padding-top: 20px; padding-bottom: 30px;">Here are some of my projects.</p>
+                    <p style="font-size:30px; font-family: Montserrat; font-weight: bold; line-height: 1.2; margin: 0;">Projects Overview</p>
+                    <p style="font-size:16px; padding-top: 10px; padding-bottom: 20px;">Here are some of my projects.</p>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="primary_container" style="padding-top:100px; padding-bottom:100px">
-        <div class="about-content e-content" itemprop="articleBody">
-            {{ content }}
-        </div>
-        <div class="container" style="width:100%">
-
-            <main class="grid">
-                <article>
-                    <div class="text">
-                        <h2>Projects Overview</h2>
-                        <p style="text-align: right; opacity: 0.7"><small>- Click on a project to see more details</small></p>
-                        <div class="card-description">
-                            <hr>
-                            <div class="accordion">
-                                <div class="accordion-item">
-                                    <button id="accordion-button-1" aria-expanded="false">
-                                        <span class="accordion-title">Project 1: Phase field fracture</span>
-                                        <span class="icon" aria-hidden="true"></span>
-                                    </button>
-                                    <div class="accordion-content">
-                                        <h3>Overview</h3>
-                                        <p>The phase field fracture method is a powerful tool for simulating crack propagation in materials. It offers a way to model complex fracture processes without the need for complex crack tracking algorithms.</p>
-                                        <h4>Key aspects</h4>
-                                        <ul>
-                                            <li><strong>Mathematical model:</strong> Utilizes a continuous field to represent cracks, avoiding the need for explicit crack tracking.</li>
-                                            <li><strong>Computational efficiency:</strong> Enhances computational efficiency through mesh adaptivity and auto step adaptivity.</li>
-                                            <li><strong>Applications:</strong> Used in predicting failure in various materials and structures, providing insights into fracture mechanics.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <button id="accordion-button-2" aria-expanded="false">
-                                        <span class="accordion-title">Project 2: Topology optimization</span>
-                                        <span class="icon" aria-hidden="true"></span>
-                                    </button>
-                                    <div class="accordion-content">
-                                        <h3>Overview</h3>
-                                        <p>Topology optimization is a mathematical approach to design materials and structures by optimizing the material layout within a given design space for a set of performance criteria.</p>
-                                        <h4>Key aspects</h4>
-                                        <ul>
-                                            <li><strong>Optimization techniques:</strong> Uses advanced algorithms to find the optimal distribution of material.</li>
-                                            <li><strong>Applications:</strong> Widely used in engineering to design lightweight, high-strength structures.</li>
-                                            <li><strong>Integration with 3D printing:</strong> Enables the creation of complex geometries that can be manufactured using 3D printing technologies.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <button id="accordion-button-3" aria-expanded="false">
-                                        <span class="accordion-title">Project 3: Metamaterials</span>
-                                        <span class="icon" aria-hidden="true"></span>
-                                    </button>
-                                    <div class="accordion-content">
-                                        <h3>Overview</h3>
-                                        <p>Metamaterials are engineered materials with properties not found in naturally occurring materials. They are designed to achieve specific responses to physical fields.</p>
-                                        <h4>Key aspects</h4>
-                                        <ul>
-                                            <li><strong>Types of metamaterials:</strong> Includes photonic, acoustic, and mechanical metamaterials, each with unique properties.</li>
-                                            <li><strong>Design optimization:</strong> Uses topology optimization to tailor the properties of metamaterials.</li>
-                                            <li><strong>3D printing:</strong> Facilitates the fabrication of complex metamaterial structures.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <button id="accordion-button-4" aria-expanded="false">
-                                        <span class="accordion-title">Project 4: Large scale problems</span>
-                                        <span class="icon" aria-hidden="true"></span>
-                                    </button>
-                                    <div class="accordion-content">
-                                        <h3>Overview</h3>
-                                        <p>Large scale problems in computational mechanics involve simulations that require significant computational resources due to their complexity and size.</p>
-                                        <h4>Key aspects</h4>
-                                        <ul>
-                                            <li><strong>Scalability:</strong> Development of algorithms that can efficiently handle large datasets and extensive computations.</li>
-                                            <li><strong>Parallel computing:</strong> Utilizes high-performance computing techniques to solve problems more quickly.</li>
-                                            <li><strong>Applications:</strong> Includes simulations in aerospace, automotive industries, and large infrastructure projects.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <button id="accordion-button-5" aria-expanded="false">
-                                        <span class="accordion-title">Project 5: Computational efficient algorithms</span>
-                                        <span class="icon" aria-hidden="true"></span>
-                                    </button>
-                                    <div class="accordion-content">
-                                        <h3>Overview</h3>
-                                        <p>Developing computationally efficient algorithms is crucial for solving complex problems in computational mechanics.</p>
-                                        <h4>Key aspects</h4>
-                                        <ul>
-                                            <li><strong>Algorithm design:</strong> Focuses on creating algorithms that reduce computational costs and increase efficiency.</li>
-                                            <li><strong>Mesh adaptivity:</strong> Implements adaptive meshing techniques to optimize computational resources.</li>
-                                            <li><strong>Auto step adaptivity:</strong> Develops strategies for automatic step adaptation to improve simulation accuracy and efficiency.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <button id="accordion-button-6" aria-expanded="false">
-                                        <span class="accordion-title">3D printing</span>
-                                        <span class="icon" aria-hidden="true"></span>
-                                    </button>
-                                    <div class="accordion-content">
-                                        <h3>Overview</h3>
-                                        <p>3D printing, or additive manufacturing, is a process of creating three-dimensional objects from a digital file. It plays a significant role in modern engineering and manufacturing.</p>
-                                        <h4>Key aspects</h4>
-                                        <ul>
-                                            <li><strong>Integration with optimization:</strong> Combines with topology optimization to produce efficient and complex structures.</li>
-                                            <li><strong>Material innovation:</strong> Enables the use of new materials and composites.</li>
-                                            <li><strong>Applications:</strong> Ranges from prototyping and manufacturing to medical implants and custom-designed products.</li>
-                                        </ul>
-                                    </div>
-                                </div>
+    <div class="container" style="width:100%">
+        <main class="grid">
+            <article>
+                <div class="text">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button id="accordion-button-1" aria-expanded="false">
+                                <span class="accordion-title">Project 1: Phase field fracture</span>
+                                <span class="icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <h3>Overview</h3>
+                                <p>The phase field fracture method is a powerful tool for simulating crack propagation in materials. It offers a way to model complex fracture processes without the need for complex crack tracking algorithms.</p>
+                                <h4>Key aspects</h4>
+                                <ul>
+                                    <li><strong>Mathematical model:</strong> Utilizes a continuous field to represent cracks, avoiding the need for explicit crack tracking.</li>
+                                    <li><strong>Computational efficiency:</strong> Enhances computational efficiency through mesh adaptivity and auto step adaptivity.</li>
+                                    <li><strong>Applications:</strong> Used in predicting failure in various materials and structures, providing insights into fracture mechanics.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-2" aria-expanded="false">
+                                <span class="accordion-title">Project 2: Topology optimization</span>
+                                <span class="icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <h3>Overview</h3>
+                                <p>Topology optimization is a mathematical approach to design materials and structures by optimizing the material layout within a given design space for a set of performance criteria.</p>
+                                <h4>Key aspects</h4>
+                                <ul>
+                                    <li><strong>Optimization techniques:</strong> Uses advanced algorithms to find the optimal distribution of material.</li>
+                                    <li><strong>Applications:</strong> Widely used in engineering to design lightweight, high-strength structures.</li>
+                                    <li><strong>Integration with 3D printing:</strong> Enables the creation of complex geometries that can be manufactured using 3D printing technologies.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-3" aria-expanded="false">
+                                <span class="accordion-title">Project 3: Metamaterials</span>
+                                <span class="icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <h3>Overview</h3>
+                                <p>Metamaterials are engineered materials with properties not found in naturally occurring materials. They are designed to achieve specific responses to physical fields.</p>
+                                <h4>Key aspects</h4>
+                                <ul>
+                                    <li><strong>Types of metamaterials:</strong> Includes photonic, acoustic, and mechanical metamaterials, each with unique properties.</li>
+                                    <li><strong>Design optimization:</strong> Uses topology optimization to tailor the properties of metamaterials.</li>
+                                    <li><strong>3D printing:</strong> Facilitates the fabrication of complex metamaterial structures.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-4" aria-expanded="false">
+                                <span class="accordion-title">Project 4: Large scale problems</span>
+                                <span class="icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <h3>Overview</h3>
+                                <p>Large scale problems in computational mechanics involve simulations that require significant computational resources due to their complexity and size.</p>
+                                <h4>Key aspects</h4>
+                                <ul>
+                                    <li><strong>Scalability:</strong> Development of algorithms that can efficiently handle large datasets and extensive computations.</li>
+                                    <li><strong>Parallel computing:</strong> Utilizes high-performance computing techniques to solve problems more quickly.</li>
+                                    <li><strong>Applications:</strong> Includes simulations in aerospace, automotive industries, and large infrastructure projects.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-5" aria-expanded="false">
+                                <span class="accordion-title">Project 5: Computational efficient algorithms</span>
+                                <span class="icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <h3>Overview</h3>
+                                <p>Developing computationally efficient algorithms is crucial for solving complex problems in computational mechanics.</p>
+                                <h4>Key aspects</h4>
+                                <ul>
+                                    <li><strong>Algorithm design:</strong> Focuses on creating algorithms that reduce computational costs and increase efficiency.</li>
+                                    <li><strong>Mesh adaptivity:</strong> Implements adaptive meshing techniques to optimize computational resources.</li>
+                                    <li><strong>Auto step adaptivity:</strong> Develops strategies for automatic step adaptation to improve simulation accuracy and efficiency.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                </article>
-            </main>
-        </div>
+                </div>
+            </article>
+        </main>
     </div>
 </div>
 
@@ -147,7 +119,7 @@ layout: default
         border-bottom: 1px solid #ddd;
     }
     .accordion-title {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: bold;
     }
     .accordion button {
@@ -156,7 +128,7 @@ layout: default
         width: 100%;
         text-align: left;
         cursor: pointer;
-        padding: 1em 0;
+        padding: 0.5em 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
