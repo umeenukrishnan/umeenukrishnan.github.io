@@ -12,46 +12,40 @@ layout: default
 
   <nav>
     <ul>
-      <li><a class="link" href="{{ site.url }}/tags">Tags</a></li>
-      <li><a class="link" href="{{ site.url }}/projects">Projects</a></li>
-      <li><a class="link" href="{{ site.url }}/about">About</a></li>
-      <li><a class="link" href="https://computationalmechanics.in/author/meenu/">Lab</a></li>
-      <li><a class="link" href="{{ site.url }}/funzone">Fun Zone</a></li>
+      <li><a class="link" href="{{ site.url }}/about">About😊</a></li>
+      <li><a class="link" href="{{ site.url }}/tags">Tags😎</a></li>
+      <li><a class="link" href="{{ site.url }}/projects">Projects💡</a></li>
+      <li><a class="link" href="https://computationalmechanics.in/author/meenu/">Lab🚀</a></li>
+      <li><a class="link" href="{{ site.url }}/funzone">Fun Zone🎉</a></li>
     </ul>
   </nav>
 
 
-  {%- if site.posts.size > 0 -%}
-  <ul class="post-list">
-      {% for post in site.posts  %}
-      {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-      {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
-  
-      {% if forloop.first %}
-      <h2 id="{{ this_year }}-ref" class="post-year">{{this_year}}</h2>
-      <ul>
-      {% endif %}
-  
-      <li>
-          {%- assign date_format = site.moving.date_format | default: "%b %-d, %Y" -%}
-          <span class="post-meta">
-            {{ post.date | date: date_format }}
-          </span>
-          <a class="black-link post-link-layout" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-      </li>
-  
-      {% if forloop.last %}
-      </ul>
-      {% else %}
-          {% if this_year != next_year %}
-          </ul>
-          <h2 id="{{ next_year }}-ref" class="post-year">{{next_year}}</h2>
-          <ul>
-          {% endif %}
-      {% endif %}
-  {% endfor %}
-  </ul>
-  {%- endif -%}
+<div class="hero">
+        <div class="flexbox_container_two_col flexbox_container_flip primary_container " style="padding-top: 50px;padding-bottom: 50px;">
+            <div class="flexbox_item">
+                <div>
+                    <p style="font-size:20px; font-family: Montserrat;">Hi, I am Abhinav Gupta</p>
+                    <p style="font-size:27px; font-family: Montserrat; line-height: 1.2; "><strong>I love research and writing.</strong></p>
+                    <p style="font-size:16px; padding-top: 20px; padding-bottom: 30px;"> I joined the Computational Mechanics Lab in January 2019, and since then, my work has primarily focused on phase field method for fracture analysis and topology optimization. 
+
+                    If you want to discuss high performace computing with finite element method, I would happily chat with you. To schedule an appointment, please book a time on my calendar.
+
+
+
+                    <!-- Signup below to receive, via email, weekly advice on producing quality research.  -->
+                    </p>
+                    
+                    <!-- <a class="ml-onclick-form button button-hello" href="javascript:void(0)" onclick="ml('show', 'uSsXyN', true)">Try the free newsletter</a> -->
+                    <a class="button button-hello" href="https://calendly.com/krishnanmeenu/30min" target="_blank" title="Say Hello!">Say Hello!</a>
+                </div>
+            </div>
+            <div class="flexbox_item">
+                <!-- <img class="remove-all-styles" src="{{ site.url }}/assets/images/abhi-sketch.png" style="max-width: 250px; vertical-align: middle;     float: right;" /> -->
+                <div style="vertical-align: middle;     float: right;">
+                    <object class="meenu-icon" data="{{ site.url }}/assets/svg/meenu.svg" width="230" style="pointer-events: none;"></object>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
