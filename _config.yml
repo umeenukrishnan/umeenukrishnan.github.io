@@ -22,7 +22,7 @@ moving:
 
   # generate social links in about page.
   social_links:
-    github: umeenukrishnan
+    # github: umeenukrishnan
     scholar: hjyZvdgAAAAJ
     researchgate: Meenu_Krishnan
     linkedin: iitrmeenu

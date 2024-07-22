@@ -1,6 +1,9 @@
 <footer class="site-footer h-card">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
   <div class="wrapper">
+    <div class="social-links" style="margin-top: 10px;">
+      {%- include social.html -%}
+    </div>
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <ul class="contact-list">
@@ -18,9 +21,6 @@
           {%- endif -%}
         </ul>
       </div>
-    </div>
-    <div class="social-links" style="margin-top: 10px;">
-      {%- include social.html -%}
     </div>
   </div>
 </footer>
