@@ -12,7 +12,8 @@ layout: default
             <div class="flexbox_item">
                 <div>
                     <p style="font-size:36px; font-family: Montserrat; font-weight: bold; line-height: 1.2; ">Projects</p>
-                    <p style="font-size:18px; padding-top: 20px; padding-bottom: 30px;"> Here are some of my projects. </p>
+                    <img src="{{ site.url }}/assets/gif/projects.gif" alt="Project GIF" style="max-width: 250px; padding-top: 20px;" />
+                    <p style="font-size:18px; padding-top: 20px; padding-bottom: 30px;">Here are some of my projects.</p>
                     <!--  <a class="button button-hello" href="https://www.calendly.com/abhiguptaio" target="_blank" title="Say Hello!">Say Hello!</a> -->
                 </div>
             </div>
@@ -25,21 +26,18 @@ layout: default
     </div>
     <div class="container" style="width:100%">
         <main class="grid">
-            {% for project in site.projects reversed%}
+            {% for project in site.projects reversed %}
             <article>
                 <a href="{{ project.url | relative_url }}">
                     <div class="text">
-                        <h2>{{ project.title | escape }}
-                        </h2>
-                        <p style="text-align: right; opacity: 0.7"><small> - {{ project.year | escape }}
-                            </small></p>
+                        <h2>{{ project.title | escape }}</h2>
+                        <p style="text-align: right; opacity: 0.7"><small>- {{ project.year | escape }}</small></p>
                         <div class="card-description">
                             {% for lang in project.langs %}
                             <code>{{ lang | escape }}</code>
                             {% endfor %}
                             <hr>
-                            <p>{{ project.description | escape }}
-                            </p>
+                            <p>{{ project.description | escape }}</p>
                         </div>
                     </div>
                 </a>
