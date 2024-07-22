@@ -25,6 +25,11 @@ layout: default
     </ul>
   </nav>
 
+  <!-- Including the projects content -->
+  <div class="home-projects">
+    {% include projects_include.html %}
+  </div>
+
   {%- if site.projects.size > 0 -%}
   <ul class="project-list">
     {% for project in site.projects %}
@@ -41,3 +46,5 @@ layout: default
   </ul>
   {%- endif -%}
 </div>
+
+

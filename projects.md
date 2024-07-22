@@ -4,7 +4,10 @@ layout: about
 
 # Projects
 
-## Phase field fracture
+Here are some of the projects I've worked on:
+
+
+## - **Project 1**: Phase field fracture
 
 ![Phase Field Fracture](assets/images/phase_field_fracture.jpg)
 
@@ -16,7 +19,7 @@ The phase field fracture method is a powerful tool for simulating crack propagat
 - **Computational efficiency**: Enhances computational efficiency through mesh adaptivity and auto step adaptivity.
 - **Applications**: Used in predicting failure in various materials and structures, providing insights into fracture mechanics.
 
-## Topology optimization
+## **Project 2**: Topology optimization
 
 
 ### Overview
@@ -27,7 +30,7 @@ Topology optimization is a mathematical approach to design materials and structu
 - **Applications**: Widely used in engineering to design lightweight, high-strength structures.
 - **Integration with 3D printing**: Enables the creation of complex geometries that can be manufactured using 3D printing technologies.
 
-## Metamaterials
+## **Project 3**: Metamaterials
 
 
 ### Overview
