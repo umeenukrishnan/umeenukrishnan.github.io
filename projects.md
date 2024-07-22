@@ -1,5 +1,5 @@
 ---
-layout: projects
+layout: project
 ---
 
 # Projects
