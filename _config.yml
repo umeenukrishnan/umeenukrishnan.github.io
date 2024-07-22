@@ -2,13 +2,13 @@ title: "Hello helloo 💃, Welcome to my place" # The title of the blog
 author: U Meenu Krishnan # Your name
 email: meenukris130993@gmail.com # your email shown in the footer
 
-url: "https://umeenukrishnan.github.io" # this is your site's root address.
+url: "https://www.krishnanmeenu.com" # this is your site's root address.
 
 permalink: /:year/:month/:day/:title:output_ext
 
 description: > # this means to ignore newlines until "show_excerpts:"
-  Researcher. Indian Institute of Technology Roorkee
-favicon: "https://umeenukrishnan.github.io/favicon.ico" # set the favicon of the site
+  Researcher. Creative Coder. Blogger. Happy Soul
+favicon: "./favicon.ico" # set the favicon of the site
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
