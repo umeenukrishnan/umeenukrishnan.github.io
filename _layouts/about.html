@@ -11,11 +11,11 @@ layout: default
   </div>
   <div class="about-header" style="display: flex; align-items: center;">
     {%- if site.moving.avatar_url -%}
-    <img class="about-avatar" src="{{ site.moving.avatar_url }}" style="margin-right: 20px;" />
+    <img class="about-avatar" src="{{ site.moving.avatar_url }}" style="margin-right: 20px; width: 150px; border-radius: 50%;" />
     {%- endif -%} 
     <div class="about-info">
       {%- if site.author -%}
-      <div class="about-your-name">
+      <div class="about-your-name" style="font-size: 24px; font-weight: bold;">
         {{ site.author | escape }}
       </div>
       {%- endif -%} 
@@ -24,8 +24,13 @@ layout: default
         {{ site.moving.about_you | escape }}
       </p>
       {%- endif -%}
-      <div class="social-links" style="margin-top: 10px;">
-        {%- include social.html -%}
+      <div class="social-links" style="margin-top: 10px; display: flex; flex-direction: column;">
+        {%- for platform, username in site.moving.social_links -%}
+        <a href="https://{{ platform }}.com/{{ username }}" target="_blank" style="margin-bottom: 5px;">
+          <img src="https://www.shareicon.net/data/128x128/2016/07/10/119806_{{ platform }}_512x512.png" alt="{{ platform }}" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;">
+          {{ platform | capitalize }}
+        </a>
+        {%- endfor -%}
       </div>
     </div>
   </div>
