@@ -1,0 +1,38 @@
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+// Common elements that should use theme colors
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+  
+  &:hover {
+    color: var(--link-color);
+    opacity: 0.8;
+  }
+}
+
+// Cards, containers, etc.
+.card, .post, .content-box {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+// Header and footer
+header {
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+  background-color: var(--footer-bg);
+  border-top: 1px solid var(--border-color);
+}

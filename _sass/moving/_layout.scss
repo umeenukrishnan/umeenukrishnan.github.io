@@ -344,3 +344,25 @@
     margin-top: 2rem;
   }
 }
+
+// Example layout updates
+.container {
+  background-color: var(--bg-color);
+}
+
+.sidebar {
+  background-color: var(--card-bg);
+  border-right: 1px solid var(--border-color);
+}
+
+.navigation {
+  background-color: var(--header-bg);
+  
+  a {
+    color: var(--text-color);
+    
+    &:hover {
+      color: var(--link-color);
+    }
+  }
+}
