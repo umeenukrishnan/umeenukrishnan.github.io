@@ -1,14 +1,13 @@
 ---
 layout: about
 ---
-I’m U. Meenu Krishnan, a researcher who firmly believes that you should either love what you do, or change it — because passion fuels purpose, and purpose drives excellence.
+Welcome to my place! My name is U. Meenu Krishnan, and I am a researcher in the field of computational mechanics. I joined the Computational Mechanics Lab in January 2019, and since then, my work has primarily focused on phase field method for fracture analysis and topology optimization.
 
-I am currently working as a Postdoctoral Research Fellow at Johns Hopkins University, where my research focuses on Evolutionary Deep Neural Networks (EDNN). I am using EDNN to solve multi-physics problems in solid mechanics, such as coupled fracture, heat conduction, and wave propagation. My goal is to combine the strengths of physics-based modeling and machine learning to create accurate and efficient solvers for challenging engineering problems.
+My main goal is to develop a computationally efficient method for solving phase-field fracture problems, enabling us to tackle more realistic and practical challenges. To achieve this, I focus on space adaptivity and parallelizing the code, ensuring that we can accurately capture the details of the fracture process and solve large problems faster using high-performance computing.
 
-My research journey began in January 2019, when I joined the Computational Mechanics Lab as a Ph.D. scholar. My work focused on the phase field method for modeling fracture and performing topology optimization. I developed computationally efficient algorithms by introducing mesh adaptivity and automatic time stepping, allowing us to solve large and realistic problems faster and more accurately. I also explored parallel computing techniques to scale up these simulations on high-performance computing systems.
+Beyond fracture mechanics, I also work on th
+e topology optimization of large-scale practical problems. This involves finding the best material distribution within a design space for optimal performance. Currently, I am working on implementing phase field methods for large-scale topology optimization problems, aiming to create efficient solutions for real-world applications.
 
-Later, I extended my research to large-scale topology optimization, aiming to find the best material layouts for structures while considering fracture, manufacturing constraints, and performance. This work helped in developing practical tools for designing optimized components for real-world applications.
-
-Outside the lab, I love to spend time drawing and simply sitting in peace. These quiet moments help me recharge and bring clarity to my thoughts, often inspiring fresh ideas in both life and research.
+In addition to my research, I am the co-founder of EigenPlus, a platform dedicated to sharing the knowledge and practical skills I have gained throughout my career. One of my passions is helping others by imparting what I have learned, and I firmly believe in Steve Jobs’s quote: “The only way to do great work is to love what you do.” When you love what you do, you put your heart and soul into it, resulting in outstanding work. Through EigenPlus, I strive to inspire others to achieve greatness by loving what they do.
 
 
