@@ -27,8 +27,8 @@ figure {
 body {
   font: $base-font-weight #{$small-font-size}/#{$small-line-height}
     $base-font-family;
-  color: $text-color;
-  background-color: $background-color;
+  color: var(--text-color);
+  background-color: var(--background-color);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -152,7 +152,7 @@ h6 {
   * Links
   */
 a {
-  color: $brand-color;
+  color: var(--brand-color);
   text-decoration: none;
 
   &:hover {
@@ -164,8 +164,8 @@ a {
   * Blockquotes
   */
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
+  color: var(--blockquote-color);
+  border-left: 4px solid var(--blockquote-border);
   padding-left: $spacing-unit / 2;
   @include relative-font-size(1);
   letter-spacing: -1px;
@@ -185,9 +185,9 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.9);
-  border: 1px solid darken($grey-color-light, 3%);
+  border: 1px solid var(--border-color);
   border-radius: 3px;
-  background-color: lighten($grey-color-light, 3%);
+  background-color: var(--code-bg);
 }
 
 code {
@@ -262,12 +262,12 @@ table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
-  color: lighten($text-color, 18%);
+  color: var(--text-color);
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
+  border: 1px solid var(--table-border);
   tr {
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
+      background-color: var(--table-row-bg);
     }
   }
   th,
@@ -275,12 +275,12 @@ table {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
   }
   th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    background-color: var(--table-header-bg);
+    border: 1px solid var(--table-border);
+    border-bottom-color: var(--table-border);
   }
   td {
-    border: 1px solid $grey-color-light;
+    border: 1px solid var(--table-border);
   }
 }
 

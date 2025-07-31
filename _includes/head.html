@@ -6,6 +6,15 @@
   {%- seo title=false -%}
   <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css" />
   <link rel="shortcut icon" type="image/x-icon" href="/{{ site.favicon }}?" />
+  
+  <!-- Theme initialization script -->
+  <script>
+    // Set theme before page loads to prevent flash
+    (function() {
+      const theme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
   <!-- <link rel="stylesheet" href="{{ site.url }}/assets/css/mariana.css" /> -->
   <!-- <script src="{{ site.url }}/assets/js/two.min.js"></script> -->
 

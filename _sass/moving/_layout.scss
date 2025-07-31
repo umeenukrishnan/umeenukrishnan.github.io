@@ -2,8 +2,8 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
+  border-top: 5px solid var(--grey-color-dark);
+  border-bottom: 1px solid var(--border-color);
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
 
@@ -15,8 +15,8 @@
   position: absolute;
   top: 9px;
   right: $spacing-unit / 2;
-  background-color: $background-color;
-  border: 1px solid $grey-color-light;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
   border-radius: 5px;
   text-align: right;
 
@@ -33,7 +33,7 @@
     text-align: center;
 
     > svg path {
-      fill: $grey-color-dark;
+      fill: var(--grey-color-dark);
     }
   }
 
@@ -57,7 +57,7 @@
   }
 
   .page-link {
-    color: $text-color;
+    color: var(--text-color);
     line-height: $base-line-height;
     display: block;
     padding: 5px 10px;
@@ -215,11 +215,11 @@
 }
 
 .black-link {
-  color: $text-color;
+  color: var(--text-color);
   text-decoration: none;
 
   &:hover {
-    color: $text-color;
+    color: var(--text-color);
     text-decoration: underline;
   }
 }
@@ -316,7 +316,7 @@
 
     .about-avatar {
       padding: 1px;
-      border: 1px solid $grey-color-light;
+      border: 1px solid var(--border-color);
       width: 10rem;
       height: 10rem;
       margin: 0 2rem 0 0;

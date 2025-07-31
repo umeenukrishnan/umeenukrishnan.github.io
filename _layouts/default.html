@@ -5,11 +5,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button id="theme-toggle" aria-label="Toggle theme">
+            <i id="theme-icon" class="fas fa-moon" title="Switch to Dark Mode"></i>
+        </button>
+    </div>
+    
     <main class="page-content" aria-label="Content">
         <div class="wrapper">
             {{ content }}
         </div>
     </main>
     {%- include footer.html -%}
+    
+    <!-- Theme Switcher JavaScript -->
+    <script src="{{ site.url }}/assets/js/theme-switcher.js"></script>
 </body>
 </html>
