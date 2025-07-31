@@ -1,0 +1,232 @@
+/* Theme Override - This file takes precedence over remote theme */
+/* CSS Custom Properties for Theme Colors */
+:root {
+  /* Light theme (default) */
+  --text-color: #111;
+  --background-color: #fdfdfd;
+  --brand-color: #2a7ae2;
+  --grey-color: #828282;
+  --grey-color-light: #e5e5e5;
+  --grey-color-dark: #515151;
+  --orange-color: #f66a0a;
+  --border-color: #e5e5e5;
+  --code-bg: #f4f4f4;
+  --blockquote-color: #828282;
+  --blockquote-border: #e5e5e5;
+  --table-border: #e5e5e5;
+  --table-header-bg: #f4f4f4;
+  --table-row-bg: #fafafa;
+}
+
+[data-theme="dark"] {
+  /* Dark theme */
+  --text-color: #e5e5e5;
+  --background-color: #1a1a1a;
+  --brand-color: #4a9eff;
+  --grey-color: #a0a0a0;
+  --grey-color-light: #404040;
+  --grey-color-dark: #d0d0d0;
+  --orange-color: #ff8c42;
+  --border-color: #404040;
+  --code-bg: #2a2a2a;
+  --blockquote-color: #a0a0a0;
+  --blockquote-border: #404040;
+  --table-border: #404040;
+  --table-header-bg: #2a2a2a;
+  --table-row-bg: #222222;
+}
+
+/* Theme Switcher Styles */
+.theme-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.theme-switcher #theme-toggle {
+  background: var(--background-color);
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.theme-switcher #theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.theme-switcher #theme-icon {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+/* Override all theme-dependent styles */
+body {
+  color: var(--text-color) !important;
+  background-color: var(--background-color) !important;
+}
+
+/* Links */
+a {
+  color: var(--brand-color) !important;
+}
+
+a:hover {
+  color: var(--brand-color) !important;
+}
+
+/* Navigation */
+.site-nav {
+  background-color: var(--background-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+.site-nav .page-link {
+  color: var(--text-color) !important;
+}
+
+.site-nav .page-link:hover {
+  background-color: var(--code-bg) !important;
+}
+
+/* Header and footer */
+.site-header {
+  background-color: var(--background-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+.site-footer {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Text elements */
+.post-meta,
+.post-year,
+.home-sub-heading,
+.post-back,
+.about-description {
+  color: var(--grey-color) !important;
+}
+
+.home-heading {
+  color: var(--text-color) !important;
+}
+
+/* Code blocks */
+pre,
+code {
+  background-color: var(--code-bg) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Blockquotes */
+blockquote {
+  color: var(--blockquote-color) !important;
+  border-left-color: var(--blockquote-border) !important;
+}
+
+/* Tables */
+table {
+  color: var(--text-color) !important;
+  border-color: var(--table-border) !important;
+}
+
+table th {
+  background-color: var(--table-header-bg) !important;
+  border-color: var(--table-border) !important;
+}
+
+table tr:nth-child(even) {
+  background-color: var(--table-row-bg) !important;
+}
+
+table td {
+  border-color: var(--table-border) !important;
+}
+
+/* Images */
+img {
+  background-color: var(--code-bg) !important;
+}
+
+/* Social media links */
+.social-media-list a {
+  color: var(--text-color) !important;
+}
+
+.social-media-list a:hover {
+  color: var(--brand-color) !important;
+}
+
+/* Navigation links */
+nav a {
+  color: var(--text-color) !important;
+}
+
+nav a:hover {
+  color: var(--brand-color) !important;
+}
+
+/* Post content */
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6,
+.post-content p,
+.post-content ul,
+.post-content ol,
+.post-content li {
+  color: var(--text-color) !important;
+}
+
+/* About page */
+.about-page .about-your-name {
+  color: var(--text-color) !important;
+}
+
+.about-avatar {
+  border-color: var(--border-color) !important;
+}
+
+/* Black links (for navigation) */
+.black-link {
+  color: var(--text-color) !important;
+}
+
+.black-link:hover {
+  color: var(--text-color) !important;
+}
+
+/* Responsive theme switcher */
+@media (max-width: 768px) {
+  .theme-switcher {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .theme-switcher #theme-toggle {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .theme-switcher #theme-icon {
+    font-size: 1rem;
+  }
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+} 
