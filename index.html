@@ -29,29 +29,11 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
         </p>
 
         <div class="hero-cta">
-          <a href="/#publications" class="btn btn-primary">
-            <i class="fa-solid fa-book-open"></i> View Publications
+          <a href="#about" class="btn btn-primary">
+            <i class="fa-solid fa-user"></i> About Me
           </a>
-          <a href="/#contact" class="btn btn-outline">
+          <a href="#contact" class="btn btn-outline">
             <i class="fa-solid fa-paper-plane"></i> Get in Touch
-          </a>
-        </div>
-
-        <div class="hero-social">
-          <a href="https://scholar.google.com/citations?user={{ site.social.scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar">
-            <i class="fa-solid fa-graduation-cap"></i>
-          </a>
-          <a href="https://www.researchgate.net/profile/{{ site.social.researchgate }}" target="_blank" rel="noopener" aria-label="ResearchGate">
-            <i class="fa-brands fa-researchgate"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-          <a href="https://www.instagram.com/{{ site.social.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="mailto:{{ site.email }}" aria-label="Email">
-            <i class="fa-solid fa-envelope"></i>
           </a>
         </div>
       </div>
@@ -117,19 +99,16 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
           I am currently working as a <strong>Postdoctoral Research Fellow at Johns Hopkins University</strong>,
           where my research focuses on <strong>Evolutionary Deep Neural Networks (EDNN)</strong>. I use EDNN
           to solve multi-physics problems in solid mechanics — coupled fracture, heat conduction, and wave
-          propagation — combining the strengths of physics-based modeling and machine learning to create
-          accurate and efficient solvers.
+          propagation — combining the strengths of physics-based modeling and machine learning.
         </p>
         <p class="reveal reveal-d2">
-          My research journey began in January 2019, when I joined the Computational Mechanics Lab as a
-          Ph.D. scholar at <strong>IIT Roorkee</strong>. My work focused on the phase field method for
-          modeling fracture and topology optimization. I developed computationally efficient algorithms
-          by introducing mesh adaptivity and automatic time stepping, later scaling these on high-performance
-          computing systems using parallel computing techniques.
+          My research journey began in January 2019 at the Computational Mechanics Lab, <strong>IIT Roorkee</strong>,
+          where I worked on phase field fracture and topology optimization — developing computationally
+          efficient algorithms with mesh adaptivity, automatic time stepping, and parallel HPC techniques.
         </p>
         <p class="reveal reveal-d3">
-          Outside the lab, I love to spend time drawing and simply sitting in peace. These quiet moments
-          help me recharge and bring clarity — often inspiring fresh ideas in both life and research.
+          Outside the lab, I love drawing, reading, and simply sitting in peace. These quiet moments
+          help me recharge and often inspire fresh ideas in both life and research.
         </p>
 
         <div class="research-tags reveal reveal-d4">
@@ -143,8 +122,54 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
             <span class="tag">Mesh Adaptivity</span>
             <span class="tag">High-Performance Computing</span>
             <span class="tag">Metamaterials</span>
-            <span class="tag">3D Printing</span>
-            <span class="tag">FEniCS · PETSc · Python</span>
+          </div>
+        </div>
+
+        <div class="reveal reveal-d4">
+          <h3 class="sub-hd" style="margin-top:2rem">Find Me Online</h3>
+          <div class="profile-links">
+            <a class="profile-link" href="https://scholar.google.com/citations?user={{ site.social.scholar }}" target="_blank" rel="noopener">
+              <div class="pl-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="pl-text">
+                <span class="pl-label">Google Scholar</span>
+                <span class="pl-name">Research Papers</span>
+              </div>
+            </a>
+            <a class="profile-link" href="https://www.researchgate.net/profile/{{ site.social.researchgate }}" target="_blank" rel="noopener">
+              <div class="pl-icon"><i class="fa-brands fa-researchgate"></i></div>
+              <div class="pl-text">
+                <span class="pl-label">ResearchGate</span>
+                <span class="pl-name">Meenu Krishnan</span>
+              </div>
+            </a>
+            <a class="profile-link" href="https://www.linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noopener">
+              <div class="pl-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+              <div class="pl-text">
+                <span class="pl-label">LinkedIn</span>
+                <span class="pl-name">iitrmeenu</span>
+              </div>
+            </a>
+            <a class="profile-link" href="https://www.instagram.com/{{ site.social.instagram }}" target="_blank" rel="noopener">
+              <div class="pl-icon"><i class="fa-brands fa-instagram"></i></div>
+              <div class="pl-text">
+                <span class="pl-label">Instagram</span>
+                <span class="pl-name">univ_tusk_mind</span>
+              </div>
+            </a>
+            <a class="profile-link" href="https://www.youtube.com/{{ site.social.youtube }}" target="_blank" rel="noopener">
+              <div class="pl-icon"><i class="fa-brands fa-youtube"></i></div>
+              <div class="pl-text">
+                <span class="pl-label">YouTube</span>
+                <span class="pl-name">Research Videos</span>
+              </div>
+            </a>
+            <a class="profile-link" href="mailto:{{ site.email }}">
+              <div class="pl-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="pl-text">
+                <span class="pl-label">Email</span>
+                <span class="pl-name">{{ site.email }}</span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -152,44 +177,8 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════ PUBLICATIONS -->
-<section class="section" id="publications">
-  <div class="container">
-    <div class="section-hd reveal">
-      <div class="label"><i class="fa-solid fa-book-open"></i> Publications</div>
-      <h2>Research Output</h2>
-      <p>Peer-reviewed articles, conference papers, and preprints across computational mechanics and machine learning.</p>
-    </div>
-
-    <div class="pub-list">
-      {% for pub in site.data.publications %}
-      <div class="pub-card reveal">
-        <div class="p-year">
-          {{ pub.year }}
-          {% if pub.note %}<span class="badge" style="margin-left:0.5rem;font-size:0.7rem">{{ pub.note }}</span>{% endif %}
-        </div>
-        <div class="p-title">{{ pub.title }}</div>
-        <div class="p-authors">{{ pub.authors }}</div>
-        <div class="p-journal">{{ pub.journal }}</div>
-        <div class="p-links">
-          {% if pub.doi %}<a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener"><i class="fa-solid fa-link"></i> DOI</a>{% endif %}
-          {% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a>{% endif %}
-          {% if pub.arxiv %}<a href="https://arxiv.org/abs/{{ pub.arxiv }}" target="_blank" rel="noopener"><i class="fa-solid fa-scroll"></i> arXiv</a>{% endif %}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-
-    <div class="view-all reveal">
-      <a href="https://scholar.google.com/citations?user={{ site.social.scholar }}" target="_blank" rel="noopener" class="btn btn-outline">
-        <i class="fa-solid fa-graduation-cap"></i> Full List on Google Scholar
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- ════════════════════════════════════════════════════ PROJECTS -->
-<section class="section" id="projects" style="background: var(--bg-2);">
+<section class="section" id="projects">
   <div class="container">
     <div class="section-hd reveal">
       <div class="label"><i class="fa-solid fa-flask"></i> Projects</div>
@@ -219,7 +208,7 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
         <div class="pc-head">
           <div class="pc-icon">🔩</div>
           <h3>Topology Optimization</h3>
-          <p>Mathematical approach to find optimal material layouts under fracture constraints and manufacturing considerations. Targets lightweight, high-strength structures for real-world applications.</p>
+          <p>Mathematical approach to find optimal material layouts under fracture constraints and manufacturing considerations. Targets lightweight, high-strength structures.</p>
         </div>
         <div class="pc-body">
           <div class="tags">
@@ -235,7 +224,7 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
         <div class="pc-head">
           <div class="pc-icon">🧠</div>
           <h3>Evolutionary Deep Neural Networks</h3>
-          <p>Using EDNN to solve multi-physics problems — coupled fracture, heat conduction, and wave propagation — bridging physics-based modeling and machine learning for efficient solvers.</p>
+          <p>Using EDNN to solve multi-physics problems — coupled fracture, heat conduction, and wave propagation — bridging physics-based modeling and machine learning.</p>
         </div>
         <div class="pc-body">
           <div class="tags">
@@ -266,7 +255,7 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
         <div class="pc-head">
           <div class="pc-icon">⚡</div>
           <h3>Large-Scale HPC Simulations</h3>
-          <p>Development of parallel algorithms capable of handling massive computational loads in aerospace, automotive, and civil infrastructure domains using distributed computing.</p>
+          <p>Parallel algorithms for massive computational loads in aerospace, automotive, and civil infrastructure using distributed computing across HPC clusters.</p>
         </div>
         <div class="pc-body">
           <div class="tags">
@@ -282,7 +271,7 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
         <div class="pc-head">
           <div class="pc-icon">🖨️</div>
           <h3>Additive Manufacturing</h3>
-          <p>Integrating topology optimization with 3D printing to produce optimized, complex geometries. Enables new material composites and custom-designed structural components.</p>
+          <p>Integrating topology optimization with 3D printing to produce optimized, complex geometries using new material composites and custom-designed structural components.</p>
         </div>
         <div class="pc-body">
           <div class="tags">
@@ -299,7 +288,7 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
 </section>
 
 <!-- ══════════════════════════════════════════════════════════ BLOG -->
-<section class="section" id="blog">
+<section class="section" id="blog" style="background: var(--bg-2);">
   <div class="container">
     <div class="section-hd reveal">
       <div class="label"><i class="fa-solid fa-pen-nib"></i> Blog</div>
@@ -336,7 +325,7 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
 </section>
 
 <!-- ══════════════════════════════════════════════════════ HOBBIES -->
-<section class="section" id="hobbies" style="background: var(--bg-2);">
+<section class="section" id="hobbies">
   <div class="container">
     <div class="section-hd reveal">
       <div class="label"><i class="fa-solid fa-heart"></i> Hobbies</div>
@@ -367,7 +356,7 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
       <div class="hobby-card reveal reveal-d3">
         <span class="h-icon">💻</span>
         <h3>Creative Coding</h3>
-        <p>Building small tools, visualizations, and experiments that sit at the edge of art and engineering.</p>
+        <p>Building small tools, visualizations, and experiments at the edge of art and engineering.</p>
       </div>
 
       <div class="hobby-card reveal reveal-d1">
@@ -387,7 +376,7 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
 </section>
 
 <!-- ══════════════════════════════════════════════════════ TRAVEL -->
-<section class="section" id="travel">
+<section class="section" id="travel" style="background: var(--bg-2);">
   <div class="container">
     <div class="section-hd reveal">
       <div class="label"><i class="fa-solid fa-earth-americas"></i> Travel</div>
@@ -431,7 +420,7 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
 </section>
 
 <!-- ══════════════════════════════════════════════════════ CONTACT -->
-<section class="section" id="contact" style="background: var(--bg-2);">
+<section class="section" id="contact">
   <div class="container">
     <div class="section-hd reveal">
       <div class="label"><i class="fa-solid fa-paper-plane"></i> Contact</div>
@@ -466,7 +455,7 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
             <div class="c-icon"><i class="fa-solid fa-graduation-cap"></i></div>
             <div class="c-meta">
               <label>Google Scholar</label>
-              <a href="https://scholar.google.com/citations?user={{ site.social.scholar }}" target="_blank" rel="noopener">View Profile</a>
+              <a href="https://scholar.google.com/citations?user={{ site.social.scholar }}" target="_blank" rel="noopener">View Profile →</a>
             </div>
           </div>
 
@@ -481,23 +470,23 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
       </div>
 
       <div class="contact-form reveal reveal-d2">
-        <!-- Replace YOUR_FORM_ID with your Formspree form ID at formspree.io -->
+        <!-- Sign up at formspree.io and replace YOUR_FORM_ID -->
         <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <div class="fg">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            <label for="cf-name">Your Name</label>
+            <input type="text" id="cf-name" name="name" placeholder="Jane Smith" required />
           </div>
           <div class="fg">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+            <label for="cf-email">Email Address</label>
+            <input type="email" id="cf-email" name="email" placeholder="jane@example.com" required />
           </div>
           <div class="fg">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Research collaboration" />
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="Research collaboration" />
           </div>
           <div class="fg">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell me about your idea or question…" required></textarea>
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" placeholder="Tell me about your idea or question…" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
             <i class="fa-solid fa-paper-plane"></i> Send Message
