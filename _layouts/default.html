@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   {% include head.html %}
   <body>
-    {% include nav.html %}
+    <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme">
+      <i class="fa-solid fa-moon" id="theme-icon"></i>
+    </button>
     <main>{{ content }}</main>
     {% include footer.html %}
     <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>

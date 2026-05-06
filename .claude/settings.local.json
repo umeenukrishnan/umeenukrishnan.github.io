@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/ukrishn4/post_doc/umeenukrishnan.github.io/.claude/worktrees/mystifying-bhaskara-3ab1b6 status --short)",
+      "Bash(git -C /Users/ukrishn4/post_doc/umeenukrishnan.github.io/.claude/worktrees/mystifying-bhaskara-3ab1b6 branch)",
+      "Bash(git -C /Users/ukrishn4/post_doc/umeenukrishnan.github.io/.claude/worktrees/mystifying-bhaskara-3ab1b6 remote -v)",
+      "Bash(git -C /Users/ukrishn4/post_doc/umeenukrishnan.github.io/.claude/worktrees/mystifying-bhaskara-3ab1b6 add _config.yml _includes/head.html _includes/footer.html _includes/nav.html _layouts/default.html _layouts/post.html assets/css/main.scss assets/js/theme.js assets/js/main.js pages/blog.md _data/publications.yml index.html)",
+      "Bash(git -C /Users/ukrishn4/post_doc/umeenukrishnan.github.io merge claude/mystifying-bhaskara-3ab1b6)",
+      "Bash(git -C /Users/ukrishn4/post_doc/umeenukrishnan.github.io push origin main)",
+      "Bash(git -C /Users/ukrishn4/post_doc/umeenukrishnan.github.io/.claude/worktrees/mystifying-bhaskara-3ab1b6 add _includes/nav.html assets/css/main.scss index.html)",
+      "Bash(git -C /Users/ukrishn4/post_doc/umeenukrishnan.github.io/.claude/worktrees/mystifying-bhaskara-3ab1b6 commit -m ' *)",
+      "Bash(ls ~/Desktop/meenu.jpg 2>/dev/null && echo \"found\" || echo \"not found\")",
+      "Bash(cp ~/Desktop/meenu.jpg /Users/ukrishn4/post_doc/umeenukrishnan.github.io/assets/images/meenu.JPG && echo \"copied\")",
+      "WebFetch(domain:www.katianakontolati.com)",
+      "Bash(git -C /Users/ukrishn4/post_doc/umeenukrishnan.github.io/.claude/worktrees/mystifying-bhaskara-3ab1b6 add -A)"
+    ]
+  }
+}
