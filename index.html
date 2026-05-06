@@ -1,0 +1,510 @@
+---
+layout: default
+title: Home
+description: "Postdoctoral Research Fellow at Johns Hopkins University. Researcher in Computational Mechanics, Machine Learning, and Structural Optimization."
+---
+
+<!-- ═══════════════════════════════════════════════════════════ HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-dots"></div>
+
+  <div class="container">
+    <div class="hero-layout">
+
+      <div class="hero-content">
+        <span class="hero-label">Postdoctoral Research Fellow · Johns Hopkins University</span>
+
+        <h1>
+          Hi, I'm<br>
+          <span class="g">Meenu Krishnan</span>
+        </h1>
+
+        <p class="hero-sub">
+          I work at the intersection of <strong style="color:var(--text)">Physics-based Modeling</strong>
+          and <strong style="color:var(--text)">Machine Learning</strong> to solve hard
+          problems in solid mechanics.<br>
+          Currently building:
+          <span id="typed" style="color:var(--accent);font-family:var(--font-m);font-size:0.95em"></span><span style="color:var(--accent);animation:blink-cursor 1s step-end infinite">|</span>
+        </p>
+
+        <div class="hero-cta">
+          <a href="/#publications" class="btn btn-primary">
+            <i class="fa-solid fa-book-open"></i> View Publications
+          </a>
+          <a href="/#contact" class="btn btn-outline">
+            <i class="fa-solid fa-paper-plane"></i> Get in Touch
+          </a>
+        </div>
+
+        <div class="hero-social">
+          <a href="https://scholar.google.com/citations?user={{ site.social.scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </a>
+          <a href="https://www.researchgate.net/profile/{{ site.social.researchgate }}" target="_blank" rel="noopener" aria-label="ResearchGate">
+            <i class="fa-brands fa-researchgate"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/{{ site.social.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="mailto:{{ site.email }}" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <div class="photo-ring">
+          <img src="{{ site.avatar | relative_url }}" alt="Meenu Krishnan" />
+        </div>
+        <div class="photo-badge">
+          📍 Baltimore, MD &nbsp;·&nbsp; <strong>Johns Hopkins</strong>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>scroll</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+</section>
+
+<style>
+@keyframes blink-cursor { 50% { opacity: 0; } }
+</style>
+
+<!-- ══════════════════════════════════════════════════════════ ABOUT -->
+<section class="section" id="about" style="background: var(--bg-2);">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="label"><i class="fa-solid fa-user"></i> About Me</div>
+      <h2>The Person Behind the Research</h2>
+      <p>Passionate researcher, creative thinker, and lifelong learner.</p>
+    </div>
+
+    <div class="about-layout">
+      <aside class="about-aside reveal">
+        <div class="img-wrap">
+          <img src="{{ site.avatar | relative_url }}" alt="Meenu Krishnan" />
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <div class="n">6+</div>
+            <div class="l">Years Research</div>
+          </div>
+          <div class="stat">
+            <div class="n">10+</div>
+            <div class="l">Publications</div>
+          </div>
+          <div class="stat">
+            <div class="n">2</div>
+            <div class="l">Countries</div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="about-body">
+        <p class="reveal">
+          I'm <strong>U. Meenu Krishnan</strong>, a researcher who firmly believes that you should
+          either love what you do, or change it — because passion fuels purpose, and purpose drives excellence.
+        </p>
+        <p class="reveal reveal-d1">
+          I am currently working as a <strong>Postdoctoral Research Fellow at Johns Hopkins University</strong>,
+          where my research focuses on <strong>Evolutionary Deep Neural Networks (EDNN)</strong>. I use EDNN
+          to solve multi-physics problems in solid mechanics — coupled fracture, heat conduction, and wave
+          propagation — combining the strengths of physics-based modeling and machine learning to create
+          accurate and efficient solvers.
+        </p>
+        <p class="reveal reveal-d2">
+          My research journey began in January 2019, when I joined the Computational Mechanics Lab as a
+          Ph.D. scholar at <strong>IIT Roorkee</strong>. My work focused on the phase field method for
+          modeling fracture and topology optimization. I developed computationally efficient algorithms
+          by introducing mesh adaptivity and automatic time stepping, later scaling these on high-performance
+          computing systems using parallel computing techniques.
+        </p>
+        <p class="reveal reveal-d3">
+          Outside the lab, I love to spend time drawing and simply sitting in peace. These quiet moments
+          help me recharge and bring clarity — often inspiring fresh ideas in both life and research.
+        </p>
+
+        <div class="research-tags reveal reveal-d4">
+          <h3 class="sub-hd">Research Areas</h3>
+          <div class="tags">
+            <span class="tag">Computational Mechanics</span>
+            <span class="tag">Phase Field Fracture</span>
+            <span class="tag">Topology Optimization</span>
+            <span class="tag">Evolutionary Deep Neural Networks</span>
+            <span class="tag">Multi-physics Simulation</span>
+            <span class="tag">Mesh Adaptivity</span>
+            <span class="tag">High-Performance Computing</span>
+            <span class="tag">Metamaterials</span>
+            <span class="tag">3D Printing</span>
+            <span class="tag">FEniCS · PETSc · Python</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════ PUBLICATIONS -->
+<section class="section" id="publications">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="label"><i class="fa-solid fa-book-open"></i> Publications</div>
+      <h2>Research Output</h2>
+      <p>Peer-reviewed articles, conference papers, and preprints across computational mechanics and machine learning.</p>
+    </div>
+
+    <div class="pub-list">
+      {% for pub in site.data.publications %}
+      <div class="pub-card reveal">
+        <div class="p-year">
+          {{ pub.year }}
+          {% if pub.note %}<span class="badge" style="margin-left:0.5rem;font-size:0.7rem">{{ pub.note }}</span>{% endif %}
+        </div>
+        <div class="p-title">{{ pub.title }}</div>
+        <div class="p-authors">{{ pub.authors }}</div>
+        <div class="p-journal">{{ pub.journal }}</div>
+        <div class="p-links">
+          {% if pub.doi %}<a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener"><i class="fa-solid fa-link"></i> DOI</a>{% endif %}
+          {% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a>{% endif %}
+          {% if pub.arxiv %}<a href="https://arxiv.org/abs/{{ pub.arxiv }}" target="_blank" rel="noopener"><i class="fa-solid fa-scroll"></i> arXiv</a>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="view-all reveal">
+      <a href="https://scholar.google.com/citations?user={{ site.social.scholar }}" target="_blank" rel="noopener" class="btn btn-outline">
+        <i class="fa-solid fa-graduation-cap"></i> Full List on Google Scholar
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════ PROJECTS -->
+<section class="section" id="projects" style="background: var(--bg-2);">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="label"><i class="fa-solid fa-flask"></i> Projects</div>
+      <h2>Research Projects</h2>
+      <p>Key areas of investigation spanning computational modeling, optimization, and data-driven methods.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="pc-head">
+          <div class="pc-icon">🧱</div>
+          <h3>Phase Field Fracture</h3>
+          <p>A powerful framework for simulating crack propagation in materials without explicit crack tracking algorithms. Enhanced with mesh adaptivity and auto time-stepping.</p>
+        </div>
+        <div class="pc-body">
+          <div class="tags">
+            <span class="tag">FEniCS</span>
+            <span class="tag">PETSc</span>
+            <span class="tag">Python</span>
+            <span class="tag">HPC</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-d1">
+        <div class="pc-head">
+          <div class="pc-icon">🔩</div>
+          <h3>Topology Optimization</h3>
+          <p>Mathematical approach to find optimal material layouts under fracture constraints and manufacturing considerations. Targets lightweight, high-strength structures for real-world applications.</p>
+        </div>
+        <div class="pc-body">
+          <div class="tags">
+            <span class="tag">SIMP</span>
+            <span class="tag">Phase Field</span>
+            <span class="tag">3D Printing</span>
+            <span class="tag">MPI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-d2">
+        <div class="pc-head">
+          <div class="pc-icon">🧠</div>
+          <h3>Evolutionary Deep Neural Networks</h3>
+          <p>Using EDNN to solve multi-physics problems — coupled fracture, heat conduction, and wave propagation — bridging physics-based modeling and machine learning for efficient solvers.</p>
+        </div>
+        <div class="pc-body">
+          <div class="tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">EDNN</span>
+            <span class="tag">Multi-physics</span>
+            <span class="tag">PINN</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-d3">
+        <div class="pc-head">
+          <div class="pc-icon">⬡</div>
+          <h3>Metamaterials Design</h3>
+          <p>Engineered materials with properties not found in nature, designed via topology optimization to achieve specific mechanical, acoustic, and photonic responses.</p>
+        </div>
+        <div class="pc-body">
+          <div class="tags">
+            <span class="tag">Topology Opt.</span>
+            <span class="tag">Homogenization</span>
+            <span class="tag">3D Printing</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-d1">
+        <div class="pc-head">
+          <div class="pc-icon">⚡</div>
+          <h3>Large-Scale HPC Simulations</h3>
+          <p>Development of parallel algorithms capable of handling massive computational loads in aerospace, automotive, and civil infrastructure domains using distributed computing.</p>
+        </div>
+        <div class="pc-body">
+          <div class="tags">
+            <span class="tag">MPI</span>
+            <span class="tag">PETSc</span>
+            <span class="tag">Scalability</span>
+            <span class="tag">Linux HPC</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-d2">
+        <div class="pc-head">
+          <div class="pc-icon">🖨️</div>
+          <h3>Additive Manufacturing</h3>
+          <p>Integrating topology optimization with 3D printing to produce optimized, complex geometries. Enables new material composites and custom-designed structural components.</p>
+        </div>
+        <div class="pc-body">
+          <div class="tags">
+            <span class="tag">FDM</span>
+            <span class="tag">SLA</span>
+            <span class="tag">CAD</span>
+            <span class="tag">Optimization</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ BLOG -->
+<section class="section" id="blog">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="label"><i class="fa-solid fa-pen-nib"></i> Blog</div>
+      <h2>Thoughts & Tutorials</h2>
+      <p>Notes on computational mechanics, research tools, and life in academia.</p>
+    </div>
+
+    <div class="blog-grid">
+      {% for post in site.posts limit:6 %}
+      <article class="blog-card reveal">
+        <div class="bc-meta">
+          <span class="cat">{{ post.categories | first | default: "misc" }}</span>
+          <span class="date">{{ post.date | date: "%b %Y" }}</span>
+        </div>
+        <div class="bc-title">
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+        </div>
+        {% if post.excerpt %}
+        <div class="bc-excerpt">{{ post.excerpt | strip_html | truncatewords: 28 }}</div>
+        {% endif %}
+        <div class="bc-foot">
+          <a href="{{ post.url | relative_url }}">Read more <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="view-all reveal">
+      <a href="/blog" class="btn btn-outline">
+        <i class="fa-solid fa-rss"></i> All Posts
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ HOBBIES -->
+<section class="section" id="hobbies" style="background: var(--bg-2);">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="label"><i class="fa-solid fa-heart"></i> Hobbies</div>
+      <h2>Beyond the Lab</h2>
+      <p>The things that keep me grounded, inspired, and human.</p>
+    </div>
+
+    <div class="hobbies-grid">
+
+      <div class="hobby-card reveal">
+        <span class="h-icon">🎨</span>
+        <h3>Drawing & Sketching</h3>
+        <p>Finding peace and clarity through pencil and paper. Art is my way of thinking without words.</p>
+      </div>
+
+      <div class="hobby-card reveal reveal-d1">
+        <span class="h-icon">📚</span>
+        <h3>Reading</h3>
+        <p>From philosophy to science fiction — books that challenge how I see the world and my place in it.</p>
+      </div>
+
+      <div class="hobby-card reveal reveal-d2">
+        <span class="h-icon">🧘</span>
+        <h3>Meditation</h3>
+        <p>Daily stillness that sharpens focus and brings balance to the intensity of research life.</p>
+      </div>
+
+      <div class="hobby-card reveal reveal-d3">
+        <span class="h-icon">💻</span>
+        <h3>Creative Coding</h3>
+        <p>Building small tools, visualizations, and experiments that sit at the edge of art and engineering.</p>
+      </div>
+
+      <div class="hobby-card reveal reveal-d1">
+        <span class="h-icon">🌿</span>
+        <h3>Nature Walks</h3>
+        <p>Long walks outdoors reset the mind. Some of my best ideas have arrived on a quiet trail.</p>
+      </div>
+
+      <div class="hobby-card reveal reveal-d2">
+        <span class="h-icon">✈️</span>
+        <h3>Travelling</h3>
+        <p>Collecting experiences across cities and cultures. Every new place rewires how I think.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ TRAVEL -->
+<section class="section" id="travel">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="label"><i class="fa-solid fa-earth-americas"></i> Travel</div>
+      <h2>Places I've Been</h2>
+      <p>Research conferences, fieldwork, and adventures that shaped my worldview.</p>
+    </div>
+
+    <div class="travel-grid">
+
+      <div class="travel-card reveal">
+        <img src="{{ '/assets/images/travel1.jpg' | relative_url }}" alt="Travel photo 1" loading="lazy" />
+        <div class="t-overlay">
+          <h3>India</h3>
+          <p>Home · IIT Roorkee</p>
+        </div>
+      </div>
+
+      <div class="travel-card reveal reveal-d1">
+        <img src="{{ '/assets/images/travel2.jpg' | relative_url }}" alt="Travel photo 2" loading="lazy" />
+        <div class="t-overlay">
+          <h3>United States</h3>
+          <p>Baltimore, MD · Johns Hopkins</p>
+        </div>
+      </div>
+
+      <div class="travel-card reveal reveal-d2">
+        <img src="{{ '/assets/images/travel3.jpg' | relative_url }}" alt="Travel photo 3" loading="lazy" />
+        <div class="t-overlay">
+          <h3>Conferences</h3>
+          <p>Research meetings worldwide</p>
+        </div>
+      </div>
+
+      <div class="travel-placeholder reveal reveal-d3">
+        <i class="fa-solid fa-map-pin"></i>
+        <span>More adventures coming…</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ CONTACT -->
+<section class="section" id="contact" style="background: var(--bg-2);">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="label"><i class="fa-solid fa-paper-plane"></i> Contact</div>
+      <h2>Get In Touch</h2>
+      <p>Whether it's a collaboration, question, or just a hello — my inbox is open.</p>
+    </div>
+
+    <div class="contact-layout">
+
+      <div class="contact-info reveal">
+        <h3>Let's connect</h3>
+        <p>I'm always open to discussing research ideas, potential collaborations, or opportunities in computational mechanics and machine learning.</p>
+
+        <div class="c-items">
+          <div class="c-item">
+            <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="c-meta">
+              <label>Email</label>
+              <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+            </div>
+          </div>
+
+          <div class="c-item">
+            <div class="c-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <div class="c-meta">
+              <label>Institution</label>
+              <span>Johns Hopkins University, Baltimore MD</span>
+            </div>
+          </div>
+
+          <div class="c-item">
+            <div class="c-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="c-meta">
+              <label>Google Scholar</label>
+              <a href="https://scholar.google.com/citations?user={{ site.social.scholar }}" target="_blank" rel="noopener">View Profile</a>
+            </div>
+          </div>
+
+          <div class="c-item">
+            <div class="c-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="c-meta">
+              <label>LinkedIn</label>
+              <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noopener">linkedin.com/in/iitrmeenu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form reveal reveal-d2">
+        <!-- Replace YOUR_FORM_ID with your Formspree form ID at formspree.io -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="fg">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+          </div>
+          <div class="fg">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="fg">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Research collaboration" />
+          </div>
+          <div class="fg">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your idea or question…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>

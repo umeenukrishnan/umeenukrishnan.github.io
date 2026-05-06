@@ -1,86 +1,44 @@
-title: "Meenu Krishnan" # The title of the blog
-author: U Meenu Krishnan # Your name
-email: ukrishn4@jh.edu # your email shown in the footer
+title: "Meenu Krishnan"
+author: U. Meenu Krishnan
+email: ukrishn4@jh.edu
 
-url: "https://www.krishnanmeenu.com" # this is your site's root address.
+url: "https://www.krishnanmeenu.com"
 
-permalink: /:year/:month/:day/:title:output_ext
+description: >
+  Postdoctoral Research Fellow at Johns Hopkins University.
+  Researcher in Computational Mechanics, Machine Learning, and Structural Optimization.
 
-description: > # this means to ignore newlines until "show_excerpts:"
-  Researcher. Creative Coder. Blogger. Happy Soul
-favicon: "./favicon.ico" # set the favicon of the site
+favicon: "/favicon.ico"
+avatar: "/assets/images/meenu.JPG"
 
-show_excerpts: false # set to true to show excerpts on the homepage
+permalink: /:year/:month/:day/:title/
+show_excerpts: true
 
-# Moving date format
-# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
-moving:
-  avatar_url: "https://umeenukrishnan.github.io/assets/images/meenu.JPG" # avatar in about page
-  about_you: Research scientist, Indian Institute of Technology Roorkee # short description about you in about page
-  date_format: "%b %d" # date format of posts in home page
-  back_to: "Home" # In the post page, you have a back button above the title, you can custom the text by yourself.
-
-  # generate social links in about page.
-  social_links:
-    # github: umeenukrishnan
-    scholar: hjyZvdgAAAAJ
-    researchgate: Meenu_Krishnan
-    linkedin: iitrmeenu
-    instagram: univ_tusk_mind
-    youtube: channel/UCzFrF4BI7298HWKzcXCciAg
-    # rss: RSS
-    # dribbble:
-    # facebook:
-    # flickr:
-    # pinterest:
-    # youtube_channel:
-    # youtube_channel_name:
-    # telegram:
-    # googleplus:
-    # microdotblog:
-    # reddit:
-
-    # Mastodon instances
-    # mastodon:
-    # - username:
-    #   instance:
-    # - username:
-    #   instance:
+social:
+  scholar: hjyZvdgAAAAJ
+  researchgate: Meenu_Krishnan
+  linkedin: iitrmeenu
+  instagram: univ_tusk_mind
+  youtube: channel/UCzFrF4BI7298HWKzcXCciAg
 
 # Build settings
-remote_theme: iitrabhi/moving
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-github-metadata
 
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-#google_analytics: G-XXXXXXXXXX
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
-# Text under the icons in footer
-footer-text:
+sass:
+  sass_dir: _sass
+  style: compressed
 
-# JavaScript
-# head_scripts:
-#   - /assets/js/two.min.js
-
-# # https://jekyllrb.com/docs/collections/
-# collections:
-#   projects:
-#     output: true
-#   newsletters:
-#     output: true
-
-# # Compress CSS files
-# sass:
-#     style: compressed
-
-# highlighter: rouge
-# # gist:
-# #   noscript: false
-# kramdown:
-#   math_engine: mathjax
-#   syntax_highlighter: rouge
-
+exclude:
+  - .DS_Store
+  - "*.sublime-workspace"
+  - "*.sublime-project"
+  - README.md
+  - _plugins
