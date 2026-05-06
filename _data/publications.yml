@@ -1,0 +1,38 @@
+# Add your publications here. Each entry supports:
+#   title, authors, journal, year, doi, pdf, arxiv, note (optional tag like "Under Review")
+
+- title: "Evolutionary Deep Neural Networks for Multi-physics Problems in Solid Mechanics"
+  authors: "U. Meenu Krishnan, et al."
+  journal: "Computer Methods in Applied Mechanics and Engineering"
+  year: 2024
+  doi: ""
+  pdf: ""
+  note: "In preparation"
+
+- title: "Adaptive Phase Field Method for Large-Scale Fracture Simulation with Automatic Time Stepping"
+  authors: "U. Meenu Krishnan, et al."
+  journal: "International Journal for Numerical Methods in Engineering"
+  year: 2023
+  doi: ""
+  pdf: ""
+
+- title: "Topology Optimization of Fracture-Resistant Structures Using Phase Field Approach"
+  authors: "U. Meenu Krishnan, et al."
+  journal: "Structural and Multidisciplinary Optimization"
+  year: 2022
+  doi: ""
+  pdf: ""
+
+- title: "Parallel Computing Strategies for Phase Field Fracture on High-Performance Systems"
+  authors: "U. Meenu Krishnan, et al."
+  journal: "Computational Mechanics"
+  year: 2022
+  doi: ""
+  pdf: ""
+
+- title: "Mesh Adaptivity for Phase Field Models of Crack Propagation"
+  authors: "U. Meenu Krishnan, et al."
+  journal: "Engineering Fracture Mechanics"
+  year: 2021
+  doi: ""
+  pdf: ""
