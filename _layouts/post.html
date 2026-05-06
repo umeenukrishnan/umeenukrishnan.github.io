@@ -2,29 +2,24 @@
 layout: default
 ---
 
-<div class="post-wrap">
-  <article>
-    <header class="post-hd">
-      <div class="post-meta">
-        {% if page.categories %}
-          <span class="cat">{{ page.categories | first }}</span>
-          <span class="sep">·</span>
-        {% endif %}
-        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
-        {% if page.author %}
-          <span class="sep">·</span>
-          <span>{{ page.author }}</span>
-        {% endif %}
-      </div>
-      <h1>{{ page.title | escape }}</h1>
-    </header>
-
-    <div class="post-body">
-      {{ content }}
-    </div>
-
+<div class="wrap">
+  <article class="post-page">
     <div class="post-back">
       <a href="/blog"><i class="fa-solid fa-arrow-left"></i> Back to Blog</a>
+    </div>
+
+    <div class="post-meta-row">
+      {% if page.categories %}
+        <span class="cat">{{ page.categories | first }}</span>
+        <span>·</span>
+      {% endif %}
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+    </div>
+
+    <h1>{{ page.title | escape }}</h1>
+
+    <div class="post-content">
+      {{ content }}
     </div>
   </article>
 </div>
