@@ -2,24 +2,30 @@
 layout: default
 ---
 
-<div class="wrap">
-  <article class="post-page">
-    <div class="post-back">
-      <a href="/blog"><i class="fa-solid fa-arrow-left"></i> Back to Blog</a>
-    </div>
-
-    <div class="post-meta-row">
-      {% if page.categories %}
-        <span class="cat">{{ page.categories | first }}</span>
-        <span>·</span>
-      {% endif %}
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-    </div>
-
-    <h1>{{ page.title | escape }}</h1>
-
-    <div class="post-content">
-      {{ content }}
-    </div>
-  </article>
+<div class="page-grid">
+  <aside class="sidebar">
+    {% include sidebar-nav.html %}
+  </aside>
+  <div class="page-main">
+    <article class="post-page section-plain">
+      <div class="section-acc-header">
+        <div class="sb-inner"><h2>{{ page.title | escape }}</h2></div>
+      </div>
+      <div class="section-body">
+        <div class="post-back">
+          <a href="/blog/"><i class="fa-solid fa-arrow-left"></i> Back to Blog</a>
+        </div>
+        <div class="post-meta-row">
+          {% if page.categories %}
+            <span class="cat">{{ page.categories | first }}</span>
+            <span>·</span>
+          {% endif %}
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+        </div>
+        <div class="post-content">
+          {{ content }}
+        </div>
+      </div>
+    </article>
+  </div>
 </div>
