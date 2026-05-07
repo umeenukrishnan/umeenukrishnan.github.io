@@ -91,16 +91,6 @@ permalink: /projects/
               <div class="pi-media-full">
                 <img src="{{ '/assets/images/topology.png' | relative_url }}" alt="Topology Optimization" loading="lazy" />
               </div>
-              <div class="pi-media" style="margin-top:0.75rem">
-                <div>
-                  <img src="{{ '/assets/gif/cover.gif' | relative_url }}" alt="Topology Optimization GIF" loading="lazy" />
-                  <div class="pi-caption">Optimization convergence</div>
-                </div>
-                <div>
-                  <img src="{{ '/assets/images/curve_fun.png' | relative_url }}" alt="Performance curves" loading="lazy" />
-                  <div class="pi-caption">Performance curves</div>
-                </div>
-              </div>
               <div class="pi-papers">
                 <h4>Publications</h4>
                 <ul>
@@ -125,15 +115,8 @@ permalink: /projects/
               <p class="pi-desc">
                 Auxetic materials exhibit a negative Poisson's ratio — they expand laterally when stretched — a counter-intuitive behaviour that leads to enhanced indentation resistance, energy absorption, and acoustic damping. Using topology optimization, I designed microstructures using FGMs that achieve auxetic responses through tailored geometry rather than intrinsic material properties and the designs were validated through 3D-printed physical samples.
               </p>
-              <div class="pi-media">
-                <div>
-                  <img src="{{ '/assets/gif/3.gif' | relative_url }}" alt="Auxetic 3D printed samples" loading="lazy" />
-                  <div class="pi-caption">3D printed auxetic samples</div>
-                </div>
-                <div>
-                  <img src="{{ '/assets/gif/aux_highlight.gif' | relative_url }}" alt="Auxetic simulation" loading="lazy" />
-                  <div class="pi-caption">Auxetic deformation</div>
-                </div>
+              <div class="pi-media-full">
+                <img src="{{ '/assets/gif/auxetic_fgm.gif' | relative_url }}" alt="Auxetic Metamaterial" loading="lazy" />
               </div>
               <div class="pi-papers">
                 <h4>Publications</h4>
