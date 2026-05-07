@@ -9,7 +9,7 @@ description: >
   Researcher in Computational Mechanics, Machine Learning, and Structural Optimization.
 
 favicon: "/favicon.ico"
-avatar: "/assets/images/meenu.JPG"
+avatar: "/assets/images/meenu.png"
 
 permalink: /:year/:month/:day/:title/
 show_excerpts: true
