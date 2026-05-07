@@ -66,6 +66,82 @@ hr { border: none; border-top: 2px solid var(--border); margin: 1.5rem 0; }
 /* ─── Layout ─────────────────────────────────────────────────────── */
 .wrap { max-width: var(--width); margin: 0 auto; padding: 0 1.5rem; }
 
+/* ─── Site Two-Column Grid ───────────────────────────────────────── */
+.site-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 0;
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.main-col { min-width: 0; }
+
+/* ─── Sidebar Navigation ─────────────────────────────────────────── */
+.sidebar {
+  position: sticky;
+  top: 1.5rem;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.snav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.1rem;
+  background: linear-gradient(105deg, var(--navy) 0%, var(--teal) 100%);
+  color: #fff !important;
+  border-radius: 10px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  transition: opacity 0.2s, transform 0.15s;
+
+  i { font-size: 0.8rem; opacity: 0.85; }
+
+  &:hover {
+    opacity: 0.88;
+    transform: translateX(-2px);
+    text-decoration: none !important;
+    color: #fff !important;
+  }
+
+  &.active {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--teal);
+  }
+}
+
+/* ─── Responsive: stack on mobile ───────────────────────────────── */
+@media (max-width: 680px) {
+  .site-wrapper {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  .sidebar {
+    position: static;
+    order: -1;
+  }
+  .sidebar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .snav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.72rem;
+  }
+}
+
 /* ─── Theme Toggle ───────────────────────────────────────────────── */
 .theme-btn {
   position: fixed;
@@ -593,6 +669,15 @@ details.project-item {
   font-family: var(--mono);
   gap: 0.4rem;
   i { font-size: 1.1rem; }
+}
+
+/* ─── Placeholder ───────────────────────────────────────────────── */
+.placeholder-text {
+  color: var(--text-3);
+  font-style: italic;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.95rem;
 }
 
 /* ─── Contact ────────────────────────────────────────────────────── */
