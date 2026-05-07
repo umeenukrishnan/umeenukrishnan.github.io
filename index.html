@@ -4,82 +4,100 @@ title: Home
 description: "Postdoctoral Research Fellow at Johns Hopkins University. Researcher in Computational Mechanics, Machine Learning, and Structural Optimization."
 ---
 
-<!-- ══════════════════════════════════════════════════ HERO -->
-<section class="hero" id="home">
-
-  <div class="hero-banner">
-    <img src="{{ '/assets/images/umk.png' | relative_url }}" alt="Banner" />
-    <div class="avatar-overlap">
-      <img class="avatar" src="{{ site.avatar | relative_url }}" alt="Meenu Krishnan" />
+<!-- ══════════════════════════════════════════════════ HERO (full width) -->
+<div class="hero-wrap">
+  <section class="hero" id="home">
+    <div class="hero-banner">
+      <img src="{{ '/assets/images/umk.png' | relative_url }}" alt="Banner" />
+      <div class="avatar-overlap">
+        <img class="avatar" src="{{ site.avatar | relative_url }}" alt="Meenu Krishnan" />
+      </div>
     </div>
-  </div>
+    <div class="hero-text">
+      <h1>U. Meenu Krishnan</h1>
+      <p class="tagline">Postdoctoral Researcher &nbsp;@&nbsp;Johns Hopkins University</p>
+      <p class="tagline-sub">Computational Mechanics &nbsp;|&nbsp; Scientific Machine Learning &nbsp;|&nbsp; Curiosity &nbsp;|&nbsp; Fun 💃</p>
+    </div>
+    <div class="social-row">
+      <a href="https://scholar.google.com/citations?user={{ site.social.scholar }}&hl=en" target="_blank" rel="noopener">
+        <i class="fa-solid fa-graduation-cap"></i> Scholar
+      </a>
+      <a href="https://www.researchgate.net/profile/{{ site.social.researchgate }}" target="_blank" rel="noopener">
+        <i class="fa-brands fa-researchgate"></i> ResearchGate
+      </a>
+      <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noopener">
+        <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+      </a>
+      <a href="https://www.instagram.com/{{ site.social.instagram }}" target="_blank" rel="noopener">
+        <i class="fa-brands fa-instagram"></i> Instagram
+      </a>
+      <a href="https://www.youtube.com/{{ site.social.youtube }}" target="_blank" rel="noopener">
+        <i class="fa-brands fa-youtube"></i> YouTube
+      </a>
+      <a href="mailto:{{ site.email }}">
+        <i class="fa-solid fa-envelope"></i> Email
+      </a>
+    </div>
+  </section>
+</div>
 
-  <div class="hero-text">
-    <h1>U. Meenu Krishnan</h1>
-    <p class="tagline">Postdoctoral Researcher &nbsp;@&nbsp;Johns Hopkins University</p>
-    <p class="tagline-sub">Computational Mechanics &nbsp;|&nbsp; Scientific Machine Learning &nbsp;|&nbsp; Curiosity &nbsp;|&nbsp; Fun 💃</p>
-  </div>
+<!-- ══════════════════════════════════════════════════ BELOW HERO: sidebar + content -->
+<div class="page-grid">
 
-  <div class="social-row">
-    <a href="https://scholar.google.com/citations?user={{ site.social.scholar }}&hl=en" target="_blank" rel="noopener">
-      <i class="fa-solid fa-graduation-cap"></i> Scholar
-    </a>
-    <a href="https://www.researchgate.net/profile/{{ site.social.researchgate }}" target="_blank" rel="noopener">
-      <i class="fa-brands fa-researchgate"></i> ResearchGate
-    </a>
-    <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noopener">
-      <i class="fa-brands fa-linkedin-in"></i> LinkedIn
-    </a>
-    <a href="https://www.instagram.com/{{ site.social.instagram }}" target="_blank" rel="noopener">
-      <i class="fa-brands fa-instagram"></i> Instagram
-    </a>
-    <a href="https://www.youtube.com/{{ site.social.youtube }}" target="_blank" rel="noopener">
-      <i class="fa-brands fa-youtube"></i> YouTube
-    </a>
-    <a href="mailto:{{ site.email }}">
-      <i class="fa-solid fa-envelope"></i> Email
-    </a>
-  </div>
-</section>
+  <aside class="sidebar">
+    {% include sidebar-nav.html %}
+  </aside>
 
-<!-- ══════════════════════════════════════════════════ HIGHLIGHTS -->
-<section class="section-plain reveal" id="highlights">
-  <div class="section-acc-header">
-    <div class="sb-inner"><h2>Highlights</h2></div>
-  </div>
-  <div class="section-body">
-    <p class="placeholder-text">Research highlights, GIFs, and featured work coming soon.</p>
-  </div>
-</section>
+  <div class="page-main">
 
-<hr />
-
-<!-- ══════════════════════════════════════════════════ CONTACT -->
-<section class="section-plain reveal" id="contact">
-  <div class="section-acc-header">
-    <div class="sb-inner"><h2>Contact</h2></div>
-  </div>
-  <div class="section-body">
-    <p class="contact-text">
-      I'm always happy to discuss research ideas, collaborations, or opportunities.
-      Reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a> or fill in the form below.
-    </p>
-    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <div class="fg">
-        <label for="cf-name">Name</label>
-        <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+    <!-- HIGHLIGHTS -->
+    <section class="section-plain reveal" id="highlights">
+      <div class="section-acc-header">
+        <div class="sb-inner"><h2>Highlights</h2></div>
       </div>
-      <div class="fg">
-        <label for="cf-email">Email</label>
-        <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
+      <div class="section-body">
+        <div class="highlights-grid">
+          <div class="highlight-item">
+            <img src="{{ '/assets/gif/umk.gif' | relative_url }}" alt="Research highlight 1" loading="lazy" />
+          </div>
+          <div class="highlight-item">
+            <img src="{{ '/assets/gif/umk1.gif' | relative_url }}" alt="Research highlight 2" loading="lazy" />
+          </div>
+        </div>
       </div>
-      <div class="fg">
-        <label for="cf-message">Message</label>
-        <textarea id="cf-message" name="message" placeholder="What's on your mind?" required></textarea>
+    </section>
+
+    <hr />
+
+    <!-- CONTACT -->
+    <section class="section-plain reveal" id="contact">
+      <div class="section-acc-header">
+        <div class="sb-inner"><h2>Contact</h2></div>
       </div>
-      <button type="submit">
-        <i class="fa-solid fa-paper-plane"></i> Send
-      </button>
-    </form>
-  </div>
-</section>
+      <div class="section-body">
+        <p class="contact-text">
+          I'm always happy to discuss research ideas, collaborations, or opportunities.
+          Reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a> or fill in the form below.
+        </p>
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="fg">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="fg">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="fg">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" placeholder="What's on your mind?" required></textarea>
+          </div>
+          <button type="submit">
+            <i class="fa-solid fa-paper-plane"></i> Send
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </div><!-- .page-main -->
+</div><!-- .page-grid -->
