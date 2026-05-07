@@ -18,7 +18,7 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
     </p>
 
     <div class="social-row">
-      <a href="https://scholar.google.com/citations?user={{ site.social.scholar }}" target="_blank" rel="noopener">
+      <a href="https://scholar.google.com/citations?user={{ site.social.scholar }}&hl=en" target="_blank" rel="noopener">
         <i class="fa-solid fa-graduation-cap"></i> Scholar
       </a>
       <a href="https://www.researchgate.net/profile/{{ site.social.researchgate }}" target="_blank" rel="noopener">
@@ -39,288 +39,235 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════════ ABOUT -->
-  <section class="section reveal" id="about">
-    <div class="section-banner">
-      <div class="sb-inner">
-        <span class="sb-icon">👩‍🔬</span>
-        <div>
-          <h2>About</h2>
-          <p>Postdoctoral Research Fellow · Johns Hopkins University</p>
+  <!-- ══════════════════════════════════════════════════ ABOUT (accordion) -->
+  <details class="section-acc reveal" id="about" open>
+    <summary>
+      <div class="sb-inner"><h2>About</h2></div>
+      <i class="fa-solid fa-chevron-down sb-chevron"></i>
+    </summary>
+    <div class="section-body">
+      <div class="content-box">
+        <div class="about-text">
+          <p>
+            I'm <strong>U. Meenu Krishnan</strong>, a researcher who firmly believes that you should
+            either love what you do, or change it — because passion fuels purpose, and purpose drives excellence.
+          </p>
+          <p>
+            I am currently working as a <strong>Postdoctoral Research Fellow at Johns Hopkins University</strong>,
+            where my research focuses on <strong>Evolutionary Deep Neural Networks (EDNN)</strong>. I use EDNN
+            to solve multi-physics problems in solid mechanics — coupled fracture, heat conduction, and wave
+            propagation — combining physics-based modeling and machine learning to build accurate and efficient solvers.
+          </p>
+          <p>
+            My research journey began in January 2019 at the Computational Mechanics Lab,
+            <strong>IIT Roorkee</strong>, where I worked on the phase field method for fracture modeling
+            and topology optimization, developing computationally efficient algorithms with mesh adaptivity,
+            automatic time stepping, and parallel HPC techniques.
+          </p>
+          <p>
+            Outside the lab, I love drawing, reading, and simply sitting in peace. These quiet moments
+            often inspire fresh ideas in both life and research.
+          </p>
+        </div>
+
+        <div class="research-chips">
+          <span>Computational Mechanics</span>
+          <span>Phase Field Fracture</span>
+          <span>Topology Optimization</span>
+          <span>EDNN</span>
+          <span>Multi-physics</span>
+          <span>HPC</span>
+          <span>FEniCS</span>
+          <span>Metamaterials</span>
+          <span>3D Printing</span>
         </div>
       </div>
     </div>
+  </details>
 
-    <div class="about-text">
-      <p>
-        I'm <strong>U. Meenu Krishnan</strong>, a researcher who firmly believes that you should
-        either love what you do, or change it — because passion fuels purpose, and purpose drives excellence.
-      </p>
-      <p>
-        I am currently working as a <strong>Postdoctoral Research Fellow at Johns Hopkins University</strong>,
-        where my research focuses on <strong>Evolutionary Deep Neural Networks (EDNN)</strong>. I use EDNN
-        to solve multi-physics problems in solid mechanics — coupled fracture, heat conduction, and wave
-        propagation — combining physics-based modeling and machine learning to build accurate and efficient solvers.
-      </p>
-      <p>
-        My research journey began in January 2019 at the Computational Mechanics Lab,
-        <strong>IIT Roorkee</strong>, where I worked on the phase field method for fracture modeling
-        and topology optimization, developing computationally efficient algorithms with mesh adaptivity,
-        automatic time stepping, and parallel HPC techniques.
-      </p>
-      <p>
-        Outside the lab, I love drawing, reading, and simply sitting in peace. These quiet moments
-        often inspire fresh ideas in both life and research.
-      </p>
-    </div>
+  <!-- ══════════════════════════════════════════════════ PROJECTS (accordion) -->
+  <details class="section-acc reveal" id="projects" open>
+    <summary>
+      <div class="sb-inner"><h2>Projects</h2></div>
+      <i class="fa-solid fa-chevron-down sb-chevron"></i>
+    </summary>
+    <div class="section-body">
 
-    <div class="research-chips">
-      <span>Computational Mechanics</span>
-      <span>Phase Field Fracture</span>
-      <span>Topology Optimization</span>
-      <span>EDNN</span>
-      <span>Multi-physics</span>
-      <span>HPC</span>
-      <span>FEniCS</span>
-      <span>PyTorch</span>
-      <span>Metamaterials</span>
-      <span>3D Printing</span>
-    </div>
+      <div class="project-list">
 
-  </section>
+        <!-- Topology Optimization -->
+        <details class="project-item" open>
+          <summary>
+            <div class="pi-meta">
+              <div class="pi-title">Topology Optimization</div>
+              <div class="pi-tags-inline">
+                <span>SIMP</span><span>Phase Field</span><span>3D Printing</span><span>MPI</span>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down pi-chevron"></i>
+          </summary>
+          <div class="pi-body">
+            <p class="pi-desc">
+              Mathematical approach to find optimal material layouts under fracture constraints and
+              manufacturing considerations. Targets lightweight, high-strength structures for real-world
+              aerospace and civil applications. Integrated with 3D printing for fabrication of complex geometries.
+            </p>
+            <div class="pi-media-full">
+              <img src="{{ '/assets/gif/cover.gif' | relative_url }}" alt="Large Scale Topology Optimization animation" loading="lazy" />
+              <div class="pi-caption">Large Scale Topology Optimization — phase field coupled result</div>
+            </div>
+            <div class="pi-media" style="margin-top:0.75rem">
+              <div>
+                <img src="{{ '/assets/gif/projects.gif' | relative_url }}" alt="Projects overview" loading="lazy" />
+                <div class="pi-caption">Optimization convergence</div>
+              </div>
+              <div>
+                <img src="{{ '/assets/images/curve_fun.png' | relative_url }}" alt="Result curve" loading="lazy" />
+                <div class="pi-caption">Performance curves</div>
+              </div>
+            </div>
+          </div>
+        </details>
 
-  <hr />
+        <!-- Phase Field Fracture -->
+        <details class="project-item">
+          <summary>
+            <div class="pi-meta">
+              <div class="pi-title">Phase Field Fracture</div>
+              <div class="pi-tags-inline">
+                <span>FEniCS</span><span>PETSc</span><span>Python</span><span>HPC</span>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down pi-chevron"></i>
+          </summary>
+          <div class="pi-body">
+            <p class="pi-desc">
+              A continuous-field framework for simulating crack propagation in materials without explicit
+              crack tracking algorithms. Enhanced with mesh adaptivity and automatic time-stepping for
+              large-scale problems. Scales efficiently on HPC clusters using MPI-parallel FEniCS/PETSc.
+            </p>
+            <div class="pi-media">
+              <div>
+                <img src="{{ '/assets/images/u_disp.png' | relative_url }}" alt="Displacement field" loading="lazy" />
+                <div class="pi-caption">Displacement field — fracture simulation</div>
+              </div>
+              <div>
+                <img src="{{ '/assets/images/image-20201122115600774.png' | relative_url }}" alt="Phase field result" loading="lazy" />
+                <div class="pi-caption">Phase field crack pattern</div>
+              </div>
+            </div>
+          </div>
+        </details>
 
-  <!-- ══════════════════════════════════════════════════ PROJECTS -->
-  <section class="section reveal" id="projects">
-    <div class="section-banner">
-      <div class="sb-inner">
-        <span class="sb-icon">🔬</span>
-        <div>
-          <h2>Projects</h2>
-          <p>Click any project to expand details and results</p>
-        </div>
+        <!-- EDNN -->
+        <details class="project-item">
+          <summary>
+            <div class="pi-meta">
+              <div class="pi-title">Evolutionary Deep Neural Networks</div>
+              <div class="pi-tags-inline">
+                <span>EDNN</span><span>PINN</span><span>Multi-physics</span>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down pi-chevron"></i>
+          </summary>
+          <div class="pi-body">
+            <p class="pi-desc">
+              Using Evolutionary Deep Neural Networks (EDNN) to solve multi-physics problems in solid
+              mechanics — coupled fracture, heat conduction, and wave propagation. Bridges physics-based
+              modeling and machine learning to create efficient, generalizable solvers without
+              the need for labeled training data.
+            </p>
+          </div>
+        </details>
+
+        <!-- Metamaterials -->
+        <details class="project-item">
+          <summary>
+            <div class="pi-meta">
+              <div class="pi-title">Metamaterials Design</div>
+              <div class="pi-tags-inline">
+                <span>Homogenization</span><span>Topology Opt.</span><span>3D Printing</span>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down pi-chevron"></i>
+          </summary>
+          <div class="pi-body">
+            <p class="pi-desc">
+              Engineering materials with tailored mechanical, acoustic, and photonic properties via
+              topology optimization and additive manufacturing. Designed microstructures achieve
+              extreme stiffness-to-weight ratios, wave-guiding behavior, and auxetic responses.
+            </p>
+          </div>
+        </details>
+
+        <!-- HPC -->
+        <details class="project-item">
+          <summary>
+            <div class="pi-meta">
+              <div class="pi-title">Large-Scale HPC Simulations</div>
+              <div class="pi-tags-inline">
+                <span>MPI</span><span>PETSc</span><span>Linux HPC</span><span>Scalability</span>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down pi-chevron"></i>
+          </summary>
+          <div class="pi-body">
+            <p class="pi-desc">
+              Parallel algorithms for massive computational loads in structural simulation, deployed
+              on distributed HPC clusters for aerospace, automotive, and civil infrastructure domains.
+            </p>
+            <div class="pi-media">
+              <div>
+                <img src="{{ '/assets/images/meshx.png' | relative_url }}" alt="Mesh tool" loading="lazy" />
+                <div class="pi-caption">MeshX — mesh generation tool</div>
+              </div>
+            </div>
+          </div>
+        </details>
+
       </div>
     </div>
+  </details>
 
-    <div class="project-list">
-
-      <!-- Topology Optimization -->
-      <details class="project-item" open>
-        <summary>
-          <span class="pi-icon">🔩</span>
-          <div class="pi-meta">
-            <div class="pi-title">Topology Optimization</div>
-            <div class="pi-tags-inline">
-              <span>SIMP</span><span>Phase Field</span><span>3D Printing</span><span>MPI</span>
-            </div>
-          </div>
-          <i class="fa-solid fa-chevron-down pi-chevron"></i>
-        </summary>
-        <div class="pi-body">
-          <p class="pi-desc">
-            Mathematical approach to find optimal material layouts under fracture constraints and
-            manufacturing considerations. Targets lightweight, high-strength structures for real-world
-            aerospace and civil applications. Integrated with 3D printing for fabrication of complex geometries.
-          </p>
-          <div class="pi-media-full">
-            <img src="{{ '/assets/gif/cover.gif' | relative_url }}" alt="Large Scale Topology Optimization animation" loading="lazy" />
-            <div class="pi-caption">Large Scale Topology Optimization — phase field coupled result</div>
-          </div>
-          <div class="pi-media" style="margin-top:0.75rem">
-            <div>
-              <img src="{{ '/assets/gif/projects.gif' | relative_url }}" alt="Projects overview" loading="lazy" />
-              <div class="pi-caption">Optimization convergence</div>
-            </div>
-            <div>
-              <img src="{{ '/assets/images/curve_fun.png' | relative_url }}" alt="Result curve" loading="lazy" />
-              <div class="pi-caption">Performance curves</div>
-            </div>
+  <!-- ══════════════════════════════════════════════════ BLOG (accordion) -->
+  <details class="section-acc reveal" id="blog" open>
+    <summary>
+      <div class="sb-inner"><h2>Blog</h2></div>
+      <i class="fa-solid fa-chevron-down sb-chevron"></i>
+    </summary>
+    <div class="section-body">
+      <div class="post-list">
+        {% for post in site.posts limit:6 %}
+        <div class="post-item">
+          <div class="post-date">{{ post.date | date: "%b %Y" }}</div>
+          <div class="post-info">
+            <span class="post-cat">{{ post.categories | first | default: "misc" }}</span>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+            {% if post.excerpt %}
+            <p>{{ post.excerpt | strip_html | truncatewords: 22 }}</p>
+            {% endif %}
           </div>
         </div>
-      </details>
-
-      <!-- Phase Field Fracture -->
-      <details class="project-item">
-        <summary>
-          <span class="pi-icon">🧱</span>
-          <div class="pi-meta">
-            <div class="pi-title">Phase Field Fracture</div>
-            <div class="pi-tags-inline">
-              <span>FEniCS</span><span>PETSc</span><span>Python</span><span>HPC</span>
-            </div>
-          </div>
-          <i class="fa-solid fa-chevron-down pi-chevron"></i>
-        </summary>
-        <div class="pi-body">
-          <p class="pi-desc">
-            A continuous-field framework for simulating crack propagation in materials without explicit
-            crack tracking algorithms. Enhanced with mesh adaptivity and automatic time-stepping for
-            large-scale problems. Scales efficiently on HPC clusters using MPI-parallel FEniCS/PETSc.
-          </p>
-          <div class="pi-media">
-            <div>
-              <img src="{{ '/assets/images/u_disp.png' | relative_url }}" alt="Displacement field" loading="lazy" />
-              <div class="pi-caption">Displacement field — fracture simulation</div>
-            </div>
-            <div>
-              <img src="{{ '/assets/images/image-20201122115600774.png' | relative_url }}" alt="Phase field result" loading="lazy" />
-              <div class="pi-caption">Phase field crack pattern</div>
-            </div>
-          </div>
-        </div>
-      </details>
-
-      <!-- EDNN -->
-      <details class="project-item">
-        <summary>
-          <span class="pi-icon">🧠</span>
-          <div class="pi-meta">
-            <div class="pi-title">Evolutionary Deep Neural Networks</div>
-            <div class="pi-tags-inline">
-              <span>PyTorch</span><span>EDNN</span><span>PINN</span><span>Multi-physics</span>
-            </div>
-          </div>
-          <i class="fa-solid fa-chevron-down pi-chevron"></i>
-        </summary>
-        <div class="pi-body">
-          <p class="pi-desc">
-            Using Evolutionary Deep Neural Networks (EDNN) to solve multi-physics problems in solid
-            mechanics — coupled fracture, heat conduction, and wave propagation. Bridges physics-based
-            modeling and machine learning to create efficient, generalizable solvers without
-            the need for labeled training data.
-          </p>
-        </div>
-      </details>
-
-      <!-- Metamaterials -->
-      <details class="project-item">
-        <summary>
-          <span class="pi-icon">⬡</span>
-          <div class="pi-meta">
-            <div class="pi-title">Metamaterials Design</div>
-            <div class="pi-tags-inline">
-              <span>Homogenization</span><span>Topology Opt.</span><span>3D Printing</span>
-            </div>
-          </div>
-          <i class="fa-solid fa-chevron-down pi-chevron"></i>
-        </summary>
-        <div class="pi-body">
-          <p class="pi-desc">
-            Engineering materials with tailored mechanical, acoustic, and photonic properties via
-            topology optimization and additive manufacturing. Designed microstructures achieve
-            extreme stiffness-to-weight ratios, wave-guiding behavior, and auxetic responses.
-          </p>
-        </div>
-      </details>
-
-      <!-- HPC -->
-      <details class="project-item">
-        <summary>
-          <span class="pi-icon">⚡</span>
-          <div class="pi-meta">
-            <div class="pi-title">Large-Scale HPC Simulations</div>
-            <div class="pi-tags-inline">
-              <span>MPI</span><span>PETSc</span><span>Linux HPC</span><span>Scalability</span>
-            </div>
-          </div>
-          <i class="fa-solid fa-chevron-down pi-chevron"></i>
-        </summary>
-        <div class="pi-body">
-          <p class="pi-desc">
-            Parallel algorithms for massive computational loads in structural simulation, deployed
-            on distributed HPC clusters for aerospace, automotive, and civil infrastructure domains.
-            Developed scalable mesh partitioning and load-balancing strategies using PETSc and MPI.
-          </p>
-          <div class="pi-media">
-            <div>
-              <img src="{{ '/assets/images/meshx.png' | relative_url }}" alt="Mesh tool" loading="lazy" />
-              <div class="pi-caption">MeshX — mesh generation tool</div>
-            </div>
-          </div>
-        </div>
-      </details>
-
-    </div>
-  </section>
-
-  <hr />
-
-  <!-- ══════════════════════════════════════════════════ BLOG -->
-  <section class="section reveal" id="blog">
-    <div class="section-banner">
-      <div class="sb-inner">
-        <span class="sb-icon">✍️</span>
-        <div>
-          <h2>Blog</h2>
-          <p>Notes on research, tools, and academia</p>
-        </div>
+        {% endfor %}
       </div>
+      <a href="/blog" class="more-link">All posts <i class="fa-solid fa-arrow-right"></i></a>
     </div>
-
-    <div class="post-list">
-      {% for post in site.posts limit:6 %}
-      <div class="post-item">
-        <div class="post-date">{{ post.date | date: "%b %Y" }}</div>
-        <div class="post-info">
-          <span class="post-cat">{{ post.categories | first | default: "misc" }}</span>
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-          {% if post.excerpt %}
-          <p>{{ post.excerpt | strip_html | truncatewords: 22 }}</p>
-          {% endif %}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-
-    <a href="/blog" class="more-link">All posts <i class="fa-solid fa-arrow-right"></i></a>
-  </section>
+  </details>
 
   <hr />
 
   <!-- ══════════════════════════════════════════════════ HOBBIES -->
   <section class="section reveal" id="hobbies">
     <div class="section-banner">
-      <div class="sb-inner">
-        <span class="sb-icon">🌿</span>
-        <div>
-          <h2>Hobbies</h2>
-          <p>Life beyond the equations</p>
-        </div>
-      </div>
+      <div class="sb-inner"><h2>Hobbies</h2></div>
     </div>
-
     <div class="hobby-grid">
-      <div class="hobby-item">
-        <span class="hi-icon">🎨</span>
-        <h3>Drawing</h3>
-        <p>Pencil, paper, and peace</p>
-      </div>
-      <div class="hobby-item">
-        <span class="hi-icon">📚</span>
-        <h3>Reading</h3>
-        <p>Philosophy & science fiction</p>
-      </div>
-      <div class="hobby-item">
-        <span class="hi-icon">🧘</span>
-        <h3>Meditation</h3>
-        <p>Daily stillness & clarity</p>
-      </div>
-      <div class="hobby-item">
-        <span class="hi-icon">💻</span>
-        <h3>Creative Coding</h3>
-        <p>Art meets engineering</p>
-      </div>
-      <div class="hobby-item">
-        <span class="hi-icon">🌿</span>
-        <h3>Nature Walks</h3>
-        <p>Ideas on quiet trails</p>
-      </div>
-      <div class="hobby-item">
-        <span class="hi-icon">✈️</span>
-        <h3>Travelling</h3>
-        <p>Collecting experiences</p>
-      </div>
+      <div class="hobby-item"><span class="hi-icon">🎨</span><h3>Drawing</h3><p>Pencil, paper, and peace</p></div>
+      <div class="hobby-item"><span class="hi-icon">📚</span><h3>Reading</h3><p>Philosophy & science fiction</p></div>
+      <div class="hobby-item"><span class="hi-icon">🧘</span><h3>Meditation</h3><p>Daily stillness & clarity</p></div>
+      <div class="hobby-item"><span class="hi-icon">💻</span><h3>Creative Coding</h3><p>Art meets engineering</p></div>
+      <div class="hobby-item"><span class="hi-icon">🌿</span><h3>Nature Walks</h3><p>Ideas on quiet trails</p></div>
+      <div class="hobby-item"><span class="hi-icon">✈️</span><h3>Travelling</h3><p>Collecting experiences</p></div>
     </div>
   </section>
 
@@ -329,36 +276,20 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
   <!-- ══════════════════════════════════════════════════ TRAVEL -->
   <section class="section reveal" id="travel">
     <div class="section-banner">
-      <div class="sb-inner">
-        <span class="sb-icon">🗺️</span>
-        <div>
-          <h2>Travel</h2>
-          <p>Places that shaped my worldview</p>
-        </div>
-      </div>
+      <div class="sb-inner"><h2>Travel</h2></div>
     </div>
-
     <div class="travel-grid">
       <div class="travel-item">
         <img src="{{ '/assets/images/travel1.jpg' | relative_url }}" alt="India" loading="lazy" />
-        <div class="ti-label">
-          <h3>India</h3>
-          <p>Home · IIT Roorkee</p>
-        </div>
+        <div class="ti-label"><h3>India</h3><p>Home · IIT Roorkee</p></div>
       </div>
       <div class="travel-item">
         <img src="{{ '/assets/images/travel2.jpg' | relative_url }}" alt="United States" loading="lazy" />
-        <div class="ti-label">
-          <h3>United States</h3>
-          <p>Baltimore · Johns Hopkins</p>
-        </div>
+        <div class="ti-label"><h3>United States</h3><p>Baltimore · Johns Hopkins</p></div>
       </div>
       <div class="travel-item">
         <img src="{{ '/assets/images/travel3.jpg' | relative_url }}" alt="Conferences" loading="lazy" />
-        <div class="ti-label">
-          <h3>Conferences</h3>
-          <p>Research meetings worldwide</p>
-        </div>
+        <div class="ti-label"><h3>Conferences</h3><p>Research meetings worldwide</p></div>
       </div>
       <div class="travel-placeholder">
         <i class="fa-solid fa-map-pin"></i>
@@ -372,20 +303,12 @@ description: "Postdoctoral Research Fellow at Johns Hopkins University. Research
   <!-- ══════════════════════════════════════════════════ CONTACT -->
   <section class="section reveal" id="contact">
     <div class="section-banner">
-      <div class="sb-inner">
-        <span class="sb-icon">📬</span>
-        <div>
-          <h2>Contact</h2>
-          <p>Collaborations, questions, or just a hello</p>
-        </div>
-      </div>
+      <div class="sb-inner"><h2>Contact</h2></div>
     </div>
-
     <p class="contact-text">
       I'm always happy to discuss research ideas, collaborations, or opportunities.
       Reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a> or fill in the form below.
     </p>
-
     <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <div class="fg">
         <label for="cf-name">Name</label>
