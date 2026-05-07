@@ -188,20 +188,23 @@ hr { border: none; border-top: 2px solid var(--border); margin: 1.5rem 0; }
   overflow: hidden;
   border: 1px solid var(--border);
 
-  .section-banner-plain {
+  .section-acc-header {
     padding: 1.1rem 1.4rem;
     background: linear-gradient(105deg, var(--navy) 0%, var(--teal) 100%);
     border-radius: 10px 10px 0 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    .sb-inner { display: flex; align-items: center; }
 
     h2 {
-      color: #fff;
-      font-family: var(--mono);
+      font-size: 0.95rem;
+      font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      font-size: 0.95rem;
-      font-weight: 500;
+      color: #ffffff;
+      font-family: var(--mono);
     }
   }
 
