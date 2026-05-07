@@ -29,7 +29,7 @@ permalink: /projects/
             </summary>
             <div class="pi-body">
               <p class="pi-desc">
-                A continuous-field framework for simulating crack propagation in materials without explicit crack tracking algorithms. Enhanced with mesh adaptivity and automatic time-stepping for large-scale problems. Scales efficiently on HPC clusters using MPI-parallel FEniCS/PETSc. Applied to brittle, cohesive, and dynamic fracture problems.
+                Phase-field models represent cracks as a smooth, continuous damage field. My work focused on developing computationally efficient algorithms for large-scale fracture simulations — introducing adaptive mesh refinement guided by an energy based error indicator, and automatic time-stepping to capture rapid crack propagation accurately. The framework is implemented in FEniCS with MPI parallelism and applied to brittle, cohesive, and thermo-mechanical fracture problems.
               </p>
               <div class="pi-media-full">
                 <img src="{{ '/assets/images/pff.png' | relative_url }}" alt="Phase Field Fracture" loading="lazy" />
@@ -59,7 +59,7 @@ permalink: /projects/
             </summary>
             <div class="pi-body">
               <p class="pi-desc">
-                Extension of the phase-field framework to functionally graded materials (FGM), where material properties vary continuously through the domain. An adaptive phase-field cohesive zone model captures complex crack paths and mixed-mode fracture in graded microstructures without re-meshing.
+                Functionally graded materials have spatially varying properties — for example, transitioning from ceramic to metal across a component — making them ideal for high-temperature and structural applications, but challenging to model for fracture. I extended the phase-field cohesive zone framework to FGMs, where material parameters vary continuously as a function of spatial coordinates. The adaptive implementation captures complex crack paths and mixed-mode failure with adaptive meshing, offering a robust tool for fracture design in graded structures.
               </p>
               <div class="pi-media-full">
                 <img src="{{ '/assets/images/fgm.png' | relative_url }}" alt="FGM Fracture" loading="lazy" />
@@ -86,7 +86,7 @@ permalink: /projects/
             </summary>
             <div class="pi-body">
               <p class="pi-desc">
-                Mathematical approach to find optimal material layouts under fracture constraints and manufacturing considerations. Targets lightweight, high-strength structures for aerospace and civil applications. Large-scale implementation in FEniCS with MPI parallelism, integrated with 3D printing for fabrication of complex geometries.
+                Topology optimization finds the optimal distribution of material within a design domain to maximize structural performance under given constraints. My work scaled this to large 3D problems using FEniCS and MPI-based parallel computing. The resulting geometries are fabricated using 3D printing, bridging computational design with physical manufacturing.
               </p>
               <div class="pi-media-full">
                 <img src="{{ '/assets/images/topology.png' | relative_url }}" alt="Topology Optimization" loading="lazy" />
@@ -123,7 +123,7 @@ permalink: /projects/
             </summary>
             <div class="pi-body">
               <p class="pi-desc">
-                Design of auxetic microstructures — materials with negative Poisson's ratio — using stress-driven topology optimization. Extended to functionally graded metamaterials for tailored spatial property variation. Fabricated via 3D printing and validated experimentally for mechanical performance.
+                Auxetic materials exhibit a negative Poisson's ratio — they expand laterally when stretched — a counter-intuitive behaviour that leads to enhanced indentation resistance, energy absorption, and acoustic damping. Using topology optimization, I designed microstructures using FGMs that achieve auxetic responses through tailored geometry rather than intrinsic material properties and the designs were validated through 3D-printed physical samples.
               </p>
               <div class="pi-media">
                 <div>
@@ -158,42 +158,8 @@ permalink: /projects/
             </summary>
             <div class="pi-body">
               <p class="pi-desc">
-                Using Evolutionary Deep Neural Networks (EDNN) to solve multi-physics problems in solid mechanics — coupled fracture, heat conduction, and wave propagation. Bridges physics-based modeling and machine learning to create efficient, generalizable solvers without labeled training data.
+                Evolutionary Deep Neural Networks (EDNN) are a mesh-free, physics-informed approach that evolves the solution of PDEs in time by training a neural network to satisfy the governing equations and boundary conditions. My current research at Johns Hopkins applies EDNN to coupled physics problems in solid mechanics — working toward efficient solvers that generalise across geometries and loading conditions without requiring labeled simulation data.
               </p>
-            </div>
-          </details>
-
-          <!-- HPC -->
-          <details class="project-item">
-            <summary>
-              <div class="pi-meta">
-                <div class="pi-title">Large-Scale HPC Simulations</div>
-                <div class="pi-tags-inline">
-                  <span>MPI</span><span>PETSc</span><span>Linux HPC</span><span>Scalability</span>
-                </div>
-              </div>
-              <i class="fa-solid fa-chevron-down pi-chevron"></i>
-            </summary>
-            <div class="pi-body">
-              <p class="pi-desc">
-                Parallel algorithms for massive computational loads in structural simulation, deployed on distributed HPC clusters for aerospace, automotive, and civil infrastructure domains.
-              </p>
-              <div class="pi-media">
-                <div>
-                  <img src="{{ '/assets/images/mpi.png' | relative_url }}" alt="MPI parallel" loading="lazy" />
-                  <div class="pi-caption">MPI parallel scaling</div>
-                </div>
-                <div>
-                  <img src="{{ '/assets/images/meshx.png' | relative_url }}" alt="Mesh tool" loading="lazy" />
-                  <div class="pi-caption">MeshX — mesh generation tool</div>
-                </div>
-              </div>
-              <div class="pi-papers">
-                <h4>Publications</h4>
-                <ul>
-                  <li><a href="https://doi.org/10.6084/M9.figshare.c.5487891" target="_blank" rel="noopener">U. M. Krishnan, A. Gupta, and R. Chowdhury. Working with complex meshes: The mesh processing pipeline. <em>FEniCS 2021</em>. doi: 10.6084/M9</a></li>
-                </ul>
-              </div>
             </div>
           </details>
 
