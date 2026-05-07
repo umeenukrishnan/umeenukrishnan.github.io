@@ -146,34 +146,73 @@ hr { border: none; border-top: 2px solid var(--border); margin: 1.5rem 0; }
   }
 }
 
-/* ─── Section Banner ─────────────────────────────────────────────── */
-.section-banner {
-  margin: 0 -1.5rem 2.25rem;
-  padding: 1.4rem 1.5rem;
-  background: linear-gradient(105deg, var(--navy) 0%, var(--teal) 100%);
-  position: relative;
+/* ─── Section Accordion (whole-section dropdown) ────────────────── */
+details.section-acc {
+  margin-bottom: 1.25rem;
+  border-radius: 10px;
   overflow: hidden;
+  border: 1px solid var(--border);
 
-  &::after {
-    content: '';
-    position: absolute;
-    right: -30px; top: -30px;
-    width: 120px; height: 120px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.05);
+  &[open] > summary { border-radius: 10px 10px 0 0; }
+
+  > summary {
+    list-style: none;
+    cursor: pointer;
+    &::-webkit-details-marker { display: none; }
+    &::marker { display: none; }
+
+    /* reuse .section-banner styles */
+    padding: 1.1rem 1.4rem;
+    background: linear-gradient(105deg, var(--navy) 0%, var(--teal) 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: border-radius 0.2s;
+
+    .sb-inner {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    h2 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-family: var(--mono);
+      margin: 0;
+    }
+
+    .sb-chevron {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.7);
+      transition: transform 0.25s var(--ease);
+    }
   }
+
+  &[open] > summary .sb-chevron { transform: rotate(180deg); }
+
+  > .section-body {
+    padding: 1.75rem 1.4rem;
+    background: var(--bg);
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+/* ─── Section Banner (non-accordion sections) ────────────────────── */
+.section-banner {
+  margin-bottom: 1.5rem;
+  padding: 1.1rem 1.4rem;
+  border-radius: 10px;
+  background: linear-gradient(105deg, var(--navy) 0%, var(--teal) 100%);
 
   .sb-inner {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .sb-icon {
-    font-size: 1.3rem;
-    line-height: 1;
+    gap: 0;
   }
 
   h2 {
@@ -185,13 +224,14 @@ hr { border: none; border-top: 2px solid var(--border); margin: 1.5rem 0; }
     font-family: var(--mono);
     margin: 0;
   }
+}
 
-  p {
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.65);
-    margin: 0.15rem 0 0;
-    font-family: var(--mono);
-  }
+/* ─── Content Box (rounded card for section content) ─────────────── */
+.content-box {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: var(--bg-alt);
 }
 
 /* ─── Section ────────────────────────────────────────────────────── */
@@ -278,8 +318,6 @@ details.project-item {
     &::marker { display: none; }
 
     &:hover { background: var(--bg-banner); }
-
-    .pi-icon { font-size: 1.4rem; flex-shrink: 0; }
 
     .pi-meta { flex: 1; }
 
