@@ -21,7 +21,7 @@ permalink: /about/
               <strong>Andaman and Nicobar Islands</strong>. Growing up surrounded by nature, simplicity,
               and a close-knit community shaped much of who I am today. I completed my schooling and
               Bachelor's degree in Civil Engineering there before beginning a journey that would take me
-              across different parts of India and eventually to the United States.
+              across different parts of the world.
             </p>
             <p>
               Later, I moved to Kerala to pursue my <strong>Master's degree in Structural Engineering
