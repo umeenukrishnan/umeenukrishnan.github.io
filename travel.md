@@ -14,6 +14,95 @@ permalink: /travel/
         <div class="sb-inner"><h2>Travel</h2></div>
       </div>
       <div class="section-body">
+        <div style="margin-bottom: 30px;">
+          <div style="width:100%;background:#000;border-radius:12px;overflow:hidden;position:relative;">
+            <div id="globeViz" style="width:100%;height:560px;"></div>
+            <div id="panel" style="position:absolute;top:14px;left:14px;background:rgba(0,0,0,0.75);border:1px solid rgba(255,80,80,0.3);border-radius:10px;padding:10px 16px;pointer-events:none;min-width:180px;">
+              <div id="pnum" style="font-size:11px;color:#ff6060;font-family:sans-serif;margin-bottom:3px;">Stop 1 of 16</div>
+              <div id="pname" style="font-size:15px;font-weight:600;color:#ffffff;font-family:sans-serif;">Andaman &amp; Nicobar</div>
+              <div id="pcountry" style="font-size:12px;color:#aaaaaa;font-family:sans-serif;margin-top:2px;">India</div>
+            </div>
+            <div style="position:absolute;bottom:14px;left:14px;right:130px;">
+              <div style="height:4px;background:rgba(255,255,255,0.1);border-radius:4px;overflow:hidden;">
+                <div id="prog" style="height:100%;background:#ff3333;width:0%;transition:width 0.15s linear;border-radius:4px;"></div>
+              </div>
+            </div>
+            <div style="position:absolute;bottom:10px;right:14px;display:flex;gap:8px;">
+              <button id="btnP" style="font-size:12px;padding:5px 12px;border-radius:8px;border:1px solid rgba(255,80,80,0.35);background:rgba(0,0,0,0.7);color:#ff9090;cursor:pointer;font-family:sans-serif;">Pause</button>
+              <button id="btnR" style="font-size:12px;padding:5px 12px;border-radius:8px;border:1px solid rgba(255,80,80,0.35);background:rgba(0,0,0,0.7);color:#ff9090;cursor:pointer;font-family:sans-serif;">Restart</button>
+            </div>
+          </div>
+          <script src="https://unpkg.com/globe.gl@2.27.1/dist/globe.gl.min.js"></script>
+          <script>
+          const stops = [
+            {id:0,  name:"Andaman & Nicobar", country:"India",    lat:10.74,  lng:92.50},
+            {id:1,  name:"Chennai",            country:"India",    lat:13.08,  lng:80.27},
+            {id:2,  name:"Hyderabad",          country:"India",    lat:17.41,  lng:78.48},
+            {id:3,  name:"Kerala",             country:"India",    lat:10.16,  lng:76.64},
+            {id:4,  name:"Delhi",              country:"India",    lat:28.61,  lng:77.21},
+            {id:5,  name:"Roorkee",            country:"India",    lat:29.85,  lng:77.89},
+            {id:6,  name:"Mussoorie",          country:"India",    lat:30.45,  lng:78.08},
+            {id:7,  name:"Dehradun",           country:"India",    lat:30.32,  lng:78.03},
+            {id:8,  name:"Rishikesh",          country:"India",    lat:30.12,  lng:78.29},
+            {id:9,  name:"Bir, Himachal",      country:"India",    lat:32.05,  lng:76.72},
+            {id:10, name:"Punjab",             country:"India",    lat:31.15,  lng:75.34},
+            {id:11, name:"Madhya Pradesh",     country:"India",    lat:23.26,  lng:77.41},
+            {id:12, name:"Lisbon",             country:"Portugal", lat:38.72,  lng:-9.14},
+            {id:13, name:"San Diego",          country:"USA",      lat:32.72,  lng:-117.16},
+            {id:14, name:"Oklahoma State",     country:"USA",      lat:36.12,  lng:-97.06},
+            {id:15, name:"Maryland",           country:"USA",      lat:39.05,  lng:-76.64},
+          ];
+          const STEP_MS = 2000;
+          let currentStep = 0, paused = false, timer = null, visible = [];
+          const globe = Globe()
+            .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+            .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
+            .backgroundImageUrl('https://unpkg.com/three-globe/example/img/night-sky.png')
+            .width(680).height(560)
+            .pointsData([])
+            .pointLat(d => d.lat).pointLng(d => d.lng)
+            .pointColor(() => '#ff2222').pointAltitude(0.01).pointRadius(0.5)
+            .pointLabel(d => `<div style="font-family:sans-serif;background:rgba(0,0,0,0.85);color:#fff;padding:6px 10px;border-radius:8px;font-size:13px;">${d.name}, ${d.country}</div>`)
+            (document.getElementById('globeViz'));
+          globe.controls().autoRotate = false;
+          globe.controls().enableZoom = true;
+          function updatePanel(idx) {
+            document.getElementById('pnum').textContent = `Stop ${idx+1} of ${stops.length}`;
+            document.getElementById('pname').textContent = stops[idx].name;
+            document.getElementById('pcountry').textContent = stops[idx].country;
+          }
+          function advance() {
+            if (paused || currentStep >= stops.length) return;
+            const s = stops[currentStep];
+            visible = stops.slice(0, currentStep + 1);
+            globe.pointsData(visible);
+            globe.pointOfView({lat: s.lat, lng: s.lng, altitude: 1.8}, 1000);
+            updatePanel(currentStep);
+            document.getElementById('prog').style.width = ((currentStep + 1) / stops.length * 100).toFixed(1) + '%';
+            currentStep++;
+            if (currentStep < stops.length) timer = setTimeout(advance, STEP_MS);
+          }
+          globe.pointOfView({lat: stops[0].lat, lng: stops[0].lng, altitude: 1.8});
+          updatePanel(0);
+          timer = setTimeout(advance, 800);
+          document.getElementById('btnP').addEventListener('click', function() {
+            paused = !paused;
+            this.textContent = paused ? 'Resume' : 'Pause';
+            if (!paused && currentStep < stops.length) timer = setTimeout(advance, 400);
+            else clearTimeout(timer);
+          });
+          document.getElementById('btnR').addEventListener('click', function() {
+            clearTimeout(timer);
+            currentStep = 0; paused = false; visible = [];
+            globe.pointsData([]);
+            document.getElementById('btnP').textContent = 'Pause';
+            document.getElementById('prog').style.width = '0%';
+            globe.pointOfView({lat: stops[0].lat, lng: stops[0].lng, altitude: 1.8});
+            updatePanel(0);
+            timer = setTimeout(advance, 800);
+          });
+          </script>
+        </div>
         <div class="travel-grid">
           <div class="travel-item">
             <img src="{{ '/assets/images/travel1.jpg' | relative_url }}" alt="India" loading="lazy" />
