@@ -55,7 +55,7 @@ permalink: /projects/
                 My undergraduate project was a full field condition assessment of a G+2 residential RC building at Brichgunj Military Station, built in 1991 and no longer serviceable — with no structural drawings and no record of the as-built material properties. We began with a visual condition survey, colour-coding every column and beam on all three floors for corrosion, cracking and spalling of cover, which showed corrosion concentrated in the exposed external columns where stirrups were in places completely lost. In-situ material properties were then recovered non-destructively: rebound hammer readings and ultrasonic pulse velocity at 101 member locations, combined to estimate compressive strengths ranging from roughly 8 to 23 N/mm². Those measured strengths — rather than assumed design values — were fed into a linear analysis in STAAD.Pro, and member demand was checked against capacity per IS 456:2000 for every beam and column. The exercise identified the specific members failing in flexure and led to a recommended repair scheme, including an RCC jacketing procedure for the distressed columns and beams.
               </p>
               </div>
-              <button class="pi-more" type="button" aria-expanded="false" hidden><span class="pi-more-label">More</span> <i class="fa-solid fa-chevron-down"></i></button>
+              <button class="pi-more" type="button" aria-expanded="false" hidden><span class="pi-more-label">Read in detail</span> <i class="fa-solid fa-chevron-down"></i></button>
               <div class="pi-media-full">
                 <img src="{{ '/assets/images/btech_condition_assessment.jpg' | relative_url }}" alt="The assessed G+2 residential building at Brichgunj Military Station" loading="lazy" />
                 <p class="pi-caption">The assessed building — a G+2 residential block at Brichgunj Military Station, built in 1991.</p>
@@ -124,7 +124,7 @@ permalink: /projects/
                 My M.Tech thesis at TKM College of Engineering (APJ Abdul Kalam Technological University, 2018), supervised by Dr. Sajeeb R., asked how much vertical geometric irregularity actually changes the seismic demand on a building. Stepped frames and buildings on sloping ground are common in modern urban construction, but IS 1893 only prescribes limits on irregularity — it says little about how the design forces should change once those limits are crossed. I modelled 16 stepped frames and 16 sloping-ground frames in SAP2000 alongside their regular counterparts, and compared fundamental time period, modal participation, base shear and overturning moment across the set. From that comparison I proposed an <em>Irregularity Index</em> — built on overturning moment, which showed the lowest RMS error against the time-period ratio — to grade how irregular a frame really is, and a <em>magnification factor</em> expressed as a function of the number of storeys that corrects the code-based seismic force. The IS code method was found to consistently underestimate both the fundamental period and the seismic demand of irregular frames; the magnified estimate agreed with the full finite-element response to within about 3–17% across the four demonstration frames.
               </p>
               </div>
-              <button class="pi-more" type="button" aria-expanded="false" hidden><span class="pi-more-label">More</span> <i class="fa-solid fa-chevron-down"></i></button>
+              <button class="pi-more" type="button" aria-expanded="false" hidden><span class="pi-more-label">Read in detail</span> <i class="fa-solid fa-chevron-down"></i></button>
               <div class="pi-media-full">
                 <img src="{{ '/assets/images/mtech_stepped_frames.png' | relative_url }}" alt="Stepped building frame modelled in SAP2000 — 3D view and elevation" loading="lazy" />
                 <p class="pi-caption">Stepped frame (5 bays, 12 storeys) modelled in SAP2000 — 3D view and elevation.</p>
@@ -171,7 +171,7 @@ permalink: /projects/
             </div>
             <span class="era-more">
               <span class="era-cta">
-                <span class="era-cta-in">Explore all 4 projects</span>
+                <span class="era-cta-in">Explore the projects</span>
                 <span class="era-cta-out">Hide</span>
               </span>
               <i class="fa-solid fa-chevron-down era-chevron"></i>
@@ -195,7 +195,7 @@ permalink: /projects/
                 Phase-field models represent cracks as a smooth, continuous damage field. My work focused on developing computationally efficient algorithms for large-scale fracture simulations — introducing adaptive mesh refinement guided by an energy based error indicator, and automatic time-stepping to capture rapid crack propagation accurately. The framework is implemented in FEniCS with MPI parallelism and applied to brittle, cohesive, and thermo-mechanical fracture problems.
               </p>
               </div>
-              <button class="pi-more" type="button" aria-expanded="false" hidden><span class="pi-more-label">More</span> <i class="fa-solid fa-chevron-down"></i></button>
+              <button class="pi-more" type="button" aria-expanded="false" hidden><span class="pi-more-label">Read in detail</span> <i class="fa-solid fa-chevron-down"></i></button>
               <div class="pi-media-full">
                 <img src="{{ '/assets/images/pff.png' | relative_url }}" alt="Phase Field Fracture" loading="lazy" />
               </div>
@@ -228,7 +228,7 @@ permalink: /projects/
                 Functionally graded materials have spatially varying properties — for example, transitioning from ceramic to metal across a component — making them ideal for high-temperature and structural applications, but challenging to model for fracture. I extended the phase-field cohesive zone framework to FGMs, where material parameters vary continuously as a function of spatial coordinates. The adaptive implementation captures complex crack paths and mixed-mode failure with adaptive meshing, offering a robust tool for fracture design in graded structures.
               </p>
               </div>
-              <button class="pi-more" type="button" aria-expanded="false" hidden><span class="pi-more-label">More</span> <i class="fa-solid fa-chevron-down"></i></button>
+              <button class="pi-more" type="button" aria-expanded="false" hidden><span class="pi-more-label">Read in detail</span> <i class="fa-solid fa-chevron-down"></i></button>
               <div class="pi-media-full">
                 <img src="{{ '/assets/images/fgm.png' | relative_url }}" alt="FGM Fracture" loading="lazy" />
               </div>
@@ -258,7 +258,7 @@ permalink: /projects/
                 Topology optimization finds the optimal distribution of material within a design domain to maximize structural performance under given constraints. My work scaled this to large 3D problems using FEniCS and MPI-based parallel computing. The resulting geometries are fabricated using 3D printing, bridging computational design with physical manufacturing.
               </p>
               </div>
-              <button class="pi-more" type="button" aria-expanded="false" hidden><span class="pi-more-label">More</span> <i class="fa-solid fa-chevron-down"></i></button>
+              <button class="pi-more" type="button" aria-expanded="false" hidden><span class="pi-more-label">Read in detail</span> <i class="fa-solid fa-chevron-down"></i></button>
               <div class="pi-media-full">
                 <img src="{{ '/assets/images/topology.png' | relative_url }}" alt="Topology Optimization" loading="lazy" />
               </div>
@@ -288,7 +288,7 @@ permalink: /projects/
                 Auxetic materials exhibit a negative Poisson's ratio — they expand laterally when stretched — a counter-intuitive behaviour that leads to enhanced indentation resistance, energy absorption, and acoustic damping. Using topology optimization, I designed microstructures using FGMs that achieve auxetic responses through tailored geometry rather than intrinsic material properties and the designs were validated through 3D-printed physical samples.
               </p>
               </div>
-              <button class="pi-more" type="button" aria-expanded="false" hidden><span class="pi-more-label">More</span> <i class="fa-solid fa-chevron-down"></i></button>
+              <button class="pi-more" type="button" aria-expanded="false" hidden><span class="pi-more-label">Read in detail</span> <i class="fa-solid fa-chevron-down"></i></button>
               <div class="pi-media-full">
                 <img src="{{ '/assets/gif/auxetic_fgm.gif' | relative_url }}" alt="Auxetic Metamaterial" loading="lazy" />
               </div>
@@ -321,7 +321,7 @@ permalink: /projects/
             </div>
             <span class="era-more">
               <span class="era-cta">
-                <span class="era-cta-in">Explore both projects</span>
+                <span class="era-cta-in">Explore the projects</span>
                 <span class="era-cta-out">Hide</span>
               </span>
               <i class="fa-solid fa-chevron-down era-chevron"></i>
@@ -345,7 +345,7 @@ permalink: /projects/
                 Evolutionary Deep Neural Networks (EDNN) are a mesh-free, physics-informed approach that evolves the solution of PDEs in time by training a neural network to satisfy the governing equations and boundary conditions. My current research at Johns Hopkins applies EDNN to coupled physics problems in solid mechanics — working toward efficient solvers that generalise across geometries and loading conditions without requiring labeled simulation data.
               </p>
               </div>
-              <button class="pi-more" type="button" aria-expanded="false" hidden><span class="pi-more-label">More</span> <i class="fa-solid fa-chevron-down"></i></button>
+              <button class="pi-more" type="button" aria-expanded="false" hidden><span class="pi-more-label">Read in detail</span> <i class="fa-solid fa-chevron-down"></i></button>
             </div>
           </details>
 
@@ -381,7 +381,7 @@ permalink: /projects/
                 the same data.
               </p>
               </div>
-              <button class="pi-more" type="button" aria-expanded="false" hidden><span class="pi-more-label">More</span> <i class="fa-solid fa-chevron-down"></i></button>
+              <button class="pi-more" type="button" aria-expanded="false" hidden><span class="pi-more-label">Read in detail</span> <i class="fa-solid fa-chevron-down"></i></button>
               <div class="pi-media-full">
                 <img src="{{ '/assets/images/fracbench_dynamic_branching.png' | relative_url }}" alt="Crack paths at four traction magnitudes, from a single straight crack to repeated branching" loading="lazy" />
                 <p class="pi-caption">Dynamic dataset — raising the applied traction takes the same notched plate from steady propagation (σ* = 1.0) through to repeated branching and coalescence (σ* = 3.0). Left: initial notch. Right: final damage field.</p>
@@ -480,7 +480,7 @@ permalink: /projects/
       var clamped = body.classList.toggle(CLAMP);
       btn.dataset.open = clamped ? 'false' : 'true';
       btn.setAttribute('aria-expanded', clamped ? 'false' : 'true');
-      btn.querySelector('.pi-more-label').textContent = clamped ? 'More' : 'Less';
+      btn.querySelector('.pi-more-label').textContent = clamped ? 'Read in detail' : 'Show less';
     });
 
     // Heights can only be measured once every ancestor <details> is open.
