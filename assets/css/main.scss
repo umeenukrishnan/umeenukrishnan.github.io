@@ -635,13 +635,6 @@ details.section-acc {
     white-space: nowrap;
   }
 
-  /* the label flips with the section's state */
-  .era-cta-out { display: none; }
-  &[open] {
-    .era-cta-in  { display: none; }
-    .era-cta-out { display: inline; }
-  }
-
   .era-head:hover .era-cta { text-decoration: underline; }
 
   .era-chevron {

@@ -30,10 +30,7 @@ permalink: /projects/
               <span class="era-where">Port Blair, Andaman &amp; Nicobar Islands &middot; 2011&ndash;2015</span>
             </div>
             <span class="era-more">
-              <span class="era-cta">
-                <span class="era-cta-in">Explore the project</span>
-                <span class="era-cta-out">Hide</span>
-              </span>
+              <span class="era-cta">Explore the project</span>
               <i class="fa-solid fa-chevron-down era-chevron"></i>
             </span>
           </summary>
@@ -99,10 +96,7 @@ permalink: /projects/
               <span class="era-where">Kollam, Kerala &middot; 2016&ndash;2018</span>
             </div>
             <span class="era-more">
-              <span class="era-cta">
-                <span class="era-cta-in">Explore the project</span>
-                <span class="era-cta-out">Hide</span>
-              </span>
+              <span class="era-cta">Explore the project</span>
               <i class="fa-solid fa-chevron-down era-chevron"></i>
             </span>
           </summary>
@@ -170,10 +164,7 @@ permalink: /projects/
               <span class="era-where">Roorkee, Uttarakhand &middot; 2019&ndash;2024</span>
             </div>
             <span class="era-more">
-              <span class="era-cta">
-                <span class="era-cta-in">Explore the projects</span>
-                <span class="era-cta-out">Hide</span>
-              </span>
+              <span class="era-cta">Explore the projects</span>
               <i class="fa-solid fa-chevron-down era-chevron"></i>
             </span>
           </summary>
@@ -320,10 +311,7 @@ permalink: /projects/
               <span class="era-where">Baltimore, Maryland, USA &middot; 2025&ndash;present</span>
             </div>
             <span class="era-more">
-              <span class="era-cta">
-                <span class="era-cta-in">Explore the projects</span>
-                <span class="era-cta-out">Hide</span>
-              </span>
+              <span class="era-cta">Explore the projects</span>
               <i class="fa-solid fa-chevron-down era-chevron"></i>
             </span>
           </summary>
