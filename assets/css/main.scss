@@ -627,12 +627,22 @@ details.section-acc {
     flex-shrink: 0;
   }
 
-  .era-count {
+  .era-cta {
     font-family: var(--mono);
     font-size: 0.68rem;
-    color: var(--text-3);
+    font-weight: 500;
+    color: var(--accent);
     white-space: nowrap;
   }
+
+  /* the label flips with the section's state */
+  .era-cta-out { display: none; }
+  &[open] {
+    .era-cta-in  { display: none; }
+    .era-cta-out { display: inline; }
+  }
+
+  .era-head:hover .era-cta { text-decoration: underline; }
 
   .era-chevron {
     font-size: 0.75rem;
