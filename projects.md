@@ -16,8 +16,90 @@ permalink: /projects/
       <div class="section-body">
         <div class="project-list">
 
-          <!-- Phase Field Fracture -->
+          <!-- B.Tech Project -->
           <details class="project-item" open>
+            <summary>
+              <div class="pi-meta">
+                <div class="pi-title">Condition Assessment of an RC Building using NDT</div>
+                <div class="pi-tags-inline">
+                  <span>B.Tech Project</span><span>Non-Destructive Testing</span><span>Rebound Hammer</span><span>UPV</span><span>STAAD.Pro</span><span>Retrofitting</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down pi-chevron"></i>
+            </summary>
+            <div class="pi-body">
+              <p class="pi-desc">
+                My undergraduate project was a full field condition assessment of a G+2 residential RC building at Brichgunj Military Station, built in 1991 and no longer serviceable — with no structural drawings and no record of the as-built material properties. We began with a visual condition survey, colour-coding every column and beam on all three floors for corrosion, cracking and spalling of cover, which showed corrosion concentrated in the exposed external columns where stirrups were in places completely lost. In-situ material properties were then recovered non-destructively: rebound hammer readings and ultrasonic pulse velocity at 101 member locations, combined to estimate compressive strengths ranging from roughly 8 to 23 N/mm². Those measured strengths — rather than assumed design values — were fed into a linear analysis in STAAD.Pro, and member demand was checked against capacity per IS 456:2000 for every beam and column. The exercise identified the specific members failing in flexure and led to a recommended repair scheme, including an RCC jacketing procedure for the distressed columns and beams.
+              </p>
+              <div class="pi-media-full">
+                <img src="{{ '/assets/images/btech_condition_assessment.jpg' | relative_url }}" alt="The assessed G+2 residential building at Brichgunj Military Station" loading="lazy" />
+                <p class="pi-caption">The assessed building — a G+2 residential block at Brichgunj Military Station, built in 1991.</p>
+              </div>
+              <div class="pi-media pi-media-2">
+                <figure>
+                  <img src="{{ '/assets/images/btech_ndt_instruments.jpg' | relative_url }}" alt="Rebound hammer and ultrasonic pulse velocity instruments used on site" loading="lazy" />
+                  <figcaption class="pi-caption">The field kit: Schmidt rebound hammer and the ultrasonic pulse velocity tester.</figcaption>
+                </figure>
+                <figure>
+                  <img src="{{ '/assets/images/btech_calibration.png' | relative_url }}" alt="Calibration curves relating compressive strength to rebound number and to UPV" loading="lazy" />
+                  <figcaption class="pi-caption">Calibration curves built from cube tests, used to convert the field readings into in-situ compressive strength.</figcaption>
+                </figure>
+                <figure>
+                  <img src="{{ '/assets/images/btech_member_plan.png' | relative_url }}" alt="Ground floor plan with every beam and column numbered" loading="lazy" />
+                  <figcaption class="pi-caption">Every beam and column was numbered floor by floor so survey observations, NDT readings and analysis results could be tied to one member.</figcaption>
+                </figure>
+                <figure>
+                  <img src="{{ '/assets/images/btech_failed_members.png' | relative_url }}" alt="STAAD.Pro model highlighting beams and columns whose demand exceeds capacity" loading="lazy" />
+                  <figcaption class="pi-caption">The outcome: members whose demand exceeds capacity, marked in red on the STAAD.Pro model.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </details>
+
+          <!-- M.Tech Thesis -->
+          <details class="project-item">
+            <summary>
+              <div class="pi-meta">
+                <div class="pi-title">Seismic Response of Vertically Irregular Buildings</div>
+                <div class="pi-tags-inline">
+                  <span>M.Tech Thesis</span><span>SAP2000</span><span>Response Spectrum</span><span>IS 1893</span><span>Earthquake Engineering</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down pi-chevron"></i>
+            </summary>
+            <div class="pi-body">
+              <p class="pi-desc">
+                My M.Tech thesis at TKM College of Engineering (APJ Abdul Kalam Technological University, 2018), supervised by Dr. Sajeeb R., asked how much vertical geometric irregularity actually changes the seismic demand on a building. Stepped frames and buildings on sloping ground are common in modern urban construction, but IS 1893 only prescribes limits on irregularity — it says little about how the design forces should change once those limits are crossed. I modelled 16 stepped frames and 16 sloping-ground frames in SAP2000 alongside their regular counterparts, and compared fundamental time period, modal participation, base shear and overturning moment across the set. From that comparison I proposed an <em>Irregularity Index</em> — built on overturning moment, which showed the lowest RMS error against the time-period ratio — to grade how irregular a frame really is, and a <em>magnification factor</em> expressed as a function of the number of storeys that corrects the code-based seismic force. The IS code method was found to consistently underestimate both the fundamental period and the seismic demand of irregular frames; the magnified estimate agreed with the full finite-element response to within about 3–17% across the four demonstration frames.
+              </p>
+              <div class="pi-media-full">
+                <img src="{{ '/assets/images/mtech_stepped_frames.png' | relative_url }}" alt="Stepped building frame modelled in SAP2000 — 3D view and elevation" loading="lazy" />
+                <p class="pi-caption">Stepped frame (5 bays, 12 storeys) modelled in SAP2000 — 3D view and elevation.</p>
+              </div>
+              <div class="pi-media pi-media-2">
+                <figure>
+                  <img src="{{ '/assets/images/mtech_sloping_model.png' | relative_url }}" alt="Building frame on sloping ground modelled in SAP2000" loading="lazy" />
+                  <figcaption class="pi-caption">The second irregularity type: a frame founded on sloping ground.</figcaption>
+                </figure>
+                <figure>
+                  <img src="{{ '/assets/images/mtech_timeperiod.png' | relative_url }}" alt="Fundamental time period from FE modal analysis versus the IS code formula" loading="lazy" />
+                  <figcaption class="pi-caption">The IS code formula underestimates the fundamental period badly, and the gap widens with height.</figcaption>
+                </figure>
+                <figure>
+                  <img src="{{ '/assets/images/mtech_otm_ratio.png' | relative_url }}" alt="Overturning moment ratio versus number of storeys for sloping-ground and stepped frames" loading="lazy" />
+                  <figcaption class="pi-caption">Overturning-moment ratio against storey count for every bay configuration; the dashed average is what the magnification factor fits — MF = 0.27n + 2.462 for sloping ground, MF = 1.187n − 3.183 for stepped frames.</figcaption>
+                </figure>
+              </div>
+              <div class="pi-papers">
+                <h4>Publications</h4>
+                <ul>
+                  <li>U. M. Krishnan and R. Sajeeb. Performance assessment of irregular buildings under earthquake excitation — a state of the art review. <em>International Conference on Advances in Construction Materials and Structures (ACMS-2018), IIT Roorkee</em>, 2018.</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <!-- Phase Field Fracture -->
+          <details class="project-item">
             <summary>
               <div class="pi-meta">
                 <div class="pi-title">Phase Field Fracture</div>
@@ -143,89 +225,6 @@ permalink: /projects/
               <p class="pi-desc">
                 Evolutionary Deep Neural Networks (EDNN) are a mesh-free, physics-informed approach that evolves the solution of PDEs in time by training a neural network to satisfy the governing equations and boundary conditions. My current research at Johns Hopkins applies EDNN to coupled physics problems in solid mechanics — working toward efficient solvers that generalise across geometries and loading conditions without requiring labeled simulation data.
               </p>
-            </div>
-          </details>
-
-
-          <!-- M.Tech Thesis -->
-          <details class="project-item">
-            <summary>
-              <div class="pi-meta">
-                <div class="pi-title">Seismic Response of Vertically Irregular Buildings</div>
-                <div class="pi-tags-inline">
-                  <span>M.Tech Thesis</span><span>SAP2000</span><span>Response Spectrum</span><span>IS 1893</span><span>Earthquake Engineering</span>
-                </div>
-              </div>
-              <i class="fa-solid fa-chevron-down pi-chevron"></i>
-            </summary>
-            <div class="pi-body">
-              <p class="pi-desc">
-                My M.Tech thesis at TKM College of Engineering (APJ Abdul Kalam Technological University, 2018), supervised by Dr. Sajeeb R., asked how much vertical geometric irregularity actually changes the seismic demand on a building. Stepped frames and buildings on sloping ground are common in modern urban construction, but IS 1893 only prescribes limits on irregularity — it says little about how the design forces should change once those limits are crossed. I modelled 16 stepped frames and 16 sloping-ground frames in SAP2000 alongside their regular counterparts, and compared fundamental time period, modal participation, base shear and overturning moment across the set. From that comparison I proposed an <em>Irregularity Index</em> — built on overturning moment, which showed the lowest RMS error against the time-period ratio — to grade how irregular a frame really is, and a <em>magnification factor</em> expressed as a function of the number of storeys that corrects the code-based seismic force. The IS code method was found to consistently underestimate both the fundamental period and the seismic demand of irregular frames; the magnified estimate agreed with the full finite-element response to within about 3–17% across the four demonstration frames.
-              </p>
-              <div class="pi-media-full">
-                <img src="{{ '/assets/images/mtech_stepped_frames.png' | relative_url }}" alt="Stepped building frame modelled in SAP2000 — 3D view and elevation" loading="lazy" />
-                <p class="pi-caption">Stepped frame (5 bays, 12 storeys) modelled in SAP2000 — 3D view and elevation.</p>
-              </div>
-              <div class="pi-media pi-media-2">
-                <figure>
-                  <img src="{{ '/assets/images/mtech_sloping_model.png' | relative_url }}" alt="Building frame on sloping ground modelled in SAP2000" loading="lazy" />
-                  <figcaption class="pi-caption">The second irregularity type: a frame founded on sloping ground.</figcaption>
-                </figure>
-                <figure>
-                  <img src="{{ '/assets/images/mtech_timeperiod.png' | relative_url }}" alt="Fundamental time period from FE modal analysis versus the IS code formula" loading="lazy" />
-                  <figcaption class="pi-caption">The IS code formula underestimates the fundamental period badly, and the gap widens with height.</figcaption>
-                </figure>
-                <figure>
-                  <img src="{{ '/assets/images/mtech_otm_ratio.png' | relative_url }}" alt="Overturning moment ratio versus number of storeys for sloping-ground and stepped frames" loading="lazy" />
-                  <figcaption class="pi-caption">Overturning-moment ratio against storey count for every bay configuration; the dashed average is what the magnification factor fits — MF = 0.27n + 2.462 for sloping ground, MF = 1.187n − 3.183 for stepped frames.</figcaption>
-                </figure>
-              </div>
-              <div class="pi-papers">
-                <h4>Publications</h4>
-                <ul>
-                  <li>U. M. Krishnan and R. Sajeeb. Performance assessment of irregular buildings under earthquake excitation — a state of the art review. <em>International Conference on Advances in Construction Materials and Structures (ACMS-2018), IIT Roorkee</em>, 2018.</li>
-                </ul>
-              </div>
-            </div>
-          </details>
-
-          <!-- B.Tech Project -->
-          <details class="project-item">
-            <summary>
-              <div class="pi-meta">
-                <div class="pi-title">Condition Assessment of an RC Building using NDT</div>
-                <div class="pi-tags-inline">
-                  <span>B.Tech Project</span><span>Non-Destructive Testing</span><span>Rebound Hammer</span><span>UPV</span><span>STAAD.Pro</span><span>Retrofitting</span>
-                </div>
-              </div>
-              <i class="fa-solid fa-chevron-down pi-chevron"></i>
-            </summary>
-            <div class="pi-body">
-              <p class="pi-desc">
-                My undergraduate project was a full field condition assessment of a G+2 residential RC building at Brichgunj Military Station, built in 1991 and no longer serviceable — with no structural drawings and no record of the as-built material properties. We began with a visual condition survey, colour-coding every column and beam on all three floors for corrosion, cracking and spalling of cover, which showed corrosion concentrated in the exposed external columns where stirrups were in places completely lost. In-situ material properties were then recovered non-destructively: rebound hammer readings and ultrasonic pulse velocity at 101 member locations, combined to estimate compressive strengths ranging from roughly 8 to 23 N/mm². Those measured strengths — rather than assumed design values — were fed into a linear analysis in STAAD.Pro, and member demand was checked against capacity per IS 456:2000 for every beam and column. The exercise identified the specific members failing in flexure and led to a recommended repair scheme, including an RCC jacketing procedure for the distressed columns and beams.
-              </p>
-              <div class="pi-media-full">
-                <img src="{{ '/assets/images/btech_condition_assessment.jpg' | relative_url }}" alt="The assessed G+2 residential building at Brichgunj Military Station" loading="lazy" />
-                <p class="pi-caption">The assessed building — a G+2 residential block at Brichgunj Military Station, built in 1991.</p>
-              </div>
-              <div class="pi-media pi-media-2">
-                <figure>
-                  <img src="{{ '/assets/images/btech_ndt_instruments.jpg' | relative_url }}" alt="Rebound hammer and ultrasonic pulse velocity instruments used on site" loading="lazy" />
-                  <figcaption class="pi-caption">The field kit: Schmidt rebound hammer and the ultrasonic pulse velocity tester.</figcaption>
-                </figure>
-                <figure>
-                  <img src="{{ '/assets/images/btech_calibration.png' | relative_url }}" alt="Calibration curves relating compressive strength to rebound number and to UPV" loading="lazy" />
-                  <figcaption class="pi-caption">Calibration curves built from cube tests, used to convert the field readings into in-situ compressive strength.</figcaption>
-                </figure>
-                <figure>
-                  <img src="{{ '/assets/images/btech_member_plan.png' | relative_url }}" alt="Ground floor plan with every beam and column numbered" loading="lazy" />
-                  <figcaption class="pi-caption">Every beam and column was numbered floor by floor so survey observations, NDT readings and analysis results could be tied to one member.</figcaption>
-                </figure>
-                <figure>
-                  <img src="{{ '/assets/images/btech_failed_members.png' | relative_url }}" alt="STAAD.Pro model highlighting beams and columns whose demand exceeds capacity" loading="lazy" />
-                  <figcaption class="pi-caption">The outcome: members whose demand exceeds capacity, marked in red on the STAAD.Pro model.</figcaption>
-                </figure>
-              </div>
             </div>
           </details>
 
