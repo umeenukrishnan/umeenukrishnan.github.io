@@ -590,6 +590,70 @@ details.section-acc {
   }
 }
 
+/* ─── Project eras (one band per degree stage) ──────────────────── */
+.era {
+  & + .era { margin-top: 2.5rem; }
+
+  .era-head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.1rem;
+    background: var(--bg-banner);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--teal);
+    border-radius: 8px;
+  }
+
+  .era-photo {
+    flex: 0 0 auto;
+    width: 88px;
+    height: 88px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .era-meta { min-width: 0; }
+
+  .era-degree {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.64rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+  }
+
+  .era-inst {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--navy);
+    margin: 0 0 0.2rem;
+    [data-theme="dark"] & { color: var(--teal); }
+  }
+
+  .era-where {
+    display: block;
+    font-size: 0.76rem;
+    color: var(--text-3);
+  }
+
+  @media (max-width: 560px) {
+    .era-head { flex-direction: column; align-items: flex-start; }
+  }
+}
+
 /* ─── Projects (Accordion / Details) ────────────────────────────── */
 .project-list {
   display: flex;

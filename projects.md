@@ -14,8 +14,23 @@ permalink: /projects/
         <div class="sb-inner"><h2>Projects</h2></div>
       </div>
       <div class="section-body">
-        <div class="project-list">
 
+        <!-- ═══ Dr. B. R. Ambedkar Institute of Technology ═══ -->
+        <section class="era" id="era-btech">
+          <div class="era-head">
+            {% assign era_photo = site.static_files | where_exp: "f", "f.path contains '/assets/images/campus_dbrait.'" | first %}
+            {% if era_photo %}
+            <div class="era-photo">
+              <img src="{{ era_photo.path | relative_url }}" alt="Dr. B. R. Ambedkar Institute of Technology" loading="lazy" />
+            </div>
+            {% endif %}
+            <div class="era-meta">
+              <span class="era-degree">B.Tech &middot; Civil Engineering</span>
+              <h3 class="era-inst">Dr. B. R. Ambedkar Institute of Technology</h3>
+              <span class="era-where">Port Blair, Andaman &amp; Nicobar Islands &middot; 2011&ndash;2015</span>
+            </div>
+          </div>
+          <div class="project-list">
           <!-- B.Tech Project -->
           <details id="condition-assessment" class="project-item" open>
             <summary>
@@ -56,6 +71,25 @@ permalink: /projects/
             </div>
           </details>
 
+          </div>
+        </section>
+
+        <!-- ═══ TKM College of Engineering ═══ -->
+        <section class="era" id="era-mtech">
+          <div class="era-head">
+            {% assign era_photo = site.static_files | where_exp: "f", "f.path contains '/assets/images/campus_tkmce.'" | first %}
+            {% if era_photo %}
+            <div class="era-photo">
+              <img src="{{ era_photo.path | relative_url }}" alt="TKM College of Engineering" loading="lazy" />
+            </div>
+            {% endif %}
+            <div class="era-meta">
+              <span class="era-degree">M.Tech &middot; Structural Engineering &amp; Construction Management</span>
+              <h3 class="era-inst">TKM College of Engineering</h3>
+              <span class="era-where">Kollam, Kerala &middot; 2016&ndash;2018</span>
+            </div>
+          </div>
+          <div class="project-list">
           <!-- M.Tech Thesis -->
           <details id="seismic-irregularity" class="project-item">
             <summary>
@@ -98,6 +132,25 @@ permalink: /projects/
             </div>
           </details>
 
+          </div>
+        </section>
+
+        <!-- ═══ Indian Institute of Technology Roorkee ═══ -->
+        <section class="era" id="era-phd">
+          <div class="era-head">
+            {% assign era_photo = site.static_files | where_exp: "f", "f.path contains '/assets/images/campus_iitr.'" | first %}
+            {% if era_photo %}
+            <div class="era-photo">
+              <img src="{{ era_photo.path | relative_url }}" alt="Indian Institute of Technology Roorkee" loading="lazy" />
+            </div>
+            {% endif %}
+            <div class="era-meta">
+              <span class="era-degree">Ph.D. &middot; Civil Engineering (Computational Mechanics)</span>
+              <h3 class="era-inst">Indian Institute of Technology Roorkee</h3>
+              <span class="era-where">Roorkee, Uttarakhand &middot; 2019&ndash;2024</span>
+            </div>
+          </div>
+          <div class="project-list">
           <!-- Phase Field Fracture -->
           <details id="phase-field-fracture" class="project-item">
             <summary>
@@ -210,6 +263,25 @@ permalink: /projects/
             </div>
           </details>
 
+          </div>
+        </section>
+
+        <!-- ═══ Johns Hopkins University ═══ -->
+        <section class="era" id="era-postdoc">
+          <div class="era-head">
+            {% assign era_photo = site.static_files | where_exp: "f", "f.path contains '/assets/images/campus_jhu.'" | first %}
+            {% if era_photo %}
+            <div class="era-photo">
+              <img src="{{ era_photo.path | relative_url }}" alt="Johns Hopkins University" loading="lazy" />
+            </div>
+            {% endif %}
+            <div class="era-meta">
+              <span class="era-degree">Postdoctoral Research Fellow</span>
+              <h3 class="era-inst">Johns Hopkins University</h3>
+              <span class="era-where">Baltimore, Maryland, USA &middot; 2025&ndash;present</span>
+            </div>
+          </div>
+          <div class="project-list">
           <!-- EDNN -->
           <details id="ednn" class="project-item">
             <summary>
@@ -227,7 +299,6 @@ permalink: /projects/
               </p>
             </div>
           </details>
-
 
           <!-- Fracture-Bench -->
           <details id="fracture-bench" class="project-item">
@@ -259,6 +330,24 @@ permalink: /projects/
                 Repository, with documented preprocessing and evaluation splits so other groups can train against exactly
                 the same data.
               </p>
+              <div class="pi-media-full">
+                <img src="{{ '/assets/images/fracbench_dynamic_branching.png' | relative_url }}" alt="Crack paths at four traction magnitudes, from a single straight crack to repeated branching" loading="lazy" />
+                <p class="pi-caption">Dynamic dataset — raising the applied traction takes the same notched plate from steady propagation (σ* = 1.0) through to repeated branching and coalescence (σ* = 3.0). Left: initial notch. Right: final damage field.</p>
+              </div>
+              <div class="pi-media-full">
+                <img src="{{ '/assets/images/fracbench_fgm_fields.png' | relative_url }}" alt="Displacement, initial and final phase field, and the graded material property field for one FGM realisation" loading="lazy" />
+                <p class="pi-caption">FGM dataset — each realisation stores the displacement field, the initial and final phase-field damage, and the underlying stiffness map. The crack visibly deflects around the stiff inclusion.</p>
+              </div>
+              <div class="pi-media pi-media-2">
+                <figure>
+                  <img src="{{ '/assets/images/fracbench_dynamic_setup.png' | relative_url }}" alt="Problem setup: 100 by 40 mm plate under step tensile traction, with sampled crack-tip positions" loading="lazy" />
+                  <figcaption class="pi-caption">The setup that generates the variation: a 100 &times; 40 mm plate under a step tensile traction, with the initial notch tip sampled across the domain in both directions.</figcaption>
+                </figure>
+                <figure>
+                  <img src="{{ '/assets/images/fracbench_fgm_crack.gif' | relative_url }}" alt="Animation of a crack propagating through a functionally graded plate" loading="lazy" />
+                  <figcaption class="pi-caption">A crack advancing through the graded plate over the 31 load steps — the trajectory a surrogate has to reproduce.</figcaption>
+                </figure>
+              </div>
               <div class="pi-papers">
                 <h4>Open Datasets</h4>
                 <ul>
@@ -282,7 +371,9 @@ permalink: /projects/
             </div>
           </details>
 
-        </div>
+          </div>
+        </section>
+
       </div>
     </section>
   </div>
