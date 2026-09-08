@@ -230,6 +230,14 @@ hr { border: none; border-top: 2px solid var(--border); margin: 1.5rem 0; }
       margin: 0;
     }
 
+    .feature-cite {
+      font-size: 0.7rem;
+      line-height: 1.5;
+      color: var(--text-3);
+      margin: 0;
+      a { color: var(--accent); }
+    }
+
     .feature-link {
       margin-top: auto;
       font-size: 0.78rem;
@@ -244,9 +252,23 @@ hr { border: none; border-top: 2px solid var(--border); margin: 1.5rem 0; }
       &:hover i { transform: translateX(3px); }
     }
 
+    /* mirrored variant, so the column of cards alternates left/right */
+    &.feature-alt {
+      border-left: 1px solid var(--border);
+      border-right: 3px solid var(--teal);
+
+      .feature-media { grid-column: 2; grid-row: 1; }
+      .feature-body  { grid-column: 1; grid-row: 1; }
+    }
+
     @media (max-width: 680px) {
       grid-template-columns: 1fr;
       .feature-media { min-height: 0; img { height: auto; } }
+
+      &.feature-alt {
+        .feature-media { grid-column: 1; grid-row: 1; }
+        .feature-body  { grid-column: 1; grid-row: 2; }
+      }
     }
   }
 }

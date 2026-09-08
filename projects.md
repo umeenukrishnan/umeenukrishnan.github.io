@@ -17,7 +17,7 @@ permalink: /projects/
         <div class="project-list">
 
           <!-- B.Tech Project -->
-          <details class="project-item" open>
+          <details id="condition-assessment" class="project-item" open>
             <summary>
               <div class="pi-meta">
                 <div class="pi-title">Condition Assessment of an RC Building using NDT</div>
@@ -57,7 +57,7 @@ permalink: /projects/
           </details>
 
           <!-- M.Tech Thesis -->
-          <details class="project-item">
+          <details id="seismic-irregularity" class="project-item">
             <summary>
               <div class="pi-meta">
                 <div class="pi-title">Seismic Response of Vertically Irregular Buildings</div>
@@ -99,7 +99,7 @@ permalink: /projects/
           </details>
 
           <!-- Phase Field Fracture -->
-          <details class="project-item">
+          <details id="phase-field-fracture" class="project-item">
             <summary>
               <div class="pi-meta">
                 <div class="pi-title">Phase Field Fracture</div>
@@ -129,7 +129,7 @@ permalink: /projects/
           </details>
 
           <!-- FGM Fracture -->
-          <details class="project-item">
+          <details id="fgm-fracture" class="project-item">
             <summary>
               <div class="pi-meta">
                 <div class="pi-title">Fracture in Functionally Graded Materials</div>
@@ -156,7 +156,7 @@ permalink: /projects/
           </details>
 
           <!-- Topology Optimization -->
-          <details class="project-item">
+          <details id="topology-optimization" class="project-item">
             <summary>
               <div class="pi-meta">
                 <div class="pi-title">Topology Optimization</div>
@@ -183,7 +183,7 @@ permalink: /projects/
           </details>
 
           <!-- Auxetic Metamaterials -->
-          <details class="project-item">
+          <details id="auxetic-metamaterials" class="project-item">
             <summary>
               <div class="pi-meta">
                 <div class="pi-title">Auxetic Metamaterials Design</div>
@@ -211,7 +211,7 @@ permalink: /projects/
           </details>
 
           <!-- EDNN -->
-          <details class="project-item">
+          <details id="ednn" class="project-item">
             <summary>
               <div class="pi-meta">
                 <div class="pi-title">Evolutionary Deep Neural Networks</div>
@@ -233,3 +233,19 @@ permalink: /projects/
     </section>
   </div>
 </div>
+
+<script>
+  (function () {
+    function openTarget() {
+      var h = window.location.hash;
+      if (!h) return;
+      var el = document.querySelector(h);
+      if (el && el.tagName === 'DETAILS') {
+        el.open = true;
+        el.scrollIntoView({ block: 'start' });
+      }
+    }
+    window.addEventListener('DOMContentLoaded', openTarget);
+    window.addEventListener('hashchange', openTarget);
+  })();
+</script>
