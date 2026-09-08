@@ -228,6 +228,60 @@ permalink: /projects/
             </div>
           </details>
 
+
+          <!-- Fracture-Bench -->
+          <details id="fracture-bench" class="project-item">
+            <summary>
+              <div class="pi-meta">
+                <div class="pi-title">Fracture-Bench: Benchmarking Neural-Operator Surrogates</div>
+                <div class="pi-tags-inline">
+                  <span>Neural Operators</span><span>FNO</span><span>DeepONet</span><span>Diffusion Models</span><span>Benchmark Datasets</span><span>Scientific ML</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down pi-chevron"></i>
+            </summary>
+            <div class="pi-body">
+              <p class="pi-desc">
+                Machine-learning surrogates for fracture are usually reported on the authors' own data, with their own
+                preprocessing and their own training budget — which makes it almost impossible to tell whether one
+                architecture is genuinely better than another. <em>Fracture-Bench</em>, my ongoing work at Johns Hopkins,
+                is an attempt to fix that. It evaluates five CNN- and neural-operator-based surrogates — UNet, FNO,
+                DeepONet, Latent DeepONet, and a conditional denoising diffusion model — for phase-field fracture under
+                <em>identical</em> preprocessing, loss functions, and training budgets, across two high-fidelity datasets
+                that differ in formulation, material heterogeneity, and prediction task. Beyond raw accuracy it measures
+                computational cost and, more tellingly, generalisation: how each model holds up on withheld load steps and
+                on parameter configurations it never saw during training. The datasets, evaluation protocols, and model
+                code are all released openly, so the comparison can be reproduced and extended rather than taken on trust.
+              </p>
+              <p class="pi-desc">
+                Producing that comparison meant first producing the ground truth. Both benchmark datasets below were
+                generated with adaptive phase-field simulations and published through the Johns Hopkins Research Data
+                Repository, with documented preprocessing and evaluation splits so other groups can train against exactly
+                the same data.
+              </p>
+              <div class="pi-papers">
+                <h4>Open Datasets</h4>
+                <ul>
+                  <li>
+                    <a href="https://doi.org/10.7281/T1IDANWZ" target="_blank" rel="noopener">U. M. Krishnan, C. Vasudev, and S. Goswami. A phase-field dataset for dynamic brittle fracture under varying crack configurations and loading. <em>Johns Hopkins Research Data Repository</em>, 2026. doi:10.7281/T1IDANWZ</a>
+                    — 2,000 realisations on a 100 &times; 40 mm notched plate under impulsive tensile loading at four
+                    intensities, spanning steady propagation through to unstable branching and coalescence.
+                  </li>
+                  <li>
+                    <a href="https://doi.org/10.7281/T1RZFI3I" target="_blank" rel="noopener">M. Hakimzadeh, U. M. Krishnan, L. Graham-Brady, and S. Goswami. Crack paths in functionally graded plates: a phase-field simulation dataset. <em>Johns Hopkins Research Data Repository</em>, 2025. doi:10.7281/T1RZFI3I</a>
+                    — 4,000 Mode-I realisations across four hard/soft inclusion configurations, interpolated to a uniform
+                    128 &times; 256 grid with predefined train/test splits.
+                  </li>
+                </ul>
+                <h4>Code</h4>
+                <ul>
+                  <li><a href="https://github.com/Centrum-IntelliPhysics/benchmark_data_phase_field_dynamic_fracture" target="_blank" rel="noopener">Generation and preprocessing code — dynamic phase-field fracture dataset</a></li>
+                  <li><a href="https://github.com/Centrum-IntelliPhysics/Benchmark_Data_Phase_field_fracture_in_fgm" target="_blank" rel="noopener">Generation and preprocessing code — functionally graded material fracture dataset</a></li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
         </div>
       </div>
     </section>
