@@ -21,13 +21,21 @@ permalink: /about/
               <strong>Andaman and Nicobar Islands</strong>. Growing up surrounded by nature, simplicity,
               and a close-knit community shaped much of who I am today. I completed my schooling and
               Bachelor's degree in Civil Engineering there before beginning a journey that would take me
-              across different parts of the world.
+              across different parts of the world. My final-year project there was my first real taste of
+              research — a <strong>condition assessment of an ageing military-station building</strong>, where we
+              recovered the in-situ concrete strength non-destructively using a rebound hammer and ultrasonic
+              pulse velocity, then used those measured values to work out which beams and columns could no
+              longer carry their load.
             </p>
             <p>
               Later, I moved to Kerala to pursue my <strong>Master's degree in Structural Engineering
               and Construction Management</strong> at TKM College of Engineering. Those years helped me
               grow not only academically, but also personally. Living in Kerala brought me closer to my
-              roots, and during that time I learned to speak my mother tongue, Malayalam.
+              roots, and during that time I learned to speak my mother tongue, Malayalam. My Master's thesis
+              asked how much <strong>vertical geometric irregularity</strong> — stepped buildings and buildings on
+              sloping ground — actually changes a structure's seismic demand, and proposed an irregularity index
+              along with a correction to the code-based design force. Both projects are described in more detail
+              on my <a href="{{ '/projects/' | relative_url }}">projects page</a>.
             </p>
             <p>
               After completing my Master's, I had the opportunity to teach undergraduate students at a
@@ -68,6 +76,11 @@ permalink: /about/
             <span>FEniCS</span>
             <span>Metamaterials</span>
             <span>3D Printing</span>
+            <span>Earthquake Engineering</span>
+            <span>Structural Assessment</span>
+            <span>Non-Destructive Testing</span>
+            <span>SAP2000</span>
+            <span>STAAD.Pro</span>
           </div>
         </div>
       </div>
