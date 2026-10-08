@@ -1,23 +1,14 @@
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo">MK<span>.</span></a>
-
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#hobbies">Hobbies</a></li>
-      <li><a href="#travel">Travel</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <div class="nav-controls">
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <i class="fa-solid fa-sun" id="theme-icon"></i>
-      </button>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="site-brand" href="{{ '/' | relative_url }}">Meenu Krishnan<span>Research &amp; Engineering</span></a>
+    <nav class="site-tabs" aria-label="Main navigation">
+      {% assign tab_names = 'Home,About,Highlights,Projects,Blog,Hobbies,Travel' | split: ',' %}
+      {% assign tab_paths = '/,/about/,/highlights/,/projects/,/blog/,/hobbies/,/travel/' | split: ',' %}
+      {% for name in tab_names %}
+      {% assign tab_path = tab_paths[forloop.index0] %}
+      <a href="{{ tab_path | relative_url }}"{% if page.url == tab_path %} class="active" aria-current="page"{% endif %}>{{ name }}</a>
+      {% endfor %}
+      <a href="{{ '/' | relative_url }}#contact">Contact</a>
+    </nav>
   </div>
-</nav>
+</header>

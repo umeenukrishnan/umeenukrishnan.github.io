@@ -2,12 +2,9 @@
 <html lang="en" data-theme="light">
   {% include head.html %}
   <body>
-    <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme">
-      <i class="fa-solid fa-moon" id="theme-icon"></i>
-    </button>
+    {% include nav.html %}
     <main class="site-main">{{ content }}</main>
     {% include footer.html %}
-    <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
   </body>
 </html>

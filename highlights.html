@@ -1,0 +1,126 @@
+---
+layout: default
+title: Highlights
+permalink: /highlights/
+description: Selected research, engineering projects, and computational tools.
+---
+<div class="page-grid"><div class="page-main">
+    <!-- HIGHLIGHTS -->
+    <section class="section-plain reveal" id="highlights">
+      <div class="section-acc-header">
+        <div class="sb-inner"><h2>Highlights</h2></div>
+      </div>
+      <div class="section-body">
+        <div class="highlights-grid">
+          <div class="highlight-item feature">
+            <div class="feature-media">
+              <img src="{{ '/assets/images/btech_condition_assessment.jpg' | relative_url }}" alt="The RCC residential building assessed at Brichgunj Military Station" loading="lazy" />
+            </div>
+            <div class="feature-body">
+              <span class="feature-eyebrow">B.Tech Project &middot; Field Assessment</span>
+              <h3 class="highlight-title">Condition Assessment of an RC Building</h3>
+              <p class="feature-desc">
+                A G+2 residential block from 1991, no longer serviceable and with no structural drawings left. A rebound hammer and ultrasonic pulse velocity recovered its real concrete strength — and that revealed which beams and columns could no longer carry their load.
+              </p>
+              <a class="feature-link" href="{{ '/projects/' | relative_url }}#condition-assessment">Read the project <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="highlight-item feature feature-alt">
+            <div class="feature-media contain">
+              <img src="{{ '/assets/images/mtech_home_tile.png' | relative_url }}" alt="Stepped building frame modelled in SAP2000" loading="lazy" />
+            </div>
+            <div class="feature-body">
+              <span class="feature-eyebrow">M.Tech Thesis &middot; Earthquake Engineering</span>
+              <h3 class="highlight-title">Seismic Response of Irregular Buildings</h3>
+              <p class="feature-desc">
+                Stepped buildings and buildings on sloping ground are everywhere, yet the code says little about how their design forces should change. Across 32 frames I built an irregularity index and a magnification factor that pulls the code estimate back in line with the real response.
+              </p>
+              <a class="feature-link" href="{{ '/projects/' | relative_url }}#seismic-irregularity">Read the project <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="highlight-item feature">
+            <div class="feature-media">
+              <img src="{{ '/assets/gif/2.gif' | relative_url }}" alt="Large scale topology optimization results" loading="lazy" />
+            </div>
+            <div class="feature-body">
+              <span class="feature-eyebrow">Ph.D. Research &middot; Structural Optimization</span>
+              <h3 class="highlight-title">Large Scale Topology Optimization</h3>
+              <p class="feature-desc">
+                Letting the optimizer decide where material should go inside a design domain — scaled up to large 3D problems in FEniCS with MPI parallelism, then 3D printed to see whether the answer really carries its load.
+              </p>
+              <a class="feature-link" href="{{ '/projects/' | relative_url }}#topology-optimization">Read the project <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="highlight-item feature feature-alt">
+            <div class="feature-media contain">
+              <img src="{{ '/assets/gif/fracture.gif' | relative_url }}" alt="Phase field fracture simulation with adaptive mesh refinement" loading="lazy" />
+            </div>
+            <div class="feature-body">
+              <span class="feature-eyebrow">Ph.D. Research &middot; Fracture Mechanics</span>
+              <h3 class="highlight-title">Phase Field Fracture and Mesh Adaptivity</h3>
+              <p class="feature-desc">
+                Cracks as a smooth damage field rather than a moving boundary. Adaptive refinement guided by an energy-based error indicator keeps fast crack growth accurate without meshing the whole domain finely.
+              </p>
+              <a class="feature-link" href="{{ '/projects/' | relative_url }}#phase-field-fracture">Read the project <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="highlight-item feature">
+            <div class="feature-media">
+              <img src="{{ '/assets/gif/aux_highlight_opt.gif' | relative_url }}" alt="Auxetic metamaterial expanding laterally under tension" loading="lazy" />
+            </div>
+            <div class="feature-body">
+              <span class="feature-eyebrow">Ph.D. Research &middot; Metamaterials</span>
+              <h3 class="highlight-title">Auxetic Metamaterials</h3>
+              <p class="feature-desc">
+                Materials that get wider when you stretch them. The negative Poisson's ratio comes from the geometry of the microstructure, not the material — designed by topology optimization, then printed and tested.
+              </p>
+              <a class="feature-link" href="{{ '/projects/' | relative_url }}#auxetic-metamaterials">Read the project <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="highlight-item feature feature-alt">
+            <div class="feature-media">
+              <img src="{{ '/assets/gif/3.gif' | relative_url }}" alt="A collection of 3D printed lattice and metamaterial samples" loading="lazy" />
+            </div>
+            <div class="feature-body">
+              <span class="feature-eyebrow">Fabrication &middot; 3D Printing</span>
+              <h3 class="highlight-title">Some Cool 3D Printed Samples</h3>
+              <p class="feature-desc">
+                The part of the work you can actually hold. Optimized geometries and metamaterial unit cells taken off the screen and onto the print bed, where a design either survives being squashed or it doesn't.
+              </p>
+              <a class="feature-link" href="{{ '/projects/' | relative_url }}#auxetic-metamaterials">Read the project <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="highlight-item feature">
+            <div class="feature-media contain">
+              <img src="{{ '/assets/images/mpi.png' | relative_url }}" alt="The mesh processing pipeline from Gmsh through meshio and FEniCS to ParaView" loading="lazy" />
+            </div>
+            <div class="feature-body">
+              <span class="feature-eyebrow">Research Tooling &middot; HPC</span>
+              <h3 class="highlight-title">Parallel Processing</h3>
+              <p class="feature-desc">
+                Getting a mesh from Gmsh into FEniCS and out to ParaView, then solving it across many cores — the pipeline behind every large simulation here.
+              </p>
+              <p class="feature-cite">U. M. Krishnan, A. Gupta, and R. Chowdhury. Working with complex meshes: The mesh processing pipeline. FEniCS 2021. <a href="https://doi.org/10.6084/M9.figshare.c.5487891" target="_blank" rel="noopener">doi: 10.6084/M9</a></p>
+              <a class="feature-link" href="{{ '/projects/' | relative_url }}#topology-optimization">Read the project <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="highlight-item feature feature-alt">
+            <div class="feature-media contain">
+              <img src="{{ '/assets/images/mesh_quality.png' | relative_url }}" alt="Comparison of solver convergence for good and bad quality meshes" loading="lazy" />
+            </div>
+            <div class="feature-body">
+              <span class="feature-eyebrow">Research Tooling &middot; Meshing</span>
+              <h3 class="highlight-title">Why Mesh Quality Matters</h3>
+              <p class="feature-desc">
+                A badly shaped element is not just ugly — it costs iterations. Comparing convergence on good and bad meshes shows why quality metrics deserve attention before you ever hit run.
+              </p>
+              <p class="feature-cite">U. M. Krishnan, A. Gupta, and R. Chowdhury. Working with complex meshes: The mesh processing pipeline. FEniCS 2021. <a href="https://doi.org/10.6084/M9.figshare.c.5487891" target="_blank" rel="noopener">doi: 10.6084/M9</a></p>
+              <a class="feature-link" href="{{ '/projects/' | relative_url }}#phase-field-fracture">Read the project <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+</div></div>

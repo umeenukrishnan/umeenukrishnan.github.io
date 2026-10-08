@@ -22,14 +22,6 @@
   <!-- Styles -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
 
-  <!-- Prevent theme flash -->
-  <script>
-    (function(){
-      var t = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', t);
-    })();
-  </script>
-
   {%- seo title=false -%}
   {%- feed_meta -%}
 </head>
