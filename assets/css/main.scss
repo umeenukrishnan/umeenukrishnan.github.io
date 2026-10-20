@@ -3,7 +3,7 @@ sitemap: false
 ---
 
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Courier+Prime:wght@400;700&display=swap');
 
 /* ─── Design tokens ──────────────────────────────────────────────── */
 :root {
@@ -1049,11 +1049,12 @@ details.project-item {
 /* ─── Contact ────────────────────────────────────────────────────── */
 .contact-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
+  grid-template-columns: 300px minmax(0, 1fr);
   gap: 48px;
   align-items: start;
 }
-.contact-main { min-width: 0; }
+.contact-main { min-width: 0; order: 2; }
+.buddy { order: 1; }
 
 /* ── interactive cartoon miniature ───────────────────────────────── */
 .buddy {
@@ -1502,14 +1503,16 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 
 .hero-copy { min-width: 0; }
 
-.hello-head {
-  font-size: clamp(54px, 9vw, 108px);
-  font-weight: 800;
-  line-height: .95;
-  letter-spacing: -0.055em;
+/* .hero h1 from the older layer out-specifies a bare .hello-head */
+.hero .hello-head {
+  font-family: 'Courier Prime', 'JetBrains Mono', ui-monospace, monospace;
+  font-size: clamp(62px, 10.2vw, 128px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
   margin-bottom: 20px;
 }
-.hello-head em { font-style: normal; color: var(--accent); }
+.hero .hello-head em { font-style: normal; color: var(--accent); }
 
 .hello-face {
   display: inline-block;
@@ -1957,7 +1960,8 @@ details.section-acc > .section-body,
 
 @media (max-width: 920px) {
   .contact-grid { grid-template-columns: 1fr; gap: 30px; }
-  .buddy { position: static; flex-direction: column-reverse; }
+  .contact-main { order: 1; }
+  .buddy { order: 2; position: static; flex-direction: column-reverse; }
   .buddy-bubble::after { top: -8px; bottom: auto; }
   .buddy-hint { display: none; }
 }
@@ -1969,7 +1973,7 @@ details.section-acc > .section-body,
 
 @media (max-width: 680px) {
   .hero { margin-top: 34px; }
-  .hello-head { font-size: clamp(50px, 16vw, 74px); }
+  .hero .hello-head { font-size: clamp(52px, 17vw, 84px); }
   .ach-card { flex: 0 0 82vw; }
   .ach-top { flex-direction: column; align-items: flex-start; }
   .section-acc-header .sb-inner { padding: 24px 22px 0; }
