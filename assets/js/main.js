@@ -1,38 +1,59 @@
-/* ── Mobile nav ──────────────────────────────────────────────────── */
-const hamburger = document.getElementById('hamburger');
-const navLinks  = document.getElementById('nav-links');
+/* ── Pill nav: mobile toggle ─────────────────────────────────────── */
+const navToggle = document.getElementById('nav-toggle');
+const siteTabs  = document.getElementById('site-tabs');
 
-if (hamburger && navLinks) {
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navLinks.classList.toggle('open');
-    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+if (navToggle && siteTabs) {
+  const icon = navToggle.querySelector('i');
+
+  const setOpen = open => {
+    siteTabs.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    if (icon) icon.className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+  };
+
+  navToggle.addEventListener('click', e => {
+    e.stopPropagation();
+    setOpen(!siteTabs.classList.contains('open'));
   });
 
-  navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      navLinks.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
-}
+  siteTabs.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
 
-/* ── Active nav on scroll ────────────────────────────────────────── */
-const sections = document.querySelectorAll('section[id]');
-const navAs    = document.querySelectorAll('.nav-links a[href^="/#"], .nav-links a[href^="#"]');
-
-function setActive() {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 120) current = s.id;
+  document.addEventListener('click', e => {
+    if (!siteTabs.contains(e.target)) setOpen(false);
   });
-  navAs.forEach(a => {
-    a.style.color = a.getAttribute('href').endsWith(current) ? 'var(--accent)' : '';
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') setOpen(false);
   });
 }
 
-window.addEventListener('scroll', setActive, { passive: true });
+/* ── Horizontal rails (achievements carousel) ────────────────────── */
+document.querySelectorAll('[data-rail]').forEach(rail => {
+  const scope = rail.closest('section') || document;
+  const prev  = scope.querySelector('[data-rail-prev]');
+  const next  = scope.querySelector('[data-rail-next]');
+
+  const step = () => {
+    const card = rail.querySelector(':scope > *');
+    if (!card) return rail.clientWidth * 0.8;
+    const gap = parseFloat(getComputedStyle(rail).columnGap || '22') || 22;
+    return card.getBoundingClientRect().width + gap;
+  };
+
+  const sync = () => {
+    const max = rail.scrollWidth - rail.clientWidth - 2;
+    if (prev) prev.disabled = rail.scrollLeft <= 2;
+    if (next) next.disabled = rail.scrollLeft >= max;
+    [prev, next].forEach(b => { if (b) b.style.opacity = b.disabled ? '.35' : '1'; });
+  };
+
+  if (prev) prev.addEventListener('click', () => rail.scrollBy({ left: -step(), behavior: 'smooth' }));
+  if (next) next.addEventListener('click', () => rail.scrollBy({ left:  step(), behavior: 'smooth' }));
+
+  rail.addEventListener('scroll', sync, { passive: true });
+  window.addEventListener('resize', sync);
+  sync();
+});
 
 /* ── Scroll reveal ───────────────────────────────────────────────── */
 const observer = new IntersectionObserver(entries => {
@@ -45,28 +66,3 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-/* ── Typed hero text ─────────────────────────────────────────────── */
-const typed    = document.getElementById('typed');
-const phrases  = [
-  'Computational Mechanics',
-  'Evolutionary Deep Neural Networks',
-  'Phase Field Fracture',
-  'Topology Optimization',
-  'Multi-physics Simulation',
-];
-let pi = 0, ci = 0, deleting = false;
-
-function type() {
-  if (!typed) return;
-  const phrase = phrases[pi];
-  typed.textContent = deleting ? phrase.slice(0, --ci) : phrase.slice(0, ++ci);
-
-  let delay = deleting ? 45 : 80;
-  if (!deleting && ci === phrase.length) { delay = 2200; deleting = true; }
-  else if (deleting && ci === 0)         { deleting = false; pi = (pi + 1) % phrases.length; delay = 400; }
-
-  setTimeout(type, delay);
-}
-
-type();

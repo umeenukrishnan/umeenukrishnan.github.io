@@ -3,58 +3,195 @@ layout: default
 title: Home
 description: "Research in computational mechanics, scientific machine learning, and structural optimization."
 ---
-<section class="intro wrap-wide">
-  <div class="intro-copy">
-    <p class="eyebrow">Research · Engineering · Discovery</p>
-    <h1>U. Meenu Krishnan</h1>
-    <p class="intro-role">Postdoctoral Research Fellow at Johns Hopkins University</p>
-    <p class="intro-description">Exploring how computational mechanics and scientific machine learning can help us understand, design, and improve engineering systems.</p>
-    <div class="intro-actions">
-      <a class="primary-link" href="{{ '/projects/' | relative_url }}">Explore my research <span aria-hidden="true">→</span></a>
-      <a class="secondary-link" href="{{ '/about/' | relative_url }}">About me</a>
+
+<!-- ─── HERO ──────────────────────────────────────────────────────── -->
+<section class="hello">
+  <h1 class="hello-head">Hello<em>!</em></h1>
+  <p class="hello-lede">
+    I&rsquo;m Meenu, a <strong>Postdoctoral Research Fellow at Johns Hopkins University</strong>
+    working at the intersection of <strong>computational mechanics</strong> and
+    <strong>scientific machine learning</strong> &mdash; building solvers, surrogates, and
+    optimization tools that help us understand how structures and materials really behave.
+  </p>
+  <div class="hello-actions">
+    <a class="btn btn-dark" href="{{ '/projects/' | relative_url }}">Explore my research <i class="fa-solid fa-arrow-right"></i></a>
+    <a class="btn btn-ghost" href="{{ '/about/' | relative_url }}">About me</a>
+    <a class="btn btn-ghost" href="#contact">Get in touch</a>
+  </div>
+</section>
+
+<!-- ─── PORTRAIT STAGE ────────────────────────────────────────────── -->
+<section class="hello-stage">
+  <div class="stage-card">
+    <img class="stage-photo" src="{{ site.avatar | relative_url }}" alt="U. Meenu Krishnan" />
+    <div class="stage-copy">
+      <h2>Physics, computation, and design &mdash; in one workflow.</h2>
+      <p>
+        From phase-field fracture and large-scale topology optimization during my Ph.D. at
+        IIT Roorkee, to evolutionary deep neural networks and neural-operator benchmarks at
+        Johns Hopkins, my work is about making hard mechanics problems solvable at scale.
+      </p>
+      <div class="stage-chips">
+        <span>Computational Mechanics</span>
+        <span>Scientific ML</span>
+        <span>Phase Field Fracture</span>
+        <span>Topology Optimization</span>
+        <span>HPC &amp; FEniCS</span>
+      </div>
     </div>
   </div>
-  <div class="intro-portrait"><img src="{{ site.avatar | relative_url }}" alt="U. Meenu Krishnan" /><p>Computational mechanics &amp;<br />scientific machine learning</p></div>
 </section>
-<section class="overview wrap-wide" aria-labelledby="overview-title">
-  <p class="eyebrow">Areas of focus</p>
-  <h2 id="overview-title">Connecting physics, computation, and design.</h2>
-  <div class="focus-grid">
-    <article><span class="focus-number">01</span><h3>Computational mechanics</h3><p>Modeling fracture, coupled physics, and structural response with efficient numerical methods.</p></article>
-    <article><span class="focus-number">02</span><h3>Scientific machine learning</h3><p>Combining physical principles and neural networks to solve challenging engineering problems.</p></article>
-    <article><span class="focus-number">03</span><h3>Structural optimization</h3><p>Exploring material layouts and metamaterials through simulation, optimization, and fabrication.</p></article>
+
+<!-- ─── TICKER ────────────────────────────────────────────────────── -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Johns Hopkins University</span><span>Evolutionary Deep Neural Networks</span>
+    <span>Fracture-Bench</span><span>Topology Optimization</span>
+    <span>Phase Field Fracture</span><span>Auxetic Metamaterials</span>
+    <span>High Performance Computing</span>
+    <span>Johns Hopkins University</span><span>Evolutionary Deep Neural Networks</span>
+    <span>Fracture-Bench</span><span>Topology Optimization</span>
+    <span>Phase Field Fracture</span><span>Auxetic Metamaterials</span>
+    <span>High Performance Computing</span>
+  </div>
+</div>
+
+<!-- ─── ACHIEVEMENTS CAROUSEL ─────────────────────────────────────── -->
+<section class="achievements" aria-labelledby="ach-title">
+  <div class="ach-top">
+    <div class="section-head">
+      <p class="eyebrow">Milestones</p>
+      <h2 id="ach-title">Recent Achievements</h2>
+    </div>
+    <div class="rail-ctrl">
+      <button type="button" data-rail-prev aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+      <button type="button" data-rail-next aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+  <div class="ach-rail" data-rail>
+    <article class="ach-card">
+      <div class="ach-media"><img src="{{ '/assets/images/campus_jhu.jpg' | relative_url }}" alt="Johns Hopkins University campus" loading="lazy" /></div>
+      <div class="ach-body">
+        <h3>Postdoctoral Research Fellow, Johns Hopkins</h3>
+        <span class="ach-when">2024 &mdash; Present</span>
+        <p>Developing evolutionary deep neural networks for multi-physics problems in solid mechanics, bridging mechanics and machine learning.</p>
+        <a class="ach-link" href="{{ '/projects/' | relative_url }}#ednn">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="ach-card">
+      <div class="ach-media contain"><img src="{{ '/assets/images/fracbench_dynamic_branching.png' | relative_url }}" alt="Dynamic crack branching benchmark" loading="lazy" /></div>
+      <div class="ach-body">
+        <h3>Fracture-Bench: a benchmark for neural operators</h3>
+        <span class="ach-when">Johns Hopkins &middot; Ongoing</span>
+        <p>Shared datasets and consistent evaluation so neural-operator surrogates for fracture can finally be compared on equal footing.</p>
+        <a class="ach-link" href="{{ '/projects/' | relative_url }}#fracture-bench">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="ach-card">
+      <div class="ach-media"><img src="{{ '/assets/gif/2.gif' | relative_url }}" alt="Large scale topology optimization result" loading="lazy" /></div>
+      <div class="ach-body">
+        <h3>Large-scale topology optimization, then 3D printed</h3>
+        <span class="ach-when">Ph.D. &middot; IIT Roorkee</span>
+        <p>Scaled optimization to large 3D problems in FEniCS with MPI parallelism, then printed the designs to check they really carry their load.</p>
+        <a class="ach-link" href="{{ '/projects/' | relative_url }}#topology-optimization">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="ach-card">
+      <div class="ach-media contain"><img src="{{ '/assets/gif/fracture.gif' | relative_url }}" alt="Phase field fracture simulation" loading="lazy" /></div>
+      <div class="ach-body">
+        <h3>Adaptive phase-field fracture with automatic time stepping</h3>
+        <span class="ach-when">Ph.D. &middot; IIT Roorkee</span>
+        <p>Energy-based error indicators drive mesh refinement, keeping fast crack growth accurate without meshing the whole domain finely.</p>
+        <a class="ach-link" href="{{ '/projects/' | relative_url }}#phase-field-fracture">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="ach-card">
+      <div class="ach-media contain"><img src="{{ '/assets/gif/aux_highlight.gif' | relative_url }}" alt="Auxetic metamaterial deformation" loading="lazy" /></div>
+      <div class="ach-body">
+        <h3>Auxetic metamaterials by design</h3>
+        <span class="ach-when">Ph.D. &middot; IIT Roorkee</span>
+        <p>Designing material layouts with negative Poisson&rsquo;s ratio through simulation, optimization, and fabrication.</p>
+        <a class="ach-link" href="{{ '/projects/' | relative_url }}#auxetic-metamaterials">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="ach-card">
+      <div class="ach-media"><img src="{{ '/assets/images/campus_iitr.jpg' | relative_url }}" alt="IIT Roorkee campus" loading="lazy" /></div>
+      <div class="ach-body">
+        <h3>Ph.D. in Computational Mechanics, IIT Roorkee</h3>
+        <span class="ach-when">Doctoral research</span>
+        <p>Efficient algorithms for phase-field fracture and 3D-printable topology optimization: mesh adaptivity, time stepping, and parallel HPC.</p>
+        <a class="ach-link" href="{{ '/projects/' | relative_url }}#era-phd">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
   </div>
 </section>
-<section class="explore-strip wrap-wide"><div><p class="eyebrow">Selected work</p><h2>Research highlights &amp; practical insights</h2><p>Explore projects, simulations, and the lessons behind the work.</p></div><a class="primary-link" href="{{ '/highlights/' | relative_url }}">View highlights <span aria-hidden="true">→</span></a></section>
-<div class="page-grid"><div class="page-main">
-    <!-- CONTACT -->
-    <section class="section-plain reveal" id="contact">
-      <div class="section-acc-header">
-        <div class="sb-inner"><h2>Contact</h2></div>
-      </div>
-      <div class="section-body">
-        <p class="contact-text">
-          I'm always happy to discuss research ideas, collaborations, or opportunities.
-          Reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a> or fill in the form below.
-        </p>
-        <form class="contact-form" action="https://formspree.io/f/mbdwalab" method="POST">
-          <div class="fg">
-            <label for="cf-name">Name</label>
-            <input type="text" id="cf-name" name="name" placeholder="Your name" required />
-          </div>
-          <div class="fg">
-            <label for="cf-email">Email</label>
-            <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
-          </div>
-          <div class="fg">
-            <label for="cf-message">Message</label>
-            <textarea id="cf-message" name="message" placeholder="What's on your mind?" required></textarea>
-          </div>
-          <button type="submit">
-            <i class="fa-solid fa-paper-plane"></i> Send
-          </button>
-        </form>
-      </div>
-    </section>
 
+<!-- ─── PROJECT SHOWCASE ──────────────────────────────────────────── -->
+<section class="showcase" aria-labelledby="showcase-title">
+  <div class="showcase-head">
+    <p class="eyebrow">Selected work</p>
+    <h2 id="showcase-title">Research <em>Highlights</em></h2>
+  </div>
+  <div class="showcase-grid">
+    <a class="show-card" href="{{ '/projects/' | relative_url }}#ednn">
+      <span class="show-num">01</span>
+      <h3>Evolutionary Deep Neural Networks</h3>
+      <p>Mesh-free, physics-informed solvers that evolve network parameters in time to march coupled physics forward.</p>
+      <div class="show-tags"><span>Scientific ML</span><span>Solid mechanics</span></div>
+      <span class="show-go">Read the project <i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+    <a class="show-card" href="{{ '/projects/' | relative_url }}#phase-field-fracture">
+      <span class="show-num">02</span>
+      <h3>Phase Field Fracture &amp; Mesh Adaptivity</h3>
+      <p>Cracks as a smooth damage field, with refinement guided by an energy-based error indicator instead of a uniformly fine mesh.</p>
+      <div class="show-tags"><span>Fracture</span><span>FEniCS</span><span>HPC</span></div>
+      <span class="show-go">Read the project <i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+    <a class="show-card" href="{{ '/projects/' | relative_url }}#topology-optimization">
+      <span class="show-num">03</span>
+      <h3>Large Scale Topology Optimization</h3>
+      <p>Letting the optimizer decide where material goes &mdash; scaled to large 3D problems and validated by printing the result.</p>
+      <div class="show-tags"><span>Optimization</span><span>3D printing</span></div>
+      <span class="show-go">Read the project <i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+  </div>
+  <div class="showcase-head" style="margin-top:30px;margin-bottom:0">
+    <a class="btn btn-dark" href="{{ '/highlights/' | relative_url }}">See all highlights <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- ─── CONTACT ───────────────────────────────────────────────────── -->
+<div class="page-grid"><div class="page-main">
+  <section class="section-plain" id="contact">
+    <div class="section-acc-header">
+      <div class="sb-inner"><h2>Contact</h2></div>
+    </div>
+    <div class="section-body">
+      <p class="contact-text">
+        I&rsquo;m always happy to discuss research ideas, collaborations, or opportunities.
+        Reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a> or fill in the form below.
+      </p>
+      <form class="contact-form" action="https://formspree.io/f/mbdwalab" method="POST">
+        <div class="fg">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="fg">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="fg">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" placeholder="What's on your mind?" required></textarea>
+        </div>
+        <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
+      </form>
+    </div>
+  </section>
 </div></div>

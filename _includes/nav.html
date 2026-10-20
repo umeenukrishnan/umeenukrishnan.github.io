@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="header-inner">
     <a class="site-brand" href="{{ '/' | relative_url }}">Meenu Krishnan<span>Research &amp; Engineering</span></a>
-    <nav class="site-tabs" aria-label="Main navigation">
+    <nav class="site-tabs" id="site-tabs" aria-label="Main navigation">
       {% assign tab_names = 'Home,About,Highlights,Projects,Blog,Hobbies,Travel' | split: ',' %}
       {% assign tab_paths = '/,/about/,/highlights/,/projects/,/blog/,/hobbies/,/travel/' | split: ',' %}
       {% for name in tab_names %}
@@ -10,5 +10,8 @@
       {% endfor %}
       <a href="{{ '/' | relative_url }}#contact">Contact</a>
     </nav>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-tabs">
+      <i class="fa-solid fa-bars"></i>
+    </button>
   </div>
 </header>

@@ -1,9 +1,39 @@
 <footer class="footer">
-  <div class="wrap">
-    <p>
-      <a href="/">U. Meenu Krishnan</a> &nbsp;·&nbsp;
-      <a href="mailto:{{ site.email }}">{{ site.email }}</a> &nbsp;·&nbsp;
-      <a href="https://github.com/umeenukrishnan" target="_blank" rel="noopener">GitHub</a>
-    </p>
+  <div class="footer-card">
+    <div class="footer-top">
+      <div>
+        <h3>Let&rsquo;s work together.</h3>
+        <p>Open to collaborations in computational mechanics, scientific machine learning, and structural optimization &mdash; and always happy to talk research.</p>
+        <div class="footer-social" style="margin-top:22px">
+          <a href="mailto:{{ site.email }}" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://scholar.google.com/citations?user={{ site.social.scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fa-brands fa-google"></i></a>
+          <a href="https://www.researchgate.net/profile/{{ site.social.researchgate }}" target="_blank" rel="noopener" aria-label="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
+          <a href="https://www.youtube.com/{{ site.social.youtube }}" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <div class="footer-links">
+          <a href="{{ '/about/' | relative_url }}">About</a>
+          <a href="{{ '/highlights/' | relative_url }}">Highlights</a>
+          <a href="{{ '/projects/' | relative_url }}">Projects</a>
+          <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        </div>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <div class="footer-links">
+          <a href="{{ '/hobbies/' | relative_url }}">Hobbies</a>
+          <a href="{{ '/travel/' | relative_url }}">Travel</a>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>&copy; {{ site.time | date: "%Y" }} U. Meenu Krishnan. All rights reserved.</span>
+      <span>Baltimore, Maryland &middot; United States</span>
+    </div>
   </div>
 </footer>
