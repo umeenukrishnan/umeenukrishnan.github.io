@@ -1099,51 +1099,69 @@ details.project-item {
   100% { transform: scale(1); }
 }
 
+/* a display case: studio backdrop, plinth, and a figure that tilts in 3D */
 .buddy-stage {
   position: relative;
-  width: 210px;
-  height: 210px;
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 26 / 31;
   display: grid;
   place-items: center;
   cursor: pointer;
-  animation: buddy-float 5.5s var(--ease) infinite;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  perspective: 900px;
+  background:
+    radial-gradient(circle at 50% 34%, #ffffff 0%, #e4eaf1 46%, #b9c6d6 100%);
+  box-shadow: var(--shadow), inset 0 0 0 1px rgba(15, 42, 80, .07);
 }
 .buddy-stage::before {
   content: "";
   position: absolute;
-  inset: 6%;
-  border-radius: 50%;
-  background: radial-gradient(circle at 50% 45%, rgba(28, 72, 119, .18), transparent 70%);
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 108%, rgba(15, 42, 80, .22), transparent 58%);
+  pointer-events: none;
+}
+.buddy-stage:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+.fig-tilt {
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--fx, 0deg)) rotateY(var(--fy, 0deg));
+  transition: transform .28s var(--ease);
+  animation: buddy-float 5.5s var(--ease) infinite;
 }
 @keyframes buddy-float {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-9px); }
+  0%, 100% { transform: rotateX(var(--fx, 0deg)) rotateY(var(--fy, 0deg)) translateY(0); }
+  50%      { transform: rotateX(var(--fx, 0deg)) rotateY(var(--fy, 0deg)) translateY(-7px); }
 }
 
-.buddy-art {
-  position: relative;
+.fig-spin { transform-style: preserve-3d; }
+.fig-spin.spin { animation: fig-spin .95s var(--ease); }
+@keyframes fig-spin {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
+
+.fig {
   display: block;
   width: 100%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--bg-alt);
-  box-shadow: var(--shadow-lg);
-  transform: translate3d(var(--bx, 0px), var(--by, 0px), 0) rotate(var(--br, 0deg));
-  transition: transform .3s var(--ease);
+  filter: drop-shadow(0 14px 18px rgba(10, 24, 48, .3));
 }
-.buddy-art img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.24);   /* crops in on the badge, hides the square backdrop */
+.fig-orb {
+  transform-origin: 56px 138px;
+  animation: orb-pulse 2.6s var(--ease) infinite;
 }
-.buddy-stage:hover .buddy-art { box-shadow: var(--shadow-lg), 0 0 0 6px var(--accent-soft); }
+@keyframes orb-pulse {
+  0%, 100% { opacity: .9;  transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.09); }
+}
 
 .buddy-wave {
   position: absolute;
-  right: 2px;
-  bottom: 14px;
+  right: 14px;
+  bottom: 18px;
+  z-index: 2;
   font-size: 34px;
   transform-origin: 75% 85%;
   opacity: 0;

@@ -136,7 +136,8 @@ document.querySelectorAll('[data-rail]').forEach(rail => {
   if (!buddy) return;
 
   const stage  = buddy.querySelector('[data-buddy-stage]');
-  const art    = buddy.querySelector('.buddy-art');
+  const tilt   = buddy.querySelector('[data-fig-tilt]');
+  const spin   = buddy.querySelector('[data-fig-spin]');
   const bubble = buddy.querySelector('[data-buddy-bubble] p');
   const calm   = matchMedia('(prefers-reduced-motion: reduce)');
 
@@ -149,29 +150,36 @@ document.querySelectorAll('[data-rail]').forEach(rail => {
     box.classList.add('pop');
   };
 
-  /* she leans toward the cursor */
-  if (art && stage && !calm.matches) {
+  /* the figure turns toward the cursor */
+  if (tilt && stage && !calm.matches) {
+    const rest = () => {
+      tilt.style.setProperty('--fy', '0deg');
+      tilt.style.setProperty('--fx', '0deg');
+    };
     let frame = null;
     const follow = e => {
       if (frame) return;
       frame = requestAnimationFrame(() => {
         frame = null;
         const r  = stage.getBoundingClientRect();
-        const dx = (e.clientX - (r.left + r.width / 2))  / (window.innerWidth  / 2);
+        const dx = (e.clientX - (r.left + r.width  / 2)) / (window.innerWidth  / 2);
         const dy = (e.clientY - (r.top  + r.height / 2)) / (window.innerHeight / 2);
         const cl = (v, m) => Math.max(-m, Math.min(m, v));
-        art.style.setProperty('--bx', cl(dx * 14, 14).toFixed(1) + 'px');
-        art.style.setProperty('--by', cl(dy * 10, 10).toFixed(1) + 'px');
-        art.style.setProperty('--br', cl(dx * 6, 6).toFixed(1) + 'deg');
+        tilt.style.setProperty('--fy', cl(dx * 22, 20).toFixed(1) + 'deg');
+        tilt.style.setProperty('--fx', cl(-dy * 12, 10).toFixed(1) + 'deg');
       });
     };
     window.addEventListener('mousemove', follow, { passive: true });
-    window.addEventListener('mouseleave', () => {
-      art.style.setProperty('--bx', '0px');
-      art.style.setProperty('--by', '0px');
-      art.style.setProperty('--br', '0deg');
-    });
+    window.addEventListener('mouseleave', rest);
+    window.addEventListener('blur', rest);
   }
+
+  /* a click spins her on the plinth */
+  const doSpin = () => {
+    if (!spin || calm.matches || spin.classList.contains('spin')) return;
+    spin.classList.add('spin');
+    spin.addEventListener('animationend', () => spin.classList.remove('spin'), { once: true });
+  };
 
   /* she reacts to the form */
   const lines = {
@@ -196,7 +204,14 @@ document.querySelectorAll('[data-rail]').forEach(rail => {
   ];
   let poke = 0;
   if (stage) {
-    stage.addEventListener('click', () => say(pokes[poke++ % pokes.length]));
+    stage.addEventListener('click', () => { doSpin(); say(pokes[poke++ % pokes.length]); });
+    stage.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        doSpin();
+        say(pokes[poke++ % pokes.length]);
+      }
+    });
     stage.addEventListener('mouseenter', () => say('Hi there \u2014 thanks for scrolling this far!'));
   }
 })();
