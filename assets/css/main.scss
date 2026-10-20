@@ -1355,7 +1355,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 
 .hello-face {
   display: inline-block;
-  margin-left: .18em;
+  font-size: .66em;          /* keeps the emoji at cap height, line stays put */
+  line-height: 1;
+  vertical-align: .06em;
+  margin-left: .22em;
   transform-origin: 65% 85%;
   animation: face-bob 3.2s var(--ease) infinite;
 }
