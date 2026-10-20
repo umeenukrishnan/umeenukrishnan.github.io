@@ -130,6 +130,77 @@ document.querySelectorAll('[data-rail]').forEach(rail => {
   sync();
 });
 
+/* ── Interactive cartoon miniature (contact section) ─────────────── */
+(() => {
+  const buddy = document.querySelector('[data-buddy]');
+  if (!buddy) return;
+
+  const stage  = buddy.querySelector('[data-buddy-stage]');
+  const art    = buddy.querySelector('.buddy-art');
+  const bubble = buddy.querySelector('[data-buddy-bubble] p');
+  const calm   = matchMedia('(prefers-reduced-motion: reduce)');
+
+  const say = text => {
+    if (!bubble || bubble.textContent === text) return;
+    bubble.textContent = text;
+    const box = bubble.parentElement;
+    box.classList.remove('pop');
+    void box.offsetWidth;          // restart the animation
+    box.classList.add('pop');
+  };
+
+  /* she leans toward the cursor */
+  if (art && stage && !calm.matches) {
+    let frame = null;
+    const follow = e => {
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = null;
+        const r  = stage.getBoundingClientRect();
+        const dx = (e.clientX - (r.left + r.width / 2))  / (window.innerWidth  / 2);
+        const dy = (e.clientY - (r.top  + r.height / 2)) / (window.innerHeight / 2);
+        const cl = (v, m) => Math.max(-m, Math.min(m, v));
+        art.style.setProperty('--bx', cl(dx * 14, 14).toFixed(1) + 'px');
+        art.style.setProperty('--by', cl(dy * 10, 10).toFixed(1) + 'px');
+        art.style.setProperty('--br', cl(dx * 6, 6).toFixed(1) + 'deg');
+      });
+    };
+    window.addEventListener('mousemove', follow, { passive: true });
+    window.addEventListener('mouseleave', () => {
+      art.style.setProperty('--bx', '0px');
+      art.style.setProperty('--by', '0px');
+      art.style.setProperty('--br', '0deg');
+    });
+  }
+
+  /* she reacts to the form */
+  const lines = {
+    'cf-name':    'Nice to meet you \u2014 what should I call you?',
+    'cf-email':   'Where should I write back?',
+    'cf-message': 'Tell me what you\u2019re working on. I read every one.',
+  };
+  Object.entries(lines).forEach(([id, line]) => {
+    const field = document.getElementById(id);
+    if (field) field.addEventListener('focus', () => say(line));
+  });
+
+  const form = document.querySelector('.contact-form');
+  if (form) form.addEventListener('submit', () => say('Thank you! I\u2019ll get back to you soon.'));
+
+  /* and to a poke */
+  const pokes = [
+    'Fun fact: my solvers crack before I do.',
+    'Currently thinking about neural operators.',
+    'Phase-field fracture, topology optimization \u2014 ask me anything.',
+    'Coffee first, convergence second.',
+  ];
+  let poke = 0;
+  if (stage) {
+    stage.addEventListener('click', () => say(pokes[poke++ % pokes.length]));
+    stage.addEventListener('mouseenter', () => say('Hi there \u2014 thanks for scrolling this far!'));
+  }
+})();
+
 /* ── Scroll reveal ───────────────────────────────────────────────── */
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => {
