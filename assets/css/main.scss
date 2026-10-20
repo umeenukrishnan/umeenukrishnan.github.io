@@ -1353,6 +1353,32 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .hello-head em { font-style: normal; color: var(--accent); }
 
+.hello-face {
+  display: inline-block;
+  margin-left: .18em;
+  transform-origin: 65% 85%;
+  animation: face-bob 3.2s var(--ease) infinite;
+}
+@keyframes face-bob {
+  0%, 100% { transform: rotate(-7deg); }
+  50%      { transform: rotate(7deg); }
+}
+
+.hello-caret {
+  display: inline-block;
+  width: .055em;
+  height: .72em;
+  margin-left: .07em;
+  background: var(--accent);
+  vertical-align: -.04em;
+  opacity: 0;
+}
+.hello-caret.on { animation: caret-blink .85s steps(1, end) infinite; }
+@keyframes caret-blink {
+  0%, 49%   { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
 .hello-lede {
   font-size: clamp(18px, 2.2vw, 25px);
   line-height: 1.45;

@@ -27,6 +27,81 @@ if (navToggle && siteTabs) {
   });
 }
 
+/* ── Typewriter hero (heading, then lede) ────────────────────────── */
+(() => {
+  const steps = [...document.querySelectorAll('[data-type-seq]')]
+    .sort((a, b) => a.dataset.typeSeq - b.dataset.typeSeq);
+  if (!steps.length) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const caret  = document.querySelector('.hello-caret');
+  const reveal = [...document.querySelectorAll('[data-type-after]')];
+
+  // snapshot the markup, then reserve the space it occupied so nothing jumps
+  const plans = steps.map(el => {
+    const nodes = [...el.childNodes].map(n => n.cloneNode(true));
+    el.style.minHeight = el.getBoundingClientRect().height + 'px';
+    el.textContent = '';
+    return { el, nodes, speed: Number(el.dataset.typeSpeed) || 60 };
+  });
+
+  reveal.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(10px)';
+  });
+
+  // replay the snapshot one character at a time, tags and all
+  const write = (nodes, dest, speed, tail) => new Promise(resolve => {
+    let i = 0;
+    const nextNode = () => {
+      if (i >= nodes.length) return resolve();
+      const node = nodes[i++];
+
+      if (node.nodeType === Node.TEXT_NODE) {
+        const text = node.nodeValue;
+        if (!text.length) return nextNode();
+        const sink = document.createTextNode('');
+        dest.appendChild(sink);
+        let j = 0;
+        const step = () => {
+          sink.nodeValue += text[j++];
+          tail();
+          if (j < text.length) setTimeout(step, speed);
+          else nextNode();
+        };
+        step();
+      } else {
+        const shell = node.cloneNode(false);
+        dest.appendChild(shell);
+        tail();
+        write([...node.childNodes], shell, speed, tail).then(nextNode);
+      }
+    };
+    nextNode();
+  });
+
+  (async () => {
+    await new Promise(r => setTimeout(r, 420));
+
+    for (const plan of plans) {
+      const tail = caret ? () => plan.el.appendChild(caret) : () => {};
+      tail();
+      if (caret) caret.classList.add('on');
+      await write(plan.nodes, plan.el, plan.speed, tail);
+    }
+
+    if (caret) setTimeout(() => caret.classList.remove('on'), 1800);
+
+    reveal.forEach((el, i) => setTimeout(() => {
+      el.style.transition = 'opacity .5s var(--ease), transform .5s var(--ease)';
+      el.style.opacity = '';
+      el.style.transform = '';
+    }, 120 * i));
+
+    setTimeout(() => plans.forEach(plan => { plan.el.style.minHeight = ''; }), 800);
+  })();
+})();
+
 /* ── Horizontal rails (achievements carousel) ────────────────────── */
 document.querySelectorAll('[data-rail]').forEach(rail => {
   const scope = rail.closest('section') || document;
