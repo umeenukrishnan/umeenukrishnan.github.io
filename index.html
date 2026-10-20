@@ -3,34 +3,26 @@ layout: default
 title: Home
 description: "Research in computational mechanics, scientific machine learning, and structural optimization."
 ---
+<!-- ─── HERO: text left, portrait right ───────────────────────────── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <h1 class="hello-head">Hello<em>!</em><span class="hello-face">&#128522;</span></h1>
 
-<!-- ─── HERO ──────────────────────────────────────────────────────── -->
-<section class="hello">
-  <h1 class="hello-head" aria-label="Hello!"><span class="hello-type" data-type-seq="1" data-type-speed="155" aria-hidden="true">Hello<em>!</em><span class="hello-face">😊</span></span><span class="hello-caret" aria-hidden="true"></span></h1>
-  <p class="hello-lede" data-type-seq="2" data-type-speed="17">
-    I&rsquo;m Meenu, a <strong>Postdoctoral Research Fellow at Johns Hopkins University</strong>
-    working at the intersection of <strong>computational mechanics</strong> and
-    <strong>scientific machine learning</strong> &mdash; building solvers, surrogates, and
-    optimization tools that help us understand how structures and materials really behave.
-  </p>
-  <div class="hello-actions" data-type-after>
-    <a class="btn btn-dark" href="{{ '/projects/' | relative_url }}">Explore my research <i class="fa-solid fa-arrow-right"></i></a>
-    <a class="btn btn-ghost" href="{{ '/about/' | relative_url }}">About me</a>
-    <a class="btn btn-ghost" href="#contact">Get in touch</a>
-  </div>
-</section>
+      <p class="hello-lede">
+        I&rsquo;m Meenu, a <strong>Postdoctoral Research Fellow at Johns Hopkins University</strong>
+        working at the intersection of <strong>computational mechanics</strong> and
+        <strong>scientific machine learning</strong> &mdash; building solvers, surrogates, and
+        optimization tools that help us understand how structures and materials really behave.
+      </p>
 
-<!-- ─── PORTRAIT STAGE ────────────────────────────────────────────── -->
-<section class="hello-stage">
-  <div class="stage-card">
-    <img class="stage-photo" src="{{ site.avatar | relative_url }}" alt="U. Meenu Krishnan" />
-    <div class="stage-copy">
-      <h2>Physics, computation, and design &mdash; in one workflow.</h2>
-      <p>
+      <h2 class="hero-sub">Physics, computation, and design &mdash; in one workflow.</h2>
+      <p class="hero-note">
         From phase-field fracture and large-scale topology optimization during my Ph.D. at
         IIT Roorkee, to evolutionary deep neural networks and neural-operator benchmarks at
         Johns Hopkins, my work is about making hard mechanics problems solvable at scale.
       </p>
+
       <div class="stage-chips">
         <span>Computational Mechanics</span>
         <span>Scientific ML</span>
@@ -38,9 +30,70 @@ description: "Research in computational mechanics, scientific machine learning, 
         <span>Topology Optimization</span>
         <span>HPC &amp; FEniCS</span>
       </div>
+
+      <div class="hello-actions">
+        <a class="btn btn-dark" href="{{ '/projects/' | relative_url }}">Explore my research <i class="fa-solid fa-arrow-right"></i></a>
+        <a class="btn btn-ghost" href="{{ '/about/' | relative_url }}">About me</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <img src="{{ site.avatar | relative_url }}" alt="U. Meenu Krishnan" />
     </div>
   </div>
 </section>
+
+
+<!-- ─── CONTACT ───────────────────────────────────────────────────── -->
+<div class="page-grid"><div class="page-main">
+  <section class="section-plain" id="contact">
+    <div class="section-acc-header">
+      <div class="sb-inner"><h2>Contact</h2></div>
+    </div>
+    <div class="section-body">
+      <div class="contact-grid">
+      <div class="contact-main">
+      <p class="contact-text">
+        I&rsquo;m always happy to discuss research ideas, collaborations, or opportunities.
+        Reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a> or fill in the form below.
+      </p>
+      <form class="contact-form" action="https://formspree.io/f/mbdwalab" method="POST">
+        <div class="fg">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="fg">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="fg">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" placeholder="What's on your mind?" required></textarea>
+        </div>
+        <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
+      </form>
+      </div>
+
+      <aside class="buddy" data-buddy aria-label="Illustrated miniature of Meenu">
+        <div class="buddy-bubble" data-buddy-bubble>
+          <p>Hi! I&rsquo;m mini-Meenu. Say hello &mdash; I read every message.</p>
+        </div>
+        <div class="buddy-stage" data-buddy-stage tabindex="0">
+          <div class="fig-tilt" data-fig-tilt>
+            <div class="fig-spin" data-fig-spin>
+              {% include buddy-figurine.html %}
+            </div>
+          </div>
+          <div class="fig-3d" data-fig-3d aria-hidden="true"></div>
+          <span class="buddy-wave" aria-hidden="true">&#128075;</span>
+        </div>
+        <p class="buddy-hint">Move your cursor &middot; click to spin</p>
+      </aside>
+      </div>
+    </div>
+  </section>
+</div></div>
 
 <!-- ─── TICKER ────────────────────────────────────────────────────── -->
 <div class="ticker" aria-hidden="true">
@@ -55,6 +108,7 @@ description: "Research in computational mechanics, scientific machine learning, 
     <span>High Performance Computing</span>
   </div>
 </div>
+
 
 <!-- ─── ACHIEVEMENTS CAROUSEL ─────────────────────────────────────── -->
 <section class="achievements" aria-labelledby="ach-title">
@@ -132,6 +186,7 @@ description: "Research in computational mechanics, scientific machine learning, 
   </div>
 </section>
 
+
 <!-- ─── PROJECT SHOWCASE ──────────────────────────────────────────── -->
 <section class="showcase" aria-labelledby="showcase-title">
   <div class="showcase-head">
@@ -166,51 +221,3 @@ description: "Research in computational mechanics, scientific machine learning, 
   </div>
 </section>
 
-<!-- ─── CONTACT ───────────────────────────────────────────────────── -->
-<div class="page-grid"><div class="page-main">
-  <section class="section-plain" id="contact">
-    <div class="section-acc-header">
-      <div class="sb-inner"><h2>Contact</h2></div>
-    </div>
-    <div class="section-body">
-      <div class="contact-grid">
-      <div class="contact-main">
-      <p class="contact-text">
-        I&rsquo;m always happy to discuss research ideas, collaborations, or opportunities.
-        Reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a> or fill in the form below.
-      </p>
-      <form class="contact-form" action="https://formspree.io/f/mbdwalab" method="POST">
-        <div class="fg">
-          <label for="cf-name">Name</label>
-          <input type="text" id="cf-name" name="name" placeholder="Your name" required />
-        </div>
-        <div class="fg">
-          <label for="cf-email">Email</label>
-          <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
-        </div>
-        <div class="fg">
-          <label for="cf-message">Message</label>
-          <textarea id="cf-message" name="message" placeholder="What's on your mind?" required></textarea>
-        </div>
-        <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
-      </form>
-      </div>
-
-      <aside class="buddy" data-buddy aria-label="Illustrated miniature of Meenu">
-        <div class="buddy-bubble" data-buddy-bubble>
-          <p>Hi! I&rsquo;m mini-Meenu. Say hello &mdash; I read every message.</p>
-        </div>
-        <div class="buddy-stage" data-buddy-stage tabindex="0">
-          <div class="fig-tilt" data-fig-tilt>
-            <div class="fig-spin" data-fig-spin>
-              {% include buddy-figurine.html %}
-            </div>
-          </div>
-          <span class="buddy-wave" aria-hidden="true">&#128075;</span>
-        </div>
-        <p class="buddy-hint">Move your cursor &middot; click to spin</p>
-      </aside>
-      </div>
-    </div>
-  </section>
-</div></div>
