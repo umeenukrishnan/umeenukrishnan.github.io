@@ -200,14 +200,15 @@ description: "Research in computational mechanics, scientific machine learning, 
         <div class="buddy-bubble" data-buddy-bubble>
           <p>Hi! I&rsquo;m mini-Meenu. Say hello &mdash; I read every message.</p>
         </div>
-        <div class="buddy-stage" data-buddy-stage>
-          <span class="buddy-art">
-            <img src="{{ '/assets/images/avtar1.png' | relative_url }}"
-                 alt="Cartoon illustration of Meenu Krishnan" loading="lazy" />
-          </span>
+        <div class="buddy-stage" data-buddy-stage tabindex="0">
+          <div class="fig-tilt" data-fig-tilt>
+            <div class="fig-spin" data-fig-spin>
+              {% include buddy-figurine.html %}
+            </div>
+          </div>
           <span class="buddy-wave" aria-hidden="true">&#128075;</span>
         </div>
-        <p class="buddy-hint">Move your cursor &mdash; she follows along.</p>
+        <p class="buddy-hint">Move your cursor &middot; click to spin</p>
       </aside>
       </div>
     </div>
