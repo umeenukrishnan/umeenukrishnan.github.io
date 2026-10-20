@@ -328,6 +328,10 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     const silver = M(0xcbd3dc, { roughness: 0.3, metalness: 0.8 });
     const ink    = M(0x14101a, { roughness: 0.38 });
     const white  = M(0xf4f7fb, { roughness: 0.32 });
+    const capTop = M(0xe8853c, { roughness: 0.62 });   // the orange cap
+    const capLip = M(0xcf6f2c, { roughness: 0.6 });
+    const print  = M(0xeef3f8, { roughness: 0.55 });   // the geometric print
+    const band   = M(0x241f2a, { roughness: 0.5 });    // beaded bracelet
 
     const root = new T.Group();
     scene.add(root);
@@ -371,21 +375,28 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
       shoe.scale.set(1, 0.6, 1.3);
     });
 
-    /* ── torso, with an open blazer over a navy top ── */
+    /* ── sleeveless navy top with a geometric print ── */
     const torso = put(new T.Mesh(new T.SphereGeometry(0.6, 36, 26), navy), 0, 1.68, 0);
     torso.scale.set(1, 1.28, 0.84);
-    [-0.35, 0.35].forEach(x => {
-      const lapel = put(new T.Mesh(new T.SphereGeometry(0.3, 24, 18), coat), x, 1.72, 0.26);
-      lapel.scale.set(0.62, 1.55, 0.62);
-    });
-    const back = put(new T.Mesh(new T.SphereGeometry(0.6, 32, 24), coat), 0, 1.68, -0.1);
-    back.scale.set(1.01, 1.26, 0.72);
 
-    /* ── arms ── */
-    bone(coat, 0.165, [-0.52, 2.02, 0.04], [-1.16, 2.44, 0.3]);   // raised, holding the orb
-    bone(coat, 0.165, [ 0.54, 2.0,  0.04], [ 0.76, 1.26, 0.12]);  // resting
+    [[ 0.00, 1.90, 0.46, 0.44,  0.55],
+     [-0.10, 1.70, 0.47, 0.50, -0.70],
+     [ 0.14, 1.54, 0.46, 0.42,  0.38],
+     [-0.02, 2.00, 0.44, 0.30, -0.22],
+     [-0.06, 1.38, 0.43, 0.34,  0.95]].forEach(([x, y, z, len, rot]) => {
+      const bar = put(new T.Mesh(new T.BoxGeometry(len, 0.032, 0.03), print), x, y, z);
+      bar.rotation.z = rot;
+      bar.castShadow = false;
+    });
+
+    /* ── bare arms ── */
+    bone(skin, 0.155, [-0.5, 2.04, 0.04], [-1.16, 2.44, 0.3]);   // raised, holding the orb
+    bone(skin, 0.155, [ 0.52, 2.02, 0.04], [ 0.76, 1.26, 0.12]);  // resting
     put(new T.Mesh(new T.SphereGeometry(0.175, 20, 14), skin), -1.2,  2.47, 0.33);
     put(new T.Mesh(new T.SphereGeometry(0.175, 20, 14), skin),  0.78, 1.2,  0.13);
+
+    const bracelet = put(new T.Mesh(new T.TorusGeometry(0.15, 0.04, 10, 20), band), 0.755, 1.36, 0.115);
+    bracelet.rotation.set(Math.PI / 2, 0, 0.28);
 
     /* ── head ── */
     const head = put(new T.Mesh(new T.SphereGeometry(0.78, 48, 34), skin), 0, 2.74, 0);
@@ -402,32 +413,34 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
       }
     };
 
-    ring(3.46, 0.32, 0.29,   0, 330, 5,  0);      // crown
-    ring(3.30, 0.56, 0.27,   0, 338, 8, -0.03);
-    ring(3.08, 0.76, 0.27,  34, 326, 9, -0.05);   // hairline, forehead clear
+    ring(2.98, 0.78, 0.26,  36, 324, 9, -0.05);   // hairline below the cap
     ring(2.78, 0.86, 0.26,  52, 308, 9, -0.09);
     ring(2.48, 0.82, 0.24,  64, 296, 8, -0.18);   // past the jaw, moving back
-    ring(2.18, 0.74, 0.22,  74, 286, 8, -0.28);
-    ring(1.90, 0.66, 0.20,  82, 278, 7, -0.36);   // over the shoulders
-    ring(1.64, 0.56, 0.18,  90, 270, 7, -0.42);
-    ring(1.42, 0.46, 0.16,  98, 262, 6, -0.46);
-    ring(1.24, 0.36, 0.14, 106, 254, 5, -0.48);   // the ends
+    ring(2.2,  0.76, 0.22,  70, 290, 8, -0.26);
+    ring(2.02, 0.66, 0.19,  80, 280, 7, -0.32);   // the ends, at the shoulders
     curls.push([0, 2.70, -0.56, 0.52]);           // mass filling in the back
-    curls.push([0, 2.20, -0.58, 0.42]);
-    curls.push([0, 1.78, -0.56, 0.32]);
+    curls.push([0, 2.26, -0.56, 0.4]);
 
     // strands down each side, so the length still reads from the front
-    [[2.32, 0.78, -0.02, 0.22], [2.04, 0.82, -0.08, 0.21], [1.78, 0.84, -0.12, 0.19],
-     [1.54, 0.82, -0.14, 0.17], [1.34, 0.76, -0.16, 0.15], [1.18, 0.68, -0.18, 0.13]]
+    [[2.4, 0.74, 0.0, 0.21], [2.22, 0.78, -0.06, 0.19], [2.05, 0.74, -0.1, 0.165]]
       .forEach(([y, x, z, r]) => { curls.push([-x, y, z, r]); curls.push([x, y, z, r]); });
 
     curls.forEach(([x, y, z, r]) => put(new T.Mesh(new T.SphereGeometry(r, 18, 14), hair), x, y, z));
+
+    /* ── the orange cap ── */
+    const crown = put(new T.Mesh(new T.SphereGeometry(0.72, 36, 26), capTop), 0, 3.3, -0.04);
+    crown.scale.set(1, 0.6, 0.95);
+    const brim = put(new T.Mesh(new T.SphereGeometry(0.5, 32, 20), capLip), 0, 3.26, 0.55);
+    brim.scale.set(1, 0.09, 0.8);
+    brim.rotation.x = -0.04;
+    const button = put(new T.Mesh(new T.SphereGeometry(0.055, 14, 12), capLip), 0, 3.73, -0.04);
+    button.castShadow = false;
 
     /* ── face: large illustrated eyes, brows, an open smile ── */
     const eyeW  = M(0xf8f5f3, { roughness: 0.32 });
     const iris  = M(0x4a2c18, { roughness: 0.28 });
     const brow  = M(0x1b1017, { roughness: 0.5 });
-    const lip   = M(0x8e4040, { roughness: 0.45 });
+    const lipMat = M(0x8e4040, { roughness: 0.45 });
     const tooth = M(0xf9f5f1, { roughness: 0.3 });
     const blush = M(0xcf7059, { roughness: 0.85, transparent: true, opacity: 0.38 });
 
@@ -463,7 +476,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
     flat(put(new T.Mesh(new T.SphereGeometry(0.046, 14, 12), skin), 0, 2.58, 0.735));   // nose
 
-    const mouth = flat(put(new T.Mesh(new T.SphereGeometry(0.155, 22, 16), lip), 0, 2.45, 0.63));
+    const mouth = flat(put(new T.Mesh(new T.SphereGeometry(0.155, 22, 16), lipMat), 0, 2.45, 0.63));
     mouth.scale.set(1.3, 0.6, 0.3);
     const teeth = flat(put(new T.Mesh(new T.SphereGeometry(0.138, 20, 14), tooth), 0, 2.485, 0.665));
     teeth.scale.set(1.26, 0.3, 0.26);
