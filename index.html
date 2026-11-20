@@ -45,56 +45,6 @@ description: "Research in computational mechanics, scientific machine learning, 
 </section>
 
 
-<!-- ─── CONTACT ───────────────────────────────────────────────────── -->
-<div class="page-grid"><div class="page-main">
-  <section class="section-plain" id="contact">
-    <div class="section-acc-header">
-      <div class="sb-inner"><h2>Contact</h2></div>
-    </div>
-    <div class="section-body">
-      <div class="contact-grid">
-      <div class="contact-main">
-      <p class="contact-text">
-        I&rsquo;m always happy to discuss research ideas, collaborations, or opportunities.
-        Reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a> or fill in the form below.
-      </p>
-      <form class="contact-form" action="https://formspree.io/f/mbdwalab" method="POST">
-        <div class="fg">
-          <label for="cf-name">Name</label>
-          <input type="text" id="cf-name" name="name" placeholder="Your name" required />
-        </div>
-        <div class="fg">
-          <label for="cf-email">Email</label>
-          <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
-        </div>
-        <div class="fg">
-          <label for="cf-message">Message</label>
-          <textarea id="cf-message" name="message" placeholder="What's on your mind?" required></textarea>
-        </div>
-        <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
-      </form>
-      </div>
-
-      <aside class="buddy" data-buddy aria-label="Illustrated miniature of Meenu">
-        <div class="buddy-bubble" data-buddy-bubble>
-          <p>Hi! I&rsquo;m mini-Meenu. Say hello &mdash; I read every message.</p>
-        </div>
-        <div class="buddy-stage" data-buddy-stage tabindex="0">
-          <div class="fig-tilt" data-fig-tilt>
-            <div class="fig-spin" data-fig-spin>
-              {% include buddy-figurine.html %}
-            </div>
-          </div>
-          <div class="fig-3d" data-fig-3d aria-hidden="true"></div>
-          <span class="buddy-wave" aria-hidden="true">&#128075;</span>
-        </div>
-        <p class="buddy-hint">Move your cursor &middot; click to spin</p>
-      </aside>
-      </div>
-    </div>
-  </section>
-</div></div>
-
 <!-- ─── RECENT WORK ───────────────────────────────────────────────── -->
 <section class="recent" id="recent-work" aria-labelledby="recent-title">
   <div class="recent-head">
@@ -106,11 +56,11 @@ description: "Research in computational mechanics, scientific machine learning, 
   <!-- Axion -->
   <article class="work-card" id="axion">
     <figure class="work-media work-media--tall">
-      <video data-autoplay muted loop playsinline preload="metadata"
+      <div class="work-video"><video data-autoplay autoplay muted loop playsinline preload="metadata"
              poster="{{ '/assets/video/koyna_crack_pattern_poster.jpg' | relative_url }}"
              aria-label="Animation of the crack pattern in the Koyna gravity dam, 96 million degrees of freedom">
         <source src="{{ '/assets/video/koyna_crack_pattern.mp4' | relative_url }}" type="video/mp4" />
-      </video>
+      </video><button class="work-play" type="button" aria-label="Pause animation" data-play-toggle><i class="fa-solid fa-pause"></i></button></div>
       <figcaption>Koyna Dam crack pattern &mdash; 96 million DOF, solved in 6.5 h on one GPU.</figcaption>
     </figure>
 
@@ -180,11 +130,11 @@ description: "Research in computational mechanics, scientific machine learning, 
       </ul>
 
       <figure class="work-media work-media--wide">
-        <video data-autoplay muted loop playsinline preload="metadata"
+        <div class="work-video"><video data-autoplay autoplay muted loop playsinline preload="metadata"
                poster="{{ '/assets/video/fracture_bench_d1_poster.png' | relative_url }}"
                aria-label="Animation of crack growth over 44 load steps: finite element result, FNO and Latent DeepONet predictions side by side">
           <source src="{{ '/assets/video/fracture_bench_d1.mp4' | relative_url }}" type="video/mp4" />
-        </video>
+        </video><button class="work-play" type="button" aria-label="Pause animation" data-play-toggle><i class="fa-solid fa-pause"></i></button></div>
         <div class="work-legend" aria-hidden="true"><span>FEM (ground truth)</span><span>FNO</span><span>Latent DeepONet</span></div>
         <figcaption>Dataset 1, held-out sample, 44 load steps: finite element result next to two surrogate predictions.</figcaption>
       </figure>
@@ -201,6 +151,56 @@ description: "Research in computational mechanics, scientific machine learning, 
     </div>
   </article>
 </section>
+
+<!-- ─── CONTACT ───────────────────────────────────────────────────── -->
+<div class="page-grid"><div class="page-main">
+  <section class="section-plain" id="contact">
+    <div class="section-acc-header">
+      <div class="sb-inner"><h2>Contact</h2></div>
+    </div>
+    <div class="section-body">
+      <div class="contact-grid">
+      <div class="contact-main">
+      <p class="contact-text">
+        I&rsquo;m always happy to discuss research ideas, collaborations, or opportunities.
+        Reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a> or fill in the form below.
+      </p>
+      <form class="contact-form" action="https://formspree.io/f/mbdwalab" method="POST">
+        <div class="fg">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="fg">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="fg">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" placeholder="What's on your mind?" required></textarea>
+        </div>
+        <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
+      </form>
+      </div>
+
+      <aside class="buddy" data-buddy aria-label="Illustrated miniature of Meenu">
+        <div class="buddy-bubble" data-buddy-bubble>
+          <p>Hi! I&rsquo;m mini-Meenu. Say hello &mdash; I read every message.</p>
+        </div>
+        <div class="buddy-stage" data-buddy-stage tabindex="0">
+          <div class="fig-tilt" data-fig-tilt>
+            <div class="fig-spin" data-fig-spin>
+              {% include buddy-figurine.html %}
+            </div>
+          </div>
+          <div class="fig-3d" data-fig-3d aria-hidden="true"></div>
+          <span class="buddy-wave" aria-hidden="true">&#128075;</span>
+        </div>
+        <p class="buddy-hint">Move your cursor &middot; click to spin</p>
+      </aside>
+      </div>
+    </div>
+  </section>
+</div></div>
 
 <!-- ─── TICKER ────────────────────────────────────────────────────── -->
 <div class="ticker" aria-hidden="true">

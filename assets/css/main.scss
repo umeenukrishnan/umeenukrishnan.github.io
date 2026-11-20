@@ -2045,6 +2045,27 @@ details.section-acc > .section-body,
   background: var(--bg-alt);
   box-shadow: inset 0 0 0 1px var(--border);
 }
+.work-video { position: relative; }
+.work-play {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: rgba(15, 42, 80, .82);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  opacity: .85;
+  transition: opacity .18s var(--ease), transform .18s var(--ease), background .18s var(--ease);
+}
+.work-play:hover { opacity: 1; background: var(--ink); transform: scale(1.06); }
+.work-video.is-paused .work-play { opacity: 1; width: 52px; height: 52px; font-size: 18px; right: 50%; bottom: 50%; transform: translate(50%, 50%); }
+.work-video.is-paused .work-play:hover { transform: translate(50%, 50%) scale(1.06); }
+
 .work-media figcaption {
   font-size: 12.5px;
   line-height: 1.5;

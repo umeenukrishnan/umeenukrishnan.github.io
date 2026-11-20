@@ -540,22 +540,40 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 })();
 
 
-/* ── Recent-work videos: play only while on screen ───────────────── */
+/* ── Recent-work videos: play on screen, with a play/pause control ── */
 (() => {
   const clips = [...document.querySelectorAll('video[data-autoplay]')];
   if (!clips.length) return;
+  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const userPaused = new WeakSet();
 
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    clips.forEach(v => { v.controls = true; });   // poster only; the visitor can press play
-    return;
-  }
+  const sync = v => {
+    const box = v.closest('.work-video');
+    const btn = box && box.querySelector('[data-play-toggle]');
+    if (!box || !btn) return;
+    box.classList.toggle('is-paused', v.paused);
+    btn.setAttribute('aria-label', v.paused ? 'Play animation' : 'Pause animation');
+    btn.firstElementChild.className = v.paused ? 'fa-solid fa-play' : 'fa-solid fa-pause';
+  };
+  const play = v => { const p = v.play(); if (p && p.catch) p.catch(() => sync(v)); };
 
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      const v = e.target;
-      if (e.isIntersecting) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
-      else v.pause();
+  clips.forEach(v => {
+    ['play', 'pause', 'ended', 'loadedmetadata'].forEach(ev => v.addEventListener(ev, () => sync(v)));
+    const btn = v.closest('.work-video').querySelector('[data-play-toggle]');
+    btn.addEventListener('click', () => {
+      if (v.paused) { userPaused.delete(v); play(v); }
+      else { userPaused.add(v); v.pause(); }
     });
-  }, { threshold: 0.25 });
+    if (calm) { v.removeAttribute('autoplay'); v.pause(); }
+    sync(v);
+  });
+  if (calm) return;
+
+  // save battery: pause off-screen, resume when it returns (unless the visitor paused it)
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting) { if (!userPaused.has(v)) play(v); }
+    else v.pause();
+  }), { threshold: 0.25 });
   clips.forEach(v => io.observe(v));
 })();
