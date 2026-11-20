@@ -538,3 +538,24 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     run();
   }
 })();
+
+
+/* ── Recent-work videos: play only while on screen ───────────────── */
+(() => {
+  const clips = [...document.querySelectorAll('video[data-autoplay]')];
+  if (!clips.length) return;
+
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    clips.forEach(v => { v.controls = true; });   // poster only; the visitor can press play
+    return;
+  }
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      const v = e.target;
+      if (e.isIntersecting) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+      else v.pause();
+    });
+  }, { threshold: 0.25 });
+  clips.forEach(v => io.observe(v));
+})();

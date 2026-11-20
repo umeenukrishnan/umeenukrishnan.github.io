@@ -95,6 +95,113 @@ description: "Research in computational mechanics, scientific machine learning, 
   </section>
 </div></div>
 
+<!-- ─── RECENT WORK ───────────────────────────────────────────────── -->
+<section class="recent" id="recent-work" aria-labelledby="recent-title">
+  <div class="recent-head">
+    <p class="eyebrow">Recent work &middot; 2026 preprints</p>
+    <h2 id="recent-title">Two new open-source projects</h2>
+    <p>From my postdoctoral work at Johns Hopkins: a GPU-native, differentiable finite element framework, and a controlled benchmark for machine-learning surrogates of fracture.</p>
+  </div>
+
+  <!-- Axion -->
+  <article class="work-card" id="axion">
+    <figure class="work-media work-media--tall">
+      <video data-autoplay muted loop playsinline preload="metadata"
+             poster="{{ '/assets/video/koyna_crack_pattern_poster.jpg' | relative_url }}"
+             aria-label="Animation of the crack pattern in the Koyna gravity dam, 96 million degrees of freedom">
+        <source src="{{ '/assets/video/koyna_crack_pattern.mp4' | relative_url }}" type="video/mp4" />
+      </video>
+      <figcaption>Koyna Dam crack pattern &mdash; 96 million DOF, solved in 6.5 h on one GPU.</figcaption>
+    </figure>
+
+    <div class="work-body">
+      <p class="work-tag"><span>Preprint</span> arXiv:2611.23682 &middot; November 2026</p>
+      <h3>Axion: A differentiable, GPU-native finite element framework, demonstrated on phase-field fracture</h3>
+      <p class="work-authors">Wei Wang, <strong>Meenu Krishnan U.</strong>, Somdatta Goswami</p>
+
+      <p>
+        Axion (<em>Autodifferentiable, XLA-compiled, Implicit, On-device Numerics</em>) is a finite element
+        framework written in JAX. The element kernels, Newton and Krylov iterations, bound-constrained updates,
+        staggered coupling of fields and the loop over load increments are expressed as a single program that is
+        just-in-time compiled and runs on the GPU without host intervention.
+      </p>
+      <p>
+        Consistent tangents come from forward-mode automatic differentiation of the element residual, and derivatives
+        of the solution with respect to model parameters come from differentiating the same program. Operators are
+        applied element by element without assembling a sparse matrix, octree refinement lives in fixed-size arrays,
+        and a cell-based domain decomposition runs the same program on several GPUs. Phase-field fracture is the
+        first module.
+      </p>
+
+      <ul class="work-stats">
+        <li><strong>37.9&times;</strong><span>faster than FEniCSx, one GPU vs one CPU (2D tension benchmark)</span></li>
+        <li><strong>92% / 96%</strong><span>strong / weak scaling on four GPUs</span></li>
+        <li><strong>96M DOF</strong><span>concrete gravity dam on a single GPU</span></li>
+      </ul>
+
+      <div class="work-links">
+        <a class="btn btn-dark" href="https://arxiv.org/abs/2611.23682" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> Paper (arXiv)</a>
+        <a class="btn btn-ghost" href="https://github.com/Centrum-IntelliPhysics/AXION" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a class="btn btn-ghost" href="https://axion-pff.github.io" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Project website</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Fracture-Bench -->
+  <article class="work-card work-card--stack" id="fracture-bench-paper">
+    <div class="work-body">
+      <p class="work-tag"><span>Preprint</span> arXiv:2611.03473 &middot; November 2026</p>
+      <h3>Fracture-Bench: A Controlled Benchmark Suite for Machine Learning Surrogates in Phase-Field Fracture Mechanics</h3>
+      <p class="work-authors"><strong>Meenu Krishnan U.</strong>, Maryam Hakimzadeh, Indrashish Saha, Meer Mehran Rashid, Lori Graham-Brady, Somdatta Goswami</p>
+
+      <p>
+        Which neural surrogates can you trust to replace phase-field fracture simulations, for which problems, and how
+        far beyond their training data? Fracture-Bench is an open benchmark of two phase-field datasets with fixed
+        splits, common test metrics and a description of each dataset&rsquo;s physical regime. A Fourier neural
+        operator (FNO), DeepONet, Latent DeepONet, a UNet and a conditional diffusion model are trained on identical
+        splits and compared on accuracy, training time, inference time and model size.
+      </p>
+
+      <div class="work-cols">
+        <div>
+          <h4>Dataset 1 &middot; 1,000 AT2 simulations</h4>
+          <p>Multiple cracks growing from a notched hole in a hyperelastic plate under random non-uniform biaxial boundary displacements (44 load steps, 128&times;128 grid).</p>
+        </div>
+        <div>
+          <h4>Dataset 2 &middot; 4,000 PF-CZM simulations</h4>
+          <p>A pre-cracked plate with two inclusions, each ten times stiffer or more compliant than the matrix (128&times;256 grid).</p>
+        </div>
+      </div>
+
+      <ul class="work-stats">
+        <li><strong>10<sup>&minus;6</sup></strong><span>mean test error of FNO and Latent DeepONet on Dataset 1, about 10&times; below UNet and DeepONet</span></li>
+        <li><strong>706 s vs 6 ms</strong><span>per prediction on Dataset 2: the diffusion model is most accurate (about one sixth of the UNet error), but far slower than UNet</span></li>
+        <li><strong>Final steps</strong><span>most of the error appears after crack localization, so rankings depend on the task</span></li>
+      </ul>
+
+      <figure class="work-media work-media--wide">
+        <video data-autoplay muted loop playsinline preload="metadata"
+               poster="{{ '/assets/video/fracture_bench_d1_poster.png' | relative_url }}"
+               aria-label="Animation of crack growth over 44 load steps: finite element result, FNO and Latent DeepONet predictions side by side">
+          <source src="{{ '/assets/video/fracture_bench_d1.mp4' | relative_url }}" type="video/mp4" />
+        </video>
+        <div class="work-legend" aria-hidden="true"><span>FEM (ground truth)</span><span>FNO</span><span>Latent DeepONet</span></div>
+        <figcaption>Dataset 1, held-out sample, 44 load steps: finite element result next to two surrogate predictions.</figcaption>
+      </figure>
+
+      <p class="work-note">Data, codes, splits, regime descriptors and generalization splits are public, with a protocol for adding under-represented regimes such as mixed-mode, three-dimensional and experimentally paired fracture.</p>
+
+      <div class="work-links">
+        <a class="btn btn-dark" href="https://arxiv.org/abs/2611.03473" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> Paper (arXiv)</a>
+        <a class="btn btn-ghost" href="https://scixplorer.org/abs/2026arXiv261103473K/abstract" target="_blank" rel="noopener"><i class="fa-solid fa-book-open"></i> SciX</a>
+        <a class="btn btn-ghost" href="https://github.com/Centrum-IntelliPhysics/Benchmark-Data--Phase-field-fracture-in-hyperelastic-material" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub &middot; Dataset 1</a>
+        <a class="btn btn-ghost" href="https://github.com/Centrum-IntelliPhysics/Benchmark_Data_Phase_field_fracture_in_fgm" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub &middot; Dataset 2</a>
+        <a class="btn btn-ghost" href="https://fracture-bench.github.io" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Project website</a>
+      </div>
+    </div>
+  </article>
+</section>
+
 <!-- ─── TICKER ────────────────────────────────────────────────────── -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
